@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: gap: content:">
+    <title>DOREMI ENG - Học Tiếng Anh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Quicksand', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+        
+        #splash-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        #splash-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin-bottom: 20px;
+            animation: pulse 2s ease-in-out infinite;
+        }
+        
+        .app-name {
+            font-size: 32px;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+        
+        .tagline {
+            font-size: 16px;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 30px;
+        }
+        
+        .loading {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        #app-frame {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: none;
+        }
+        
+        #app-frame.loaded {
+            display: block;
+        }
+        
+        .error-screen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #1a1a2e;
+            color: white;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .error-screen.show {
+            display: flex;
+        }
+        
+        .error-icon {
+            font-size: 64px;
+            margin-bottom: 20px;
+        }
+        
+        .error-title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .error-message {
+            font-size: 16px;
+            color: rgba(255,255,255,0.7);
+            margin-bottom: 30px;
+        }
+        
+        .retry-button {
+            padding: 12px 30px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <!-- Splash Screen -->
+    <div id="splash-screen">
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" fill="white" opacity="0.2"/>
+            <text x="50" y="65" font-size="50" font-weight="bold" fill="white" text-anchor="middle">D</text>
+        </svg>
+        <div class="app-name">DOREMI ENG</div>
+        <div class="tagline">Học Tiếng Anh Thông Minh</div>
+        <div class="loading"></div>
+    </div>
+
+    <!-- Error Screen -->
+    <div id="error-screen" class="error-screen">
+        <div class="error-icon">⚠️</div>
+        <div class="error-title">Không thể kết nối</div>
+        <div class="error-message">Vui lòng kiểm tra kết nối internet và thử lại</div>
+        <button class="retry-button" onclick="retryLoad()">Thử lại</button>
+    </div>
+
+    <!-- Main App Frame -->
+    <iframe id="app-frame" src="about:blank"></iframe>
+
+    <script>
+        // Configuration
+        const APP_URL = 'https://doremi-eng-mstudiotb.vercel.app'; // Thay bằng URL Vercel của bạn
+        const TIMEOUT = 15000; // 15 seconds timeout
+        
+        let loadTimeout;
+        
+        function loadApp() {
+            const iframe = document.getElementById('app-frame');
+            const splash = document.getElementById('splash-screen');
+            const errorScreen = document.getElementById('error-screen');
+            
+            // Hide error screen if showing
+            errorScreen.classList.remove('show');
+            
+            // Set timeout for loading
+            loadTimeout = setTimeout(() => {
+                showError();
+            }, TIMEOUT);
+            
+            // Load the app
+            iframe.src = APP_URL;
+            
+            // Handle successful load
+            iframe.onload = function() {
+                clearTimeout(loadTimeout);
+                setTimeout(() => {
+                    splash.classList.add('hidden');
+                    iframe.classList.add('loaded');
+                }, 500);
+            };
+            
+            // Handle load error
+            iframe.onerror = function() {
+                clearTimeout(loadTimeout);
+                showError();
+            };
+        }
+        
+        function showError() {
+            const splash = document.getElementById('splash-screen');
+            const errorScreen = document.getElementById('error-screen');
+            
+            splash.classList.add('hidden');
+            errorScreen.classList.add('show');
+        }
+        
+        function retryLoad() {
+            const splash = document.getElementById('splash-screen');
+            const errorScreen = document.getElementById('error-screen');
+            const iframe = document.getElementById('app-frame');
+            
+            // Reset UI
+            splash.classList.remove('hidden');
+            errorScreen.classList.remove('show');
+            iframe.classList.remove('loaded');
+            
+            // Retry loading
+            loadApp();
+        }
+        
+        // Check internet connection
+        function checkConnection() {
+            return navigator.onLine;
+        }
+        
+        // Listen for online/offline events
+        window.addEventListener('online', () => {
+            console.log('Connection restored');
+            if (document.getElementById('error-screen').classList.contains('show')) {
+                retryLoad();
+            }
+        });
+        
+        window.addEventListener('offline', () => {
+            console.log('Connection lost');
+        });
+        
+        // Start loading when page is ready
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', loadApp);
+        } else {
+            loadApp();
+        }
+    </script>
+</body>
+</html>

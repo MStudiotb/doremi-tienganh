@@ -1,0 +1,30 @@
+[
+  {
+    "word": "hello",
+    "meaning": "xin chào",
+    "phonetic": "/həˈloʊ/",
+    "example": "Hello everyone! How are you today?",
+    "imageUrl": ""
+  },
+  {
+    "word": "cat",
+    "meaning": "con mèo",
+    "phonetic": "/kæt/",
+    "example": "I have a cute cat at home.",
+    "imageUrl": ""
+  },
+  {
+    "word": "book",
+    "meaning": "quyển sách",
+    "phonetic": "/bʊk/",
+    "example": "I love reading books in my free time.",
+    "imageUrl": ""
+  },
+  {
+    "word": "beautiful",
+    "meaning": "",
+    "phonetic": "",
+    "example": "",
+    "imageUrl": ""
+  }
+]

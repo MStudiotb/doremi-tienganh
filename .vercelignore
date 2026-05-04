@@ -1,0 +1,12 @@
+# Large data files
+du lieu nhap/
+datauser/
+
+# Development files
+node_modules/
+.next/
+.git/
+
+# Environment files
+.env*.local
+credentials.json

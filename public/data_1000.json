@@ -1,0 +1,5980 @@
+[
+  {
+    "stt": 1,
+    "word": "accountant (n)",
+    "phonetic": "/əˈkaʊn.t̬ənt/",
+    "meaning": "kế toán",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 2,
+    "word": "actor/ actress (n)",
+    "phonetic": "/ˈæk.tɚ/",
+    "meaning": "/ˈæk.trəs/ diễn viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 3,
+    "word": "artist (n)",
+    "phonetic": "/ˈɑːr.t̬ɪst/",
+    "meaning": "nghệ sĩ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 4,
+    "word": "astronaut (n)",
+    "phonetic": "/ˈæs.trə.nɑːt/",
+    "meaning": "phi hành gia",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 5,
+    "word": "baker (n)",
+    "phonetic": "/ˈbeɪ.kɚ/",
+    "meaning": "thợ nướng bánh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 6,
+    "word": "butcher (n)",
+    "phonetic": "/ˈbʊtʃ.ɚ/",
+    "meaning": "người mổ thịt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 7,
+    "word": "cashier (n)",
+    "phonetic": "/kæʃˈɪr/",
+    "meaning": "nhân viên thu ngân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 8,
+    "word": "chef (n)",
+    "phonetic": "/ʃef/",
+    "meaning": "đầu bếp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 9,
+    "word": "comedian (n)",
+    "phonetic": "/kəˈmiː.di.ən/",
+    "meaning": "diễn viên hài",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 10,
+    "word": "delivery man (n)",
+    "phonetic": "/dɪˈlɪv.ɚ.i.mæn/",
+    "meaning": "nhân viên giao hàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 11,
+    "word": "doctor (n)",
+    "phonetic": "/ˈdoktə/",
+    "meaning": "bác sĩ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 12,
+    "word": "entrepreneur (n)",
+    "phonetic": "/ˌɑːn.trə.prəˈnɝː/",
+    "meaning": "nhà kinh doanh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 13,
+    "word": "engineer (n)",
+    "phonetic": "/ˌen.dʒɪˈnɪər/",
+    "meaning": "kỹ sư",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 14,
+    "word": "factory worker (n)",
+    "phonetic": "/ˈfæk.tɚ.i ˈwɝː.kɚ/",
+    "meaning": "công nhân nhà máy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 15,
+    "word": "office worker (n)",
+    "phonetic": "/ˈɑː.fɪs ˈwɝː.kɚ/",
+    "meaning": "nhân viên văn phòng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 16,
+    "word": "florist (n)",
+    "phonetic": "/ˈflɔːr.ɪst/",
+    "meaning": "người bán hoa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 17,
+    "word": "hairdresser (n)",
+    "phonetic": "/ˈherˌdres.ɚ/",
+    "meaning": "thợ cắt tóc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 18,
+    "word": "lawyer (n)",
+    "phonetic": "/ˈlɑː.jɚ/",
+    "meaning": "luật sư",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 19,
+    "word": "musician (n)",
+    "phonetic": "/mjuːˈzɪʃ.ən/",
+    "meaning": "nhạc sĩ, nhạc công",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 20,
+    "word": "pharmacist (n)",
+    "phonetic": "/ˈfɑːr.mə.sɪst/",
+    "meaning": "dược sĩ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 21,
+    "word": "plumber (n)",
+    "phonetic": "/ˈplʌm.ɚ/",
+    "meaning": "thợ ống nước",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 22,
+    "word": "politician (n)",
+    "phonetic": "/ˌpɑː.ləˈtɪʃ.ən/",
+    "meaning": "chính trị gia",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 23,
+    "word": "programmer (n)",
+    "phonetic": "/ˈproʊ.ɡræm.ɚ/",
+    "meaning": "lập trình viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 24,
+    "word": "real estate agent (n)",
+    "phonetic": "/ˈriː.əl ɪ.steɪt ˌeɪ.dʒənt/",
+    "meaning": "người môi giới bất động sản",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 25,
+    "word": "tailor (n)",
+    "phonetic": "/ˈteɪ.lɚ/",
+    "meaning": "thợ may",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 26,
+    "word": "taxi driver (n)",
+    "phonetic": "/ˈtæk.si ˌdraɪ.vɚ/",
+    "meaning": "tài xế xe taxi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 27,
+    "word": "teacher (n)",
+    "phonetic": "/ˈtiː.tʃɚ/",
+    "meaning": "giáo viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 28,
+    "word": "receptionist (n)",
+    "phonetic": "/rɪˈsep.ʃən.ɪst/",
+    "meaning": "nhân viên lễ tân, tiếp tân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 29,
+    "word": "singer (n)",
+    "phonetic": "/ˈsɪŋ.ɚ/",
+    "meaning": "ca sĩ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 30,
+    "word": "firefighter (n)",
+    "phonetic": "/ˈfaɪərfaɪtər/",
+    "meaning": "lính cứu hỏa FRUIT - TRÁI CÂY",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 31,
+    "word": "apple (n)",
+    "phonetic": "/ˈæp.əl/",
+    "meaning": "quả táo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 32,
+    "word": "banana (n)",
+    "phonetic": "/bəˈnæn.ə/",
+    "meaning": "quả chuối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 33,
+    "word": "pear (n)",
+    "phonetic": "/per/",
+    "meaning": "quả lê",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 34,
+    "word": "grape (n)",
+    "phonetic": "/ɡreɪp/",
+    "meaning": "quả nho",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 35,
+    "word": "peach (n)",
+    "phonetic": "/piːtʃ/",
+    "meaning": "quả đào",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 36,
+    "word": "orange (n)",
+    "phonetic": "/ˈɔːr.ɪndʒ/",
+    "meaning": "quả cam",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 37,
+    "word": "mango (n)",
+    "phonetic": "/ˈmæŋ.ɡoʊ/",
+    "meaning": "quả xoài",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 38,
+    "word": "coconut (n)",
+    "phonetic": "/ˈkoʊ.kə.nʌt/",
+    "meaning": "quả dừa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 39,
+    "word": "pineapple (n)",
+    "phonetic": "/ˈpaɪnæpl/",
+    "meaning": "quả dứa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 40,
+    "word": "watermelon (n)",
+    "phonetic": "/ˈwɑː.t̬ɚˌmel.ən/",
+    "meaning": "dưa hấu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 41,
+    "word": "durian (n)",
+    "phonetic": "/ˈduːriən/",
+    "meaning": "sầu riêng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 42,
+    "word": "lychee (n)",
+    "phonetic": "/ˈlaitʃiː, ˈliː-/",
+    "meaning": "quả vải",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 43,
+    "word": "guava (n)",
+    "phonetic": "/ˈɡwaːvə/",
+    "meaning": "quả ổi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 45,
+    "word": "apricot (n)",
+    "phonetic": "/ˈeɪ.prɪ.kɑːt/",
+    "meaning": "quả mơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 46,
+    "word": "jackfruit (n)",
+    "phonetic": "/ˈdʒæk.fruːt/",
+    "meaning": "quả mít",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 47,
+    "word": "avocado (n)",
+    "phonetic": "/ˌɑː.vəˈkɑː.doʊ/",
+    "meaning": "quả bơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 48,
+    "word": "papaya (n)",
+    "phonetic": "/pəˈpaɪ.ə/",
+    "meaning": "quả đu đủ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 49,
+    "word": "plum (n)",
+    "phonetic": "/plʌm/",
+    "meaning": "quả mận",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 50,
+    "word": "lemon (n)",
+    "phonetic": "/ˈlem.ən/",
+    "meaning": "chanh vàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 51,
+    "word": "kiwi (n)",
+    "phonetic": "/ˈkiː.wiː/",
+    "meaning": "quả kiwi (dương đào)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 52,
+    "word": "raspberry (n)",
+    "phonetic": "/ˈræz.ber.i/",
+    "meaning": "quả mâm xôi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 53,
+    "word": "blueberry (n)",
+    "phonetic": "/ˈbluːˌbər.i/",
+    "meaning": "/ˈbluːˌber.i/ quả việt quất FAMILY - GIA ĐÌNH",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 54,
+    "word": "family (n)",
+    "phonetic": "/ˈfæm.əl.i/",
+    "meaning": "gia đình",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 55,
+    "word": "mother (n)",
+    "phonetic": "/ˈmaðə/",
+    "meaning": "mẹ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 56,
+    "word": "father (n)",
+    "phonetic": "/ˈfɑː.ðɚ/",
+    "meaning": "bố, cha",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 57,
+    "word": "parent (n)",
+    "phonetic": "/ˈpeərənt/",
+    "meaning": "bố hoặc mẹ (parents: bố mẹ, phụ huynh)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 59,
+    "word": "son (n)",
+    "phonetic": "/san/",
+    "meaning": "con trai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 60,
+    "word": "sibling (n)",
+    "phonetic": "/ˈsibliŋ/",
+    "meaning": "anh chị em ruột",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 61,
+    "word": "sister (n)",
+    "phonetic": "/ˈsistə/",
+    "meaning": "chị, em gái",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 62,
+    "word": "brother (n)",
+    "phonetic": "/ˈbrʌð.ɚ/",
+    "meaning": "anh, em trai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 63,
+    "word": "grandmother (n)",
+    "phonetic": "/ˈɡræn.mʌð.ɚ/",
+    "meaning": "bà nội (ngoại)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 64,
+    "word": "grandfather (n)",
+    "phonetic": "/ˈɡræn.fɑː.ðɚ/",
+    "meaning": "ông nội (ngoại)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 65,
+    "word": "grandparent (n)",
+    "phonetic": "/ˈɡræn.per.ənt/",
+    "meaning": "ông hoặc bà (grandparents: ông bà)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 66,
+    "word": "relative (n)",
+    "phonetic": "/ˈrelətiv/",
+    "meaning": "họ hàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 67,
+    "word": "aunt (n)",
+    "phonetic": "/ænt/",
+    "meaning": "cô, dì",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 68,
+    "word": "uncle (n)",
+    "phonetic": "/ˈaŋkl/",
+    "meaning": "chú, bác, cậu, dượng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 69,
+    "word": "cousin (n)",
+    "phonetic": "/ˈkʌz.ən/",
+    "meaning": "anh em họ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 70,
+    "word": "nephew (n)",
+    "phonetic": "/ˈnefjuː/",
+    "meaning": "cháu trai (con của anh chị em)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 71,
+    "word": "niece (n)",
+    "phonetic": "/niːs/",
+    "meaning": "cháu gái (con của anh chị em)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 72,
+    "word": "wife (n)",
+    "phonetic": "/waif/",
+    "meaning": "vợ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 73,
+    "word": "husband (n)",
+    "phonetic": "/ˈhʌz.bənd/",
+    "meaning": "chồng ANIMAL - ĐỘNG VẬT",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 74,
+    "word": "mouse (n)",
+    "phonetic": "/maʊs/",
+    "meaning": "con chuột",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 75,
+    "word": "cat (n)",
+    "phonetic": "/kæt/",
+    "meaning": "con mèo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 76,
+    "word": "dog (n)",
+    "phonetic": "/dɑːɡ/",
+    "meaning": "con chó",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 77,
+    "word": "kitten (n)",
+    "phonetic": "/ˈkɪt̬.ən/",
+    "meaning": "mèo con",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 78,
+    "word": "puppy (n)",
+    "phonetic": "/ˈpʌp.i/",
+    "meaning": "chó con",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 79,
+    "word": "pig (n)",
+    "phonetic": "/pɪɡ/",
+    "meaning": "con lợn, heo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 80,
+    "word": "chicken (n)",
+    "phonetic": "/ˈtʃɪk.ɪn/",
+    "meaning": "con gà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 81,
+    "word": "duck (n)",
+    "phonetic": "/dʌk/",
+    "meaning": "con vịt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 82,
+    "word": "goose (n)",
+    "phonetic": "/ɡuːs/",
+    "meaning": "con ngỗng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 83,
+    "word": "turkey (n)",
+    "phonetic": "/ˈtɝː.ki/",
+    "meaning": "con gà tây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 84,
+    "word": "stork (n)",
+    "phonetic": "/stɔːrk/",
+    "meaning": "con cò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 85,
+    "word": "swan (n)",
+    "phonetic": "/swɑːn/",
+    "meaning": "thiên nga",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 86,
+    "word": "rabbit (n)",
+    "phonetic": "/ˈræb.ɪt/",
+    "meaning": "con thỏ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 87,
+    "word": "cow (n)",
+    "phonetic": "/kaʊ/",
+    "meaning": "con bò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 89,
+    "word": "horse (n)",
+    "phonetic": "/hɔːrs/",
+    "meaning": "con ngựa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 90,
+    "word": "goat (n)",
+    "phonetic": "/ɡoʊt/",
+    "meaning": "con dê",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 91,
+    "word": "sheep (n)",
+    "phonetic": "/ʃiːp/",
+    "meaning": "con cừu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 92,
+    "word": "fish (n)",
+    "phonetic": "/fɪʃ/",
+    "meaning": "con cá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 93,
+    "word": "goldfish (n)",
+    "phonetic": "/ˈɡoʊld.fɪʃ/",
+    "meaning": "cá vàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 94,
+    "word": "crab (n)",
+    "phonetic": "/kræb/",
+    "meaning": "con cua",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 95,
+    "word": "shrimp (n)",
+    "phonetic": "/ʃrɪmp/",
+    "meaning": "con tôm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 96,
+    "word": "squid (n)",
+    "phonetic": "/skwɪd/",
+    "meaning": "con mực",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 97,
+    "word": "octopus (n)",
+    "phonetic": "/ˈɑːktəpʊs/",
+    "meaning": "con bạch tuộc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 98,
+    "word": "shark (n)",
+    "phonetic": "/ʃɑːrk/",
+    "meaning": "cá mập",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 99,
+    "word": "dolphin (n)",
+    "phonetic": "/ˈdɑːlfɪn/",
+    "meaning": "cá heo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 100,
+    "word": "turtle (n)",
+    "phonetic": "/ˈtɝː.t̬əl/",
+    "meaning": "con rùa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 101,
+    "word": "monkey (n)",
+    "phonetic": "/ˈmʌŋ.ki/",
+    "meaning": "con khỉ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 102,
+    "word": "tiger (n)",
+    "phonetic": "/ˈtaɪɡər/",
+    "meaning": "con hổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 103,
+    "word": "lion (n)",
+    "phonetic": "/ˈlaɪ.ən/",
+    "meaning": "con sư tử",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 104,
+    "word": "leopard (n)",
+    "phonetic": "/ˈlep.ɚd/",
+    "meaning": "con báo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 105,
+    "word": "elephant (n)",
+    "phonetic": "/ˈel.ə.fənt/",
+    "meaning": "con voi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 106,
+    "word": "giraffe (n)",
+    "phonetic": "/dʒɪˈræf/",
+    "meaning": "hươu cao cổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 107,
+    "word": "deer (n)",
+    "phonetic": "/dɪr/",
+    "meaning": "con hươu, nai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 108,
+    "word": "hippo (n)",
+    "phonetic": "/ˈhɪpəʊ/",
+    "meaning": "con hà mã",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 109,
+    "word": "rhino (n)",
+    "phonetic": "/ˈraɪnəʊ/",
+    "meaning": "con tê giác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 110,
+    "word": "hedgehog (n)",
+    "phonetic": "/ˈhedʒ.hɑːɡ/",
+    "meaning": "con nhím",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 111,
+    "word": "squirrel (n)",
+    "phonetic": "/ˈskwɝː.əl/",
+    "meaning": "con sóc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 112,
+    "word": "otter (n)",
+    "phonetic": "/ˈɑː.t̬ɚ/",
+    "meaning": "rái cá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 113,
+    "word": "kangaroo (n)",
+    "phonetic": "/ˌkæŋ.ɡəˈruː/",
+    "meaning": "chuột túi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 114,
+    "word": "hamster (n)",
+    "phonetic": "/ˈhæm.stɚ/",
+    "meaning": "chuột đồng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 115,
+    "word": "fox (n)",
+    "phonetic": "/fɑːks/",
+    "meaning": "con cáo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 116,
+    "word": "wolf (n)",
+    "phonetic": "/wʊlf/",
+    "meaning": "con sói",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 117,
+    "word": "bear (n)",
+    "phonetic": "/ber/",
+    "meaning": "con gấu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 118,
+    "word": "panda (n)",
+    "phonetic": "/ˈpæn.də/",
+    "meaning": "con gấu trúc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 119,
+    "word": "ostrich (n)",
+    "phonetic": "/ˈɑː.strɪtʃ/",
+    "meaning": "đà điểu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 121,
+    "word": "butterfly (n)",
+    "phonetic": "/ˈbʌtərflaɪ/",
+    "meaning": "bướm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 122,
+    "word": "worm (n)",
+    "phonetic": "/wɜːrm/",
+    "meaning": "con sâu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 123,
+    "word": "earthworm (n)",
+    "phonetic": "/ˈɜːrθwɜːrm/",
+    "meaning": "con giun",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 124,
+    "word": "eagle (n)",
+    "phonetic": "/ˈiː.ɡəl/",
+    "meaning": "đại bàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 125,
+    "word": "owl (n)",
+    "phonetic": "/aʊl/",
+    "meaning": "con cú",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 126,
+    "word": "parrot (n)",
+    "phonetic": "/ˈper.ət/",
+    "meaning": "con vẹt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 127,
+    "word": "peacock (n)",
+    "phonetic": "/ˈpiː.kɑːk/",
+    "meaning": "con công",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 128,
+    "word": "dove (n)",
+    "phonetic": "/dʌv/",
+    "meaning": "chim bồ câu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 129,
+    "word": "flamingo (n)",
+    "phonetic": "/fləˈmɪŋ.ɡoʊ/",
+    "meaning": "chim hồng hạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 130,
+    "word": "crow (n)",
+    "phonetic": "/kroʊ/",
+    "meaning": "con quạ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 131,
+    "word": "hawk (n)",
+    "phonetic": "/hɑːk/",
+    "meaning": "chim diều hâu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 132,
+    "word": "penguin (n)",
+    "phonetic": "/ˈpeŋ.ɡwɪn/",
+    "meaning": "chim cánh cụt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 133,
+    "word": "sparrow (n)",
+    "phonetic": "/ˈsper.oʊ/",
+    "meaning": "chim sẻ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 134,
+    "word": "swallow (n)",
+    "phonetic": "/ˈswɑː.loʊ/",
+    "meaning": "chim nhạn, én COLOR - MÀU SẮC",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 155,
+    "word": "head (n)",
+    "phonetic": "/hed/",
+    "meaning": "đầu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 156,
+    "word": "hair (n)",
+    "phonetic": "/her/",
+    "meaning": "tóc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 157,
+    "word": "face (n)",
+    "phonetic": "/feɪs/",
+    "meaning": "gương mặt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 158,
+    "word": "forehead (n)",
+    "phonetic": "/ˈfɑː.rɪd/",
+    "meaning": "trán",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 159,
+    "word": "eyebrow (n)",
+    "phonetic": "/ˈaɪ.braʊ/",
+    "meaning": "lông mày",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 160,
+    "word": "eye (n)",
+    "phonetic": "/aɪ/",
+    "meaning": "mắt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 161,
+    "word": "eyelash (n)",
+    "phonetic": "/ˈaɪ.læʃ/",
+    "meaning": "lông mi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 162,
+    "word": "nose (n)",
+    "phonetic": "/nəʊz/",
+    "meaning": "mũi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 163,
+    "word": "ear (n)",
+    "phonetic": "/ɪr/",
+    "meaning": "tai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 164,
+    "word": "cheek (n)",
+    "phonetic": "/tʃiːk/",
+    "meaning": "má",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 165,
+    "word": "beard (n)",
+    "phonetic": "/bɪrd/",
+    "meaning": "râu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 166,
+    "word": "mouth (n)",
+    "phonetic": "/maʊθ/",
+    "meaning": "miệng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 167,
+    "word": "lip (n)",
+    "phonetic": "/lɪp/",
+    "meaning": "môi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 169,
+    "word": "gum (n)",
+    "phonetic": "/ɡʌm/",
+    "meaning": "nướu, lợi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 170,
+    "word": "jaw (n)",
+    "phonetic": "/dʒɑː/",
+    "meaning": "hàm, quai hàm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 171,
+    "word": "chin (n)",
+    "phonetic": "/tʃɪn/",
+    "meaning": "cằm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 172,
+    "word": "neck (n)",
+    "phonetic": "/nek/",
+    "meaning": "cổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 173,
+    "word": "chest (n)",
+    "phonetic": "/tʃest/",
+    "meaning": "ngực (chung)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 174,
+    "word": "back (n)",
+    "phonetic": "/bæk/",
+    "meaning": "lưng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 175,
+    "word": "belly (n)",
+    "phonetic": "/ˈbeli/",
+    "meaning": "bụng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 176,
+    "word": "hip (n)",
+    "phonetic": "/hɪp/",
+    "meaning": "hông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 177,
+    "word": "arm (n)",
+    "phonetic": "/ɑːrm/",
+    "meaning": "cánh tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 178,
+    "word": "armpit (n)",
+    "phonetic": "/ˈɑːrm.pɪt/",
+    "meaning": "nách",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 179,
+    "word": "forearm (n)",
+    "phonetic": "/ˈfɔːr.ɑːrm/",
+    "meaning": "cẳng tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 180,
+    "word": "elbow (n)",
+    "phonetic": "/ˈel.boʊ/",
+    "meaning": "khuỷu tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 182,
+    "word": "knuckle (n)",
+    "phonetic": "/ˈnʌk.əl/",
+    "meaning": "khớp đốt ngón tay (đặc biệt là đoạn nối giữa ngón tay và bàn tay)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 183,
+    "word": "leg (n)",
+    "phonetic": "/leɡ/",
+    "meaning": "chân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 184,
+    "word": "knee (n)",
+    "phonetic": "/niː/",
+    "meaning": "đầu gối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 185,
+    "word": "ankle (n)",
+    "phonetic": "/ˈæŋ.kəl/",
+    "meaning": "mắt cá chân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 186,
+    "word": "heel (n)",
+    "phonetic": "/hiːl/",
+    "meaning": "gót chân SCHOOL - TRƯỜNG HỌC",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 187,
+    "word": "school (n)",
+    "phonetic": "/sku:l/",
+    "meaning": "trường học",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 188,
+    "word": "class (n)",
+    "phonetic": "/klɑ:s/",
+    "meaning": "lớp học",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 189,
+    "word": "student (n)",
+    "phonetic": "/'stju:dnt/",
+    "meaning": "học sinh, sinh viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 190,
+    "word": "pupil (n)",
+    "phonetic": "/ˈpju:pl/",
+    "meaning": "học sinh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 191,
+    "word": "teacher (n)",
+    "phonetic": "/ˈtiː.tʃɚ/",
+    "meaning": "giáo viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 192,
+    "word": "principal (n)",
+    "phonetic": "/ˈprɪntsɪpəl/",
+    "meaning": "hiệu trưởng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 193,
+    "word": "course (n)",
+    "phonetic": "/kɔːrs/",
+    "meaning": "khóa học",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 194,
+    "word": "semester (n)",
+    "phonetic": "/sɪˈmestər/",
+    "meaning": "học kì",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 195,
+    "word": "exersise (n)",
+    "phonetic": "/ˈeksərsaɪz/",
+    "meaning": "bài tập",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 196,
+    "word": "homework (n)",
+    "phonetic": "/ˈhəʊmwɜːrk/",
+    "meaning": "bài tập về nhà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 197,
+    "word": "examination exam (n)",
+    "phonetic": "/ɪɡˌzæmɪˈneɪʃn/",
+    "meaning": "/ɪɡˈzæm/ bài kiểm tra",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 198,
+    "word": "grade (n)",
+    "phonetic": "/ɡreɪd/",
+    "meaning": "điểm số",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 199,
+    "word": "certificate (n)",
+    "phonetic": "/sərˈtɪfɪkət/",
+    "meaning": "bằng cấp, giấy khen",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 200,
+    "word": "kindergarten (n)",
+    "phonetic": "/ˈkɪn.dɚˌɡɑːr.tən/",
+    "meaning": "lớp mẫu giáo, nhà trẻ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 204,
+    "word": "university (n)",
+    "phonetic": "/ˌjuːnɪˈvɜːrsəti/",
+    "meaning": "trường đại học",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 205,
+    "word": "college (n)",
+    "phonetic": "/ˈkɑːlɪdʒ/",
+    "meaning": "trường đại học, cao đẳng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 206,
+    "word": "private school (n)",
+    "phonetic": "/ˌpraɪ.vət ˈskuːl/",
+    "meaning": "trường tư",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 207,
+    "word": "public school (n)",
+    "phonetic": "/ˌpʌblɪk ˈskuːl/",
+    "meaning": "trường công CHARACTER - TÍNH CÁCH",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 208,
+    "word": "active (adj)",
+    "phonetic": "/ˈæk.tɪv/",
+    "meaning": "năng nổ, lanh lợi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 210,
+    "word": "ambitious (adj)",
+    "phonetic": "/æmˈbɪʃ.əs/",
+    "meaning": "tham vọng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 211,
+    "word": "attentive (adj)",
+    "phonetic": "/əˈten.t̬ɪv/",
+    "meaning": "chăm chú, chú tâm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 212,
+    "word": "bold (adj)",
+    "phonetic": "/boʊld/",
+    "meaning": "táo bạo, mạo hiểm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 213,
+    "word": "brave (adj)",
+    "phonetic": "/breɪv/",
+    "meaning": "dũng cảm, gan dạ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 214,
+    "word": "careful (adj)",
+    "phonetic": "/ˈker.fəl/",
+    "meaning": "cẩn thận, thận trọng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 215,
+    "word": "careless (adj)",
+    "phonetic": "/ˈker.ləs/",
+    "meaning": "bất cẩn, cẩu thả",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 216,
+    "word": "cautious (adj)",
+    "phonetic": "/ˈkɑː.ʃəs/",
+    "meaning": "thận trọng, cẩn thận",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 217,
+    "word": "conscientious (adj)",
+    "phonetic": "/ˌkɑːn.ʃiˈen.ʃəs/",
+    "meaning": "chu đáo, tỉ mỉ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 218,
+    "word": "courageous (adj)",
+    "phonetic": "/kəˈreɪ.dʒəs/",
+    "meaning": "can đảm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 219,
+    "word": "crafty (adj)",
+    "phonetic": "/ˈkræf.ti/",
+    "meaning": "láu cá, xảo quyệt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 220,
+    "word": "cunning (adj)",
+    "phonetic": "/ˈkʌn.ɪŋ/",
+    "meaning": "xảo trá, khôn lỏi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 221,
+    "word": "deceitful (adj)",
+    "phonetic": "/dɪˈsiːt.fəl/",
+    "meaning": "dối trá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 222,
+    "word": "decent (adj)",
+    "phonetic": "/ˈdiː.sənt/",
+    "meaning": "lịch sự, tao nhã",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 223,
+    "word": "dependable (adj)",
+    "phonetic": "/dɪˈpen.də.bəl/",
+    "meaning": "đáng tin cậy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 224,
+    "word": "determined (adj)",
+    "phonetic": "/dɪˈtɝː.mɪnd/",
+    "meaning": "quyết tâm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 225,
+    "word": "devoted (adj)",
+    "phonetic": "/dɪˈvoʊ.t̬ɪd/",
+    "meaning": "hết lòng, tận tâm, tận tụy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 226,
+    "word": "diligent (adj)",
+    "phonetic": "/ˈdɪl.ə.dʒənt/",
+    "meaning": "siêng năng, cần cù",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 227,
+    "word": "disciplined (adj)",
+    "phonetic": "/ˈdɪs.ə.plɪnd/",
+    "meaning": "có tính kỷ luật",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 228,
+    "word": "dishonest (adj)",
+    "phonetic": "/dɪˈsɑː.nɪst/",
+    "meaning": "bất lương, dối trá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 229,
+    "word": "disloyal (adj)",
+    "phonetic": "/ˌdɪsˈlɔɪ.əl/",
+    "meaning": "phản trắc, phản bội",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 230,
+    "word": "energetic (adj)",
+    "phonetic": "/ˌen.ɚˈdʒet̬.ɪk/",
+    "meaning": "giàu năng lượng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 231,
+    "word": "fair (adj)",
+    "phonetic": "/fer/",
+    "meaning": "ngay thẳng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 232,
+    "word": "faithful (adj)",
+    "phonetic": "/ˈfeɪθ.fəl/",
+    "meaning": "trung thành, chung thủy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 233,
+    "word": "fearless (adj)",
+    "phonetic": "/ˈfɪr.ləs/",
+    "meaning": "bạo dạn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 234,
+    "word": "forgetful (adj)",
+    "phonetic": "/fɚˈɡet.fəl/",
+    "meaning": "hay quên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 235,
+    "word": "hard-headed (adj)",
+    "phonetic": "/ˌhɑːrdˈhed.ɪd/",
+    "meaning": "cứng đầu, ương ngạnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 236,
+    "word": "hardworking (adj)",
+    "phonetic": "/ˈhɑrdˈwɜr·kɪŋ/",
+    "meaning": "chăm chỉ, chịu khó",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 237,
+    "word": "hardy (adj)",
+    "phonetic": "/ˈhɑːr.di/",
+    "meaning": "táo bạo, gan dạ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 238,
+    "word": "honest (adj)",
+    "phonetic": "/ˈɑː.nɪst/",
+    "meaning": "chân thật, trung thành",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 239,
+    "word": "idle (adj)",
+    "phonetic": "/ˈaɪ.dəl/",
+    "meaning": "nhàn rỗi, lười nhác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 240,
+    "word": "immature (adj)",
+    "phonetic": "/ˌɪm.əˈtʊr/",
+    "meaning": "non nớt, thiếu chín chắn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 242,
+    "word": "inattentive (adj)",
+    "phonetic": "/ˌɪn.əˈten.t̬ɪv/",
+    "meaning": "lơ đễnh, thiếu tập trung",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 243,
+    "word": "independent (adj)",
+    "phonetic": "/ˌɪn.dɪˈpen.dənt/",
+    "meaning": "tự lập",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 244,
+    "word": "inert (adj)",
+    "phonetic": "/ˌɪnˈɝːt/",
+    "meaning": "trì trệ, chậm chạp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 245,
+    "word": "insightful (adj)",
+    "phonetic": "/ˈɪn.saɪt.fəl/",
+    "meaning": "sâu sắc, sáng suốt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 246,
+    "word": "insincere (adj)",
+    "phonetic": "/ˌɪn.sɪnˈsɪr/",
+    "meaning": "không thành thực, giả dối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 247,
+    "word": "irrational (adj)",
+    "phonetic": "/ɪˈræʃ.ən.əl/",
+    "meaning": "không hợp lý",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 248,
+    "word": "irresponsible (adj)",
+    "phonetic": "/ˌɪr.əˈspɑːn.sə.bəl/",
+    "meaning": "thiếu trách nhiệm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 249,
+    "word": "lazy (adj)",
+    "phonetic": "/ˈleɪ.zi/",
+    "meaning": "lười biếng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 250,
+    "word": "level-headed (adj)",
+    "phonetic": "/ˌlev.əlˈhed.ɪd/",
+    "meaning": "bình tĩnh, điềm đạm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 251,
+    "word": "loyal (adj)",
+    "phonetic": "/ˈlɔɪ.əl/",
+    "meaning": "trung thành, trung kiên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 252,
+    "word": "mature (adj)",
+    "phonetic": "/məˈtʊr/",
+    "meaning": "trưởng thành, chững chạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 253,
+    "word": "methodical (adj)",
+    "phonetic": "/məˈθɑː.dɪ.kəl/",
+    "meaning": "ngăn nắp, cẩn thận",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 254,
+    "word": "naive (adj)",
+    "phonetic": "/naɪˈiːv/",
+    "meaning": "ngây thơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 255,
+    "word": "objective (adj)",
+    "phonetic": "/əbˈdʒek.tɪv/",
+    "meaning": "khách quan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 256,
+    "word": "observant (adj)",
+    "phonetic": "/əbˈzɝː.vənt/",
+    "meaning": "tinh ý, hay quan sát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 257,
+    "word": "opinionated (adj)",
+    "phonetic": "/əˈpɪn.jə.neɪ.t̬ɪd/",
+    "meaning": "cứng đầu, ngoan cố",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 258,
+    "word": "organized (adj)",
+    "phonetic": "/ˈɔːr.ɡən.aɪzd/",
+    "meaning": "có trật tự, ngăn nắp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 259,
+    "word": "passive (adj)",
+    "phonetic": "/ˈpæs.ɪv/",
+    "meaning": "nhiệt huyết",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 260,
+    "word": "perceptive (adj)",
+    "phonetic": "/pɚˈsep.tɪv/",
+    "meaning": "mẫn cảm, sâu sắc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 261,
+    "word": "persevering (adj)",
+    "phonetic": "/ˌpɝː.səˈvɪr.ɪŋ/",
+    "meaning": "kiên nhẫn, bền bỉ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 262,
+    "word": "practical (adj)",
+    "phonetic": "/ˈpræk.tɪ.kəl/",
+    "meaning": "thực tế, thực tiễn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 263,
+    "word": "prudent (adj)",
+    "phonetic": "/ˈpruː.dənt/",
+    "meaning": "thận trọng, khôn ngoan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 264,
+    "word": "quick (adj)",
+    "phonetic": "/kwɪk/",
+    "meaning": "nhanh nhẹn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 265,
+    "word": "rational (adj)",
+    "phonetic": "/ˈræʃ.ən.əl/",
+    "meaning": "có lý trí",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 266,
+    "word": "reasonable (adj)",
+    "phonetic": "/ˈriː.zən.ə.bəl/",
+    "meaning": "biết điều",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 267,
+    "word": "reckless (adj)",
+    "phonetic": "/ˈrek.ləs/",
+    "meaning": "liều lĩnh, táo bạo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 268,
+    "word": "reliable (adj)",
+    "phonetic": "/rɪˈlaɪ.ə.bəl/",
+    "meaning": "đáng tin tưởng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 269,
+    "word": "resolute (adj)",
+    "phonetic": "/ˈrez.ə.luːt/",
+    "meaning": "cương quyết",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 270,
+    "word": "responsible (adj)",
+    "phonetic": "/rɪˈspɑːn.sə.bəl/",
+    "meaning": "có trách nhiệm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 271,
+    "word": "scrupulous (adj)",
+    "phonetic": "/ˈskruː.pjə.ləs/",
+    "meaning": "kĩ lưỡng, tỉ mỉ, thận trọng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 272,
+    "word": "sensible (adj)",
+    "phonetic": "/ˈsen.sə.bəl/",
+    "meaning": "khôn ngoan, có óc phán xét",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 274,
+    "word": "shrewd (adj)",
+    "phonetic": "/ʃruːd/",
+    "meaning": "khôn ngoan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 275,
+    "word": "sincere (adj)",
+    "phonetic": "/sɪnˈsɪr/",
+    "meaning": "chân thành",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 276,
+    "word": "slow (adj)",
+    "phonetic": "/sloʊ/",
+    "meaning": "chậm chạp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 277,
+    "word": "sluggish (adj)",
+    "phonetic": "/ˈslʌɡ.ɪʃ/",
+    "meaning": "uể oải, lờ đờ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 278,
+    "word": "sly (adj)",
+    "phonetic": "/slaɪ/",
+    "meaning": "ranh mãnh, quỷ quyệt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 279,
+    "word": "strong (adj)",
+    "phonetic": "/strɑːŋ/",
+    "meaning": "mạnh mẽ, đanh thép",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 280,
+    "word": "strong-minded (adj)",
+    "phonetic": "/ˌstrɑːŋˈmaɪn.dɪd/",
+    "meaning": "cứng cỏi, kiên quyết",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 281,
+    "word": "strong-willed (adj)",
+    "phonetic": "/ˌstrɑːŋˈwɪld/",
+    "meaning": "cứng cỏi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 282,
+    "word": "stubborn (adj)",
+    "phonetic": "/ˈstʌb.ɚn/",
+    "meaning": "bướng bỉnh, ngang ngạnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 283,
+    "word": "superficial (adj)",
+    "phonetic": "/ˌsuː.pɚˈfɪʃ.əl/",
+    "meaning": "hời hợt, nông cạn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 284,
+    "word": "superstitious (adj)",
+    "phonetic": "/ˌsuː.pɚˈstɪʃ.əs/",
+    "meaning": "mê tín",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 285,
+    "word": "thorough (adj)",
+    "phonetic": "/ˈθɝː.ə/",
+    "meaning": "/ˈθɝː.oʊ/ kỹ lưỡng, thấu đáo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 286,
+    "word": "timid (adj)",
+    "phonetic": "/ˈtɪm.ɪd/",
+    "meaning": "rụt rè, bẽn lẽn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 287,
+    "word": "tough (adj)",
+    "phonetic": "/tʌf/",
+    "meaning": "cứng rắn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 288,
+    "word": "treacherous (adj)",
+    "phonetic": "/ˈtretʃ.ɚ.əs/",
+    "meaning": "bội bạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 289,
+    "word": "trustworthy (adj)",
+    "phonetic": "/ˈtrʌstˌwɝː.ði/",
+    "meaning": "đáng tin",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 290,
+    "word": "truthful (adj)",
+    "phonetic": "/ˈtruːθ.fəl/",
+    "meaning": "thật thà, chân thật",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 291,
+    "word": "unbiased (adj)",
+    "phonetic": "/ʌnˈbaɪəst/",
+    "meaning": "không thiên vị",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 292,
+    "word": "unpredictable (adj)",
+    "phonetic": "/ˌʌn.prɪˈdɪk.tə.bəl/",
+    "meaning": "khó đoán, khôn lường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 293,
+    "word": "unreasonable (adj)",
+    "phonetic": "/ʌnˈriː.zən.ə.bəl/",
+    "meaning": "vô lý, quá đáng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 294,
+    "word": "unreliable (adj)",
+    "phonetic": "/ˌʌn.rɪˈlaɪə.bəl/",
+    "meaning": "không đáng tin",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 295,
+    "word": "unscrupulous (adj)",
+    "phonetic": "/ʌnˈskruː.pjə.ləs/",
+    "meaning": "cẩu thả",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 296,
+    "word": "vigorous (adj)",
+    "phonetic": "/ˈvɪɡ.ɚ.əs/",
+    "meaning": "mạnh mẽ, sôi nổi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 297,
+    "word": "weak (adj)",
+    "phonetic": "/wiːk/",
+    "meaning": "yếu đuối SCHOOL OBJECT - ĐỒ DÙNG HỌC TẬP",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 298,
+    "word": "pen (n)",
+    "phonetic": "/pen/",
+    "meaning": "bút mực",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 299,
+    "word": "pencil (n)",
+    "phonetic": "/ˈpensl/",
+    "meaning": "bút chì",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 300,
+    "word": "highlighter (n)",
+    "phonetic": "/ˈhaɪˌlaɪ.t̬ɚ/",
+    "meaning": "bút nhớ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 301,
+    "word": "ruler (n)",
+    "phonetic": "/ˈruːlər/",
+    "meaning": "thước kẻ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 302,
+    "word": "eraser (n)",
+    "phonetic": "/ɪˈreɪ.sɚ/",
+    "meaning": "tẩy, gôm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 303,
+    "word": "pencil case (n)",
+    "phonetic": "/ˈpensl keɪs/",
+    "meaning": "hộp bút",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 305,
+    "word": "notebook (n)",
+    "phonetic": "/ˈnəʊtbʊk/",
+    "meaning": "vở",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 306,
+    "word": "paper (n)",
+    "phonetic": "/ˈpeɪ.pɚ/",
+    "meaning": "giấy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 307,
+    "word": "scissors (n)",
+    "phonetic": "/ˈsɪz.ɚz/",
+    "meaning": "kéo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 308,
+    "word": "clock (n)",
+    "phonetic": "/klɑːk/",
+    "meaning": "đồng hồ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 309,
+    "word": "clip (n)",
+    "phonetic": "/klɪp/",
+    "meaning": "kẹp ghim",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 310,
+    "word": "stapler (n)",
+    "phonetic": "/ˈsteɪ.plɚ/",
+    "meaning": "cái dập ghim",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 311,
+    "word": "pin (n)",
+    "phonetic": "/pɪn/",
+    "meaning": "đinh ghim",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 312,
+    "word": "glue (n)",
+    "phonetic": "/ɡluː/",
+    "meaning": "hồ dán",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 313,
+    "word": "sticky tape (n)",
+    "phonetic": "/ˈstɪki teɪp/",
+    "meaning": "băng dính",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 314,
+    "word": "calculator (n)",
+    "phonetic": "/ˈkæl.kjə.leɪ.t̬ɚ/",
+    "meaning": "máy tính bỏ túi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 315,
+    "word": "desk (n)",
+    "phonetic": "/desk/",
+    "meaning": "bàn học",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 316,
+    "word": "chair (n)",
+    "phonetic": "/tʃer/",
+    "meaning": "ghế",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 317,
+    "word": "blackboard (n)",
+    "phonetic": "/ˈblæk.bɔːrd/",
+    "meaning": "bảng đen NATURE - THIÊN NHIÊN",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 318,
+    "word": "forest (n)",
+    "phonetic": "/ˈfɔːrɪst/",
+    "meaning": "rừng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 319,
+    "word": "rainforest (n)",
+    "phonetic": "/ˈreɪnfɔːrɪst/",
+    "meaning": "rừng mưa nhiệt đới",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 320,
+    "word": "mountain (n)",
+    "phonetic": "/ˈmaʊn.tən/",
+    "meaning": "núi, dãy núi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 321,
+    "word": "highland (n)",
+    "phonetic": "/ˈhaɪ.lənd/",
+    "meaning": "cao nguyên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 322,
+    "word": "hill (n)",
+    "phonetic": "/hɪl/",
+    "meaning": "đồi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 323,
+    "word": "valley (n)",
+    "phonetic": "/ˈvæl.i/",
+    "meaning": "thung lũng, châu thổ, lưu vực",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 324,
+    "word": "cave (n)",
+    "phonetic": "/keɪv/",
+    "meaning": "hang động",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 325,
+    "word": "rock (n)",
+    "phonetic": "/rɑːk/",
+    "meaning": "đá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 326,
+    "word": "slope (n)",
+    "phonetic": "/sloʊp/",
+    "meaning": "dốc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 327,
+    "word": "volcano (n)",
+    "phonetic": "/vɑːlˈkeɪ.noʊ/",
+    "meaning": "núi lửa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 328,
+    "word": "eruption (n)",
+    "phonetic": "/ɪˈrʌp.ʃən/",
+    "meaning": "sự phun trào (núi lửa)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 329,
+    "word": "waterfall (n)",
+    "phonetic": "/ˈwɑː.t̬ɚ.fɑːl/",
+    "meaning": "thác nước",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 330,
+    "word": "canyon (n)",
+    "phonetic": "/ˈkænjən/",
+    "meaning": "hẻm núi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 331,
+    "word": "cliff (n)",
+    "phonetic": "/klɪf/",
+    "meaning": "vách đá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 332,
+    "word": "bush (n)",
+    "phonetic": "/bʊʃ/",
+    "meaning": "bụi cây, bụi rậm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 333,
+    "word": "desert (n)",
+    "phonetic": "/ˈdez.ɚt/",
+    "meaning": "sa mạc, hoang mạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 334,
+    "word": "oasis (n)",
+    "phonetic": "/əʊˈeɪsɪs/",
+    "meaning": "ốc đảo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 336,
+    "word": "sand dune (n)",
+    "phonetic": "/ˈsænd duːn/",
+    "meaning": "đụn cát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 337,
+    "word": "coal (n)",
+    "phonetic": "/koʊl/",
+    "meaning": "than đá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 339,
+    "word": "soil (n)",
+    "phonetic": "/sɔɪl/",
+    "meaning": "đất trồng, đất dai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 340,
+    "word": "pond (n)",
+    "phonetic": "/pɑːnd/",
+    "meaning": "ao nước",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 341,
+    "word": "river (n)",
+    "phonetic": "/ˈrɪv.ɚ/",
+    "meaning": "dòng sông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 342,
+    "word": "riverbank (n)",
+    "phonetic": "/ˈrɪvəˌbæŋk/",
+    "meaning": "bờ sông, bãi sông, vùng đất ven sông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 343,
+    "word": "creek (n)",
+    "phonetic": "/kriːk/",
+    "meaning": "lạch, nhánh sông, sông con",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 344,
+    "word": "sea (n)",
+    "phonetic": "/siː/",
+    "meaning": "biển",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 345,
+    "word": "ocean (n)",
+    "phonetic": "/ˈəʊʃn/",
+    "meaning": "đại dương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 346,
+    "word": "reef (n)",
+    "phonetic": "/riːf/",
+    "meaning": "rặng đá (dưới biển)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 347,
+    "word": "coral reef (n)",
+    "phonetic": "/ˈkɔːrəl riːf/",
+    "meaning": "rặng san hô",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 348,
+    "word": "beach (n)",
+    "phonetic": "/biːtʃ/",
+    "meaning": "bãi biển",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 349,
+    "word": "bay (n)",
+    "phonetic": "/beɪ/",
+    "meaning": "vịnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 350,
+    "word": "seashore (n)",
+    "phonetic": "/ˈsiːʃɔːr/",
+    "meaning": "bờ biển",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 351,
+    "word": "meadow (n)",
+    "phonetic": "/ˈmed.oʊ/",
+    "meaning": "đồng cỏ, bãi cỏ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 352,
+    "word": "mud (n)",
+    "phonetic": "/mʌd/",
+    "meaning": "bùn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 353,
+    "word": "peninsula (n)",
+    "phonetic": "/pəˈnɪn.sə.lə/",
+    "meaning": "bán đảo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 354,
+    "word": "island (n)",
+    "phonetic": "/ˈaɪlənd/",
+    "meaning": "đảo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 355,
+    "word": "continent (n)",
+    "phonetic": "/ˈkɑːntɪnənt/",
+    "meaning": "châu lục",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 356,
+    "word": "environment (n)",
+    "phonetic": "/ɪnˈvaɪ.rən.mənt/",
+    "meaning": "môi trường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 357,
+    "word": "planet (n)",
+    "phonetic": "/ˈplæn.ɪt/",
+    "meaning": "hành tinh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 358,
+    "word": "scenery (n)",
+    "phonetic": "/ˈsiː.nɚ.i/",
+    "meaning": "phong cảnh, cảnh vật LEISURE - GIẢI TRÍ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 359,
+    "word": "activity (n)",
+    "phonetic": "/ækˈtɪv.ə.t̬i/",
+    "meaning": "hoạt động",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 360,
+    "word": "art gallery (n)",
+    "phonetic": "/ˈɑːrt ˌɡæl.ɚ.i/",
+    "meaning": "phòng trưng bày tranh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 361,
+    "word": "exhibition (n)",
+    "phonetic": "/ˌek.səˈbɪʃ.ən/",
+    "meaning": "buổi triển lãm, trưng bày",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 362,
+    "word": "museum (n)",
+    "phonetic": "/mjuːˈziː.əm/",
+    "meaning": "bảo tàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 363,
+    "word": "concert (n)",
+    "phonetic": "/ˈkɑːn.sɚt/",
+    "meaning": "buổi hòa nhạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 364,
+    "word": "ballet (n)",
+    "phonetic": "/bælˈeɪ/",
+    "meaning": "ba lê, kịch múa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 366,
+    "word": "bar (n)",
+    "phonetic": "/bɑːr/",
+    "meaning": "quán rượu, quầy bán rượu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 367,
+    "word": "pub (n)",
+    "phonetic": "/pʌb/",
+    "meaning": "nơi phục vụ đồ uống có cồn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 368,
+    "word": "nightclub (n)",
+    "phonetic": "/ˈnaɪt.klʌb/",
+    "meaning": "hộp đêm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 369,
+    "word": "restaurant (n)",
+    "phonetic": "/ˈres.tə.rɑːnt/",
+    "meaning": "nhà hàng ăn uống",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 371,
+    "word": "film (n)",
+    "phonetic": "/fɪlm/",
+    "meaning": "phim, phim ảnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 372,
+    "word": "cinema (n)",
+    "phonetic": "/ˈsɪn.ə.mə/",
+    "meaning": "rạp chiếu phim",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 373,
+    "word": "theater (n)",
+    "phonetic": "/ˈθiː.ə.t̬ɚ/",
+    "meaning": "nhà hát, rạp hát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 374,
+    "word": "circus (n)",
+    "phonetic": "/ˈsɝː.kəs/",
+    "meaning": "rạp xiếc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 375,
+    "word": "cosplay (n)",
+    "phonetic": "/ˈkɑːz.pleɪ/",
+    "meaning": "trò chơi hóa trang",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 376,
+    "word": "stadium (n)",
+    "phonetic": "/ˈsteɪ.di.əm/",
+    "meaning": "sân vận động",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 377,
+    "word": "zoo (n)",
+    "phonetic": "/zuː/",
+    "meaning": "sở thú",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 378,
+    "word": "park (n)",
+    "phonetic": "/pɑːrk/",
+    "meaning": "công viên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 379,
+    "word": "handcraft (n)",
+    "phonetic": "/ˈhænd.kræft/",
+    "meaning": "nghề thủ công, hoạt động thủ công",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 380,
+    "word": "leisure centre (n)",
+    "phonetic": "/ˈliː.ʒɚ ˌsen.t̬ɚ/",
+    "meaning": "khu vui chơi, trung tâm giải trí",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 381,
+    "word": "bowling (n)",
+    "phonetic": "/ˈboʊ.lɪŋ/",
+    "meaning": "trò chơi lăn bóng, bowling",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 382,
+    "word": "monopoly (n)",
+    "phonetic": "/məˈnɑː.pəl.i/",
+    "meaning": "trò chơi cờ tỷ phú",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 383,
+    "word": "puzzle (n)",
+    "phonetic": "/ˈpʌz.əl/",
+    "meaning": "trò chơi xếp hình",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 384,
+    "word": "quiz (n)",
+    "phonetic": "/kwɪz/",
+    "meaning": "trò chơi đố vui",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 385,
+    "word": "library (n)",
+    "phonetic": "/ˈlaɪbreri/",
+    "meaning": "thư viện",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 386,
+    "word": "fishing (n)",
+    "phonetic": "/ˈfɪʃɪŋ/",
+    "meaning": "câu cá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 387,
+    "word": "gardening (n)",
+    "phonetic": "/ˈɡɑːdnɪŋ/",
+    "meaning": "làm vườn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 388,
+    "word": "hiking (n)",
+    "phonetic": "/ˈhaɪkɪŋ/",
+    "meaning": "leo núi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 389,
+    "word": "reading (n)",
+    "phonetic": "/ˈriːdɪŋ/",
+    "meaning": "đọc sách",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 390,
+    "word": "music (n)",
+    "phonetic": "/ˈmjuːzɪk/",
+    "meaning": "âm nhạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 391,
+    "word": "poetry (n)",
+    "phonetic": "/ˈpəʊətri/",
+    "meaning": "thơ ca",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 392,
+    "word": "shopping (n)",
+    "phonetic": "/ˈʃɑːpɪŋ/",
+    "meaning": "mua sắm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 393,
+    "word": "painting (n)",
+    "phonetic": "/ˈpeɪntɪŋ/",
+    "meaning": "vẽ tranh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 394,
+    "word": "photography (n)",
+    "phonetic": "/fəˈtɑːɡrəfi/",
+    "meaning": "nhiếp ảnh HOUSE - NHÀ CỬA",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 396,
+    "word": "dining room (n)",
+    "phonetic": "/ˈdaɪnɪŋ ruːm/",
+    "meaning": "phòng ăn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 397,
+    "word": "kitchen (n)",
+    "phonetic": "/ˈkɪtʃ.ən/",
+    "meaning": "nhà bếp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 398,
+    "word": "bedroom (n)",
+    "phonetic": "/ˈbed.ruːm/",
+    "meaning": "phòng ngủ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 399,
+    "word": "bathroom (n)",
+    "phonetic": "/ˈbæθ.ru:m/",
+    "meaning": "phòng tắm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 400,
+    "word": "garage (n)",
+    "phonetic": "/ɡəˈrɑːʒ/",
+    "meaning": "ga ra, nhà để xe",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 401,
+    "word": "attic (n)",
+    "phonetic": "/ˈæt̬.ɪk/",
+    "meaning": "tum, gác xép",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 402,
+    "word": "basement (n)",
+    "phonetic": "/ˈbeɪs.mənt/",
+    "meaning": "tầng hầm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 403,
+    "word": "roof (n)",
+    "phonetic": "/ruːf/",
+    "meaning": "mái nhà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 404,
+    "word": "entrance (n)",
+    "phonetic": "/ˈen.trəns   lối vào, cổng vào 405   patio (n)   /",
+    "meaning": "ˈpæt̬.i.oʊ/ hiên, sân hè",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 406,
+    "word": "balcony (n)",
+    "phonetic": "/ˈbæl.kə.ni/",
+    "meaning": "ban công",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 407,
+    "word": "floor (n)",
+    "phonetic": "/flɔːr/",
+    "meaning": "sàn nhà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 408,
+    "word": "wall (n)",
+    "phonetic": "/wɔːl/",
+    "meaning": "tường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 409,
+    "word": "ceiling (n)",
+    "phonetic": "/ˈsiːlɪŋ/",
+    "meaning": "trần nhà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 410,
+    "word": "door (n)",
+    "phonetic": "/dɔːr/",
+    "meaning": "cửa ra vào",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 411,
+    "word": "window (n)",
+    "phonetic": "/ˈwɪn.doʊ/",
+    "meaning": "cửa sổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 412,
+    "word": "curtain (n)",
+    "phonetic": "/ˈkɜːrtn/",
+    "meaning": "rèm cửa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 413,
+    "word": "armchair (n)",
+    "phonetic": "/ˈɑːrm.tʃer/",
+    "meaning": "ghế bành, ghế có tựa tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 414,
+    "word": "couch (n)",
+    "phonetic": "/kaʊtʃ/",
+    "meaning": "ghế dài, trường kỷ, đi văng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 415,
+    "word": "table (n)",
+    "phonetic": "/ˈteɪbl/",
+    "meaning": "cái bàn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 416,
+    "word": "lamp (n)",
+    "phonetic": "/læmp/",
+    "meaning": "cái đèn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 417,
+    "word": "fan (n)",
+    "phonetic": "/fæn/",
+    "meaning": "cái quạt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 420,
+    "word": "bookshelf (n)",
+    "phonetic": "/ˈbʊkʃelf/",
+    "meaning": "kệ sách",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 421,
+    "word": "rug (n)",
+    "phonetic": "/rʌɡ/",
+    "meaning": "thảm trải sàn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 422,
+    "word": "cupboard (n)",
+    "phonetic": "/ˈkʌbərd/",
+    "meaning": "tủ bát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 423,
+    "word": "refrigerator (n)",
+    "phonetic": "/rɪˈfrɪdʒəreɪtər/",
+    "meaning": "tủ lạnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 424,
+    "word": "stove (n)",
+    "phonetic": "/stoʊv/",
+    "meaning": "bếp lò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 425,
+    "word": "oven (n)",
+    "phonetic": "/ˈʌv.ən/",
+    "meaning": "lò nướng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 426,
+    "word": "microwave (n)",
+    "phonetic": "/ˈmaɪkrəweɪv/",
+    "meaning": "lò vi sóng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 428,
+    "word": "blender (n)",
+    "phonetic": "/ˈblendər/",
+    "meaning": "máy xay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 429,
+    "word": "kettle (n)",
+    "phonetic": "/ˈket̬.əl/",
+    "meaning": "ấm đun nước",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 430,
+    "word": "tablecloth (n)",
+    "phonetic": "/ˈteɪblklɔːθ/",
+    "meaning": "khăn trải bàn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 431,
+    "word": "bed (n)",
+    "phonetic": "/bed/",
+    "meaning": "giường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 432,
+    "word": "mattress (n)",
+    "phonetic": "/ˈmætrəs/",
+    "meaning": "đệm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 433,
+    "word": "blanket (n)",
+    "phonetic": "/ˈblæŋkɪt/",
+    "meaning": "chăn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 434,
+    "word": "pillow (n)",
+    "phonetic": "/ˈpɪl.oʊ/",
+    "meaning": "gối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 435,
+    "word": "wardrobe (n)",
+    "phonetic": "/ˈwɔːr.droʊb/",
+    "meaning": "tủ quần áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 436,
+    "word": "nightstand (n)",
+    "phonetic": "/ˈnaɪtstænd/",
+    "meaning": "tủ đầu giường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 437,
+    "word": "hairdryer (n)",
+    "phonetic": "/ˈherdraɪər/",
+    "meaning": "máy sấy tóc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 438,
+    "word": "photo frame (n)",
+    "phonetic": "/ˈfəʊtəʊ freɪm/",
+    "meaning": "khung ảnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 439,
+    "word": "plant pot (n)",
+    "phonetic": "/ˈplænt pɑːt/",
+    "meaning": "chậu cây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 440,
+    "word": "vase (n)",
+    "phonetic": "/veɪs/",
+    "meaning": "lọ hoa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 441,
+    "word": "dressing table (n)",
+    "phonetic": "/ˈdresɪŋ teɪbl/",
+    "meaning": "bàn trang điểm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 442,
+    "word": "sink (n)",
+    "phonetic": "/sɪŋk/",
+    "meaning": "bồn rửa, chậu rửa mặt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 443,
+    "word": "mirror (n)",
+    "phonetic": "/ˈmɪrər/",
+    "meaning": "gương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 444,
+    "word": "shower (n)",
+    "phonetic": "/ˈʃaʊ.ɚ/",
+    "meaning": "vòi hoa sen",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 445,
+    "word": "toilet (n)",
+    "phonetic": "/ˈtɔɪ.lət/",
+    "meaning": "bồn cầu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 446,
+    "word": "bathtub (n)",
+    "phonetic": "/ˈbæθ.tʌb/",
+    "meaning": "bồn tắm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 447,
+    "word": "towel (n)",
+    "phonetic": "/ˈtaʊəl/",
+    "meaning": "khăn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 448,
+    "word": "broom (n)",
+    "phonetic": "/bruːm/",
+    "meaning": "chổi quét",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 449,
+    "word": "mop (n)",
+    "phonetic": "/mɑːp/",
+    "meaning": "chổi lau nhà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 450,
+    "word": "dustpan (n)",
+    "phonetic": "/ˈdʌst.pæn/",
+    "meaning": "xẻng hót rác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 451,
+    "word": "bucket (n)",
+    "phonetic": "/ˈbʌk.ɪt/",
+    "meaning": "xô",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 452,
+    "word": "trash can (n)",
+    "phonetic": "/ˈtræʃ ˌkæn/",
+    "meaning": "thùng rác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 453,
+    "word": "washing machine (n)",
+    "phonetic": "/ˈwɑː.ʃɪŋ məˌʃiːn/",
+    "meaning": "máy giặt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 454,
+    "word": "laundry basket (n)",
+    "phonetic": "/ˈlɑːn.dri ˌbæs.kɪt/",
+    "meaning": "giỏ đựng quần áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 455,
+    "word": "hanger (n)",
+    "phonetic": "/ˈhæŋər/",
+    "meaning": "móc treo quần áo VEGETABLE - RAU CỦ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 456,
+    "word": "bean (n)",
+    "phonetic": "/biːn/",
+    "meaning": "hạt đậu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 457,
+    "word": "pea (n)",
+    "phonetic": "/piː/",
+    "meaning": "đậu Hà Lan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 459,
+    "word": "carrot (n)",
+    "phonetic": "/ˈker.ət/",
+    "meaning": "củ cà rốt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 460,
+    "word": "corn (n)",
+    "phonetic": "/kɔːrn/",
+    "meaning": "ngô, bắp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 461,
+    "word": "cucumber (n)",
+    "phonetic": "/ˈkjuː.kʌm.bɚ/",
+    "meaning": "dưa chuột",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 462,
+    "word": "tomato (n)",
+    "phonetic": "/təˈmeɪ.t̬oʊ/",
+    "meaning": "quả cà chua",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 463,
+    "word": "garlic (n)",
+    "phonetic": "/ˈɡɑːr.lɪk/",
+    "meaning": "tỏi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 464,
+    "word": "onion (n)",
+    "phonetic": "/ˈʌn.jən/",
+    "meaning": "củ hành",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 465,
+    "word": "spring onion (n)",
+    "phonetic": "/ˌsprɪŋ ˈʌn.jən/",
+    "meaning": "hành lá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 466,
+    "word": "ginger (n)",
+    "phonetic": "/ˈdʒɪn.dʒɚ/",
+    "meaning": "củ gừng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 467,
+    "word": "turmeric (n)",
+    "phonetic": "/ˈtɜːrmərɪk/",
+    "meaning": "củ nghệ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 468,
+    "word": "potato (n)",
+    "phonetic": "/pəˈteɪ.t̬oʊ/",
+    "meaning": "khoai tây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 469,
+    "word": "sweet potato (n)",
+    "phonetic": "/ˌswiːt pəˈteɪ.t̬oʊ/",
+    "meaning": "khoai lang",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 470,
+    "word": "pumpkin (n)",
+    "phonetic": "/ˈpʌmp.kɪn/",
+    "meaning": "bí ngô, bí đỏ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 471,
+    "word": "asparagus (n)",
+    "phonetic": "/əˈsper.ə.ɡəs/",
+    "meaning": "măng tây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 472,
+    "word": "turnip (n)",
+    "phonetic": "/ˈtɝː.nɪp/",
+    "meaning": "củ cải trắng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 473,
+    "word": "beet (n)",
+    "phonetic": "/biːt/",
+    "meaning": "củ cải đường, củ dền",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 474,
+    "word": "cauliflower (n)",
+    "phonetic": "/ˈkɑː.ləˌflaʊ.ɚ/",
+    "meaning": "súp lơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 475,
+    "word": "broccoli (n)",
+    "phonetic": "/ˈbrɑː.kəl.i/",
+    "meaning": "bông cải xanh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 476,
+    "word": "eggplant (n)",
+    "phonetic": "/ˈeɡ.plænt/",
+    "meaning": "cà tím",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 477,
+    "word": "celery (n)",
+    "phonetic": "/ˈsel.ɚ.i/",
+    "meaning": "cần tây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 478,
+    "word": "leek (n)",
+    "phonetic": "/liːk/",
+    "meaning": "tỏi tây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 479,
+    "word": "lettuce (n)",
+    "phonetic": "/ˈlet̬.ɪs/",
+    "meaning": "rau diếp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 480,
+    "word": "mushroom (n)",
+    "phonetic": "/ˈmʌʃ.ruːm/",
+    "meaning": "nấm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 482,
+    "word": "bell pepper (n)",
+    "phonetic": "/ˈbel pepər/",
+    "meaning": "ớt chuông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 483,
+    "word": "spinach (n)",
+    "phonetic": "/ˈspɪn.ɪtʃ/",
+    "meaning": "rau chân vịt (bina)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 484,
+    "word": "herb (n)",
+    "phonetic": "/hɜːb/",
+    "meaning": "rau thơm (nói chung) DRINK - ĐỒ UỐNG",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 485,
+    "word": "water (n)",
+    "phonetic": "/ˈwɔːtər/",
+    "meaning": "nước",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 486,
+    "word": "lemonade (n)",
+    "phonetic": "/ˌleməˈneɪd/",
+    "meaning": "nước chanh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 487,
+    "word": "juice (n)",
+    "phonetic": "/dʒuːs/",
+    "meaning": "nước ép hoa quả",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 488,
+    "word": "smoothie (n)",
+    "phonetic": "/ˈsmuːði/",
+    "meaning": "sinh tố",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 490,
+    "word": "tea (n)",
+    "phonetic": "/ˈtiː/",
+    "meaning": "trà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 491,
+    "word": "milk (n)",
+    "phonetic": "/mɪlk/",
+    "meaning": "sữa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 492,
+    "word": "bubble tea (n)",
+    "phonetic": "/ˌbʌbl ˈtiː/",
+    "meaning": "trà sữa trân châu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 493,
+    "word": "hot chocolate (n)",
+    "phonetic": "/ˌhɑːt ˈtʃɑːk.lət/",
+    "meaning": "sô cô la nóng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 494,
+    "word": "beer (n)",
+    "phonetic": "/bɪr/",
+    "meaning": "bia",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 495,
+    "word": "wine (n)",
+    "phonetic": "/waɪn/",
+    "meaning": "rượu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 496,
+    "word": "yogurt (n)",
+    "phonetic": "/ˈjoʊ.ɡɚt/",
+    "meaning": "sữa chua",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 497,
+    "word": "ice cream (n)",
+    "phonetic": "/ˈaɪs ˌkriːm/",
+    "meaning": "kem FOOD - ĐỒ ĂN",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 498,
+    "word": "soup (n)",
+    "phonetic": "/suːp/",
+    "meaning": "món súp, món canh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 499,
+    "word": "salad (n)",
+    "phonetic": "/ˈsæl.əd/",
+    "meaning": "rau trộn, nộm rau",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 500,
+    "word": "bread (n)",
+    "phonetic": "/ˈbred/",
+    "meaning": "bánh mì",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 501,
+    "word": "sausage (n)",
+    "phonetic": "/ˈsɑː.sɪdʒ/",
+    "meaning": "xúc xích",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 502,
+    "word": "hot dog (n)",
+    "phonetic": "/ˈhɑːt ˌdɑːɡ/",
+    "meaning": "bánh mỳ kẹp xúc xích",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 503,
+    "word": "bacon (n)",
+    "phonetic": "/ˈbeɪ.kən/",
+    "meaning": "thịt xông khói",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 504,
+    "word": "ham (n)",
+    "phonetic": "/hæm/",
+    "meaning": "thịt giăm bông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 505,
+    "word": "egg (n)",
+    "phonetic": "/eɡ/",
+    "meaning": "trứng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 506,
+    "word": "pork (n)",
+    "phonetic": "/pɔːrk/",
+    "meaning": "thịt lợn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 507,
+    "word": "beef (n)",
+    "phonetic": "/biːf/",
+    "meaning": "thịt bò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 508,
+    "word": "chicken (n)",
+    "phonetic": "/ˈtʃɪkɪn/",
+    "meaning": "thịt gà",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 509,
+    "word": "duck (n)",
+    "phonetic": "/dʌk/",
+    "meaning": "thịt vịt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 510,
+    "word": "lamb (n)",
+    "phonetic": "/læm/",
+    "meaning": "thịt cừu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 511,
+    "word": "ribs (n)",
+    "phonetic": "/rɪbs/",
+    "meaning": "sườn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 512,
+    "word": "seafood (n)",
+    "phonetic": "/ˈsiːfuːd/",
+    "meaning": "hải sản",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 513,
+    "word": "salmon (n)",
+    "phonetic": "/ˈsæmən/",
+    "meaning": "cá hồi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 514,
+    "word": "tuna (n)",
+    "phonetic": "/ˈtuːnə/",
+    "meaning": "cá ngừ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 515,
+    "word": "shrimp (n)",
+    "phonetic": "/ʃrɪmp/",
+    "meaning": "tôm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 516,
+    "word": "pizza (n)",
+    "phonetic": "/ˈpiːt.sə/",
+    "meaning": "bánh pizza",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 518,
+    "word": "French fries (n)",
+    "phonetic": "/ˈfrentʃ ˈfrɑɪz/",
+    "meaning": "khoai tây chiên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 519,
+    "word": "hamburger (n)",
+    "phonetic": "/ˈhæmˌbɝː.ɡɚ/",
+    "meaning": "hăm bơ gơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 521,
+    "word": "sandwich (n)",
+    "phonetic": "/ˈsæn.wɪtʃ/",
+    "meaning": "bánh mỳ kẹp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 522,
+    "word": "pancake (n)",
+    "phonetic": "/ˈpæn.keɪk/",
+    "meaning": "bánh kếp, bánh xèo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 523,
+    "word": "noodle (n)",
+    "phonetic": "/ˈnuːdl/",
+    "meaning": "mỳ, bún",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 524,
+    "word": "pasta (n)",
+    "phonetic": "/ˈpɑːstə/",
+    "meaning": "mỳ Ý",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 525,
+    "word": "cheese (n)",
+    "phonetic": "/tʃiːz/",
+    "meaning": "pho mát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 526,
+    "word": "hot pot (n)",
+    "phonetic": "/ˈhɑːt ˌpɑːt/",
+    "meaning": "lẩu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 527,
+    "word": "porridge (n)",
+    "phonetic": "/ˈpɔːr.ɪdʒ/",
+    "meaning": "cháo BODY MOVEMENT - ĐỘNG TÁC",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 528,
+    "word": "walk (v)",
+    "phonetic": "/wɑːk/",
+    "meaning": "đi bộ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 529,
+    "word": "jog (v)",
+    "phonetic": "/dʒɑːɡ/",
+    "meaning": "đi bộ nhanh (tập thể dục)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 530,
+    "word": "run (v)",
+    "phonetic": "/rʌn/",
+    "meaning": "chạy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 531,
+    "word": "tiptoe (v)",
+    "phonetic": "/ˈtɪp.toʊ/",
+    "meaning": "đi nhón chân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 532,
+    "word": "jump (v)",
+    "phonetic": "/dʒʌmp/",
+    "meaning": "nhảy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 533,
+    "word": "leap (v)",
+    "phonetic": "/liːp/",
+    "meaning": "nhảy vọt, nhảy xa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 534,
+    "word": "stand (v)",
+    "phonetic": "/stænd/",
+    "meaning": "đứng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 535,
+    "word": "sit (v)",
+    "phonetic": "/sɪt/",
+    "meaning": "ngồi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 536,
+    "word": "lean (v)",
+    "phonetic": "/liːn/",
+    "meaning": "dựa, tựa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 537,
+    "word": "wave (v)",
+    "phonetic": "/weɪv/",
+    "meaning": "vẫy tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 538,
+    "word": "clap (v)",
+    "phonetic": "/klæp/",
+    "meaning": "vỗ tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 539,
+    "word": "point (v)",
+    "phonetic": "/pɔɪnt/",
+    "meaning": "chỉ, trỏ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 540,
+    "word": "catch (v)",
+    "phonetic": "/kætʃ/",
+    "meaning": "bắt, đỡ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 541,
+    "word": "stretch (v)",
+    "phonetic": "/stretʃ/",
+    "meaning": "vươn (vai..), ưỡn lưng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 542,
+    "word": "push (v)",
+    "phonetic": "/pʊʃ/",
+    "meaning": "đẩy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 543,
+    "word": "pull (v)",
+    "phonetic": "/pʊl/",
+    "meaning": "kéo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 544,
+    "word": "crawl (v)",
+    "phonetic": "/krɑːl/",
+    "meaning": "bò, trườn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 545,
+    "word": "bend (v)",
+    "phonetic": "/bend/",
+    "meaning": "cúi, uốn cong",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 546,
+    "word": "talk (v)",
+    "phonetic": "/tɑːk/",
+    "meaning": "nói chuyện, trò chuyện",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 547,
+    "word": "kiss (v)",
+    "phonetic": "/kɪs/",
+    "meaning": "hôn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 548,
+    "word": "laugh (v)",
+    "phonetic": "/læf/",
+    "meaning": "cười lớn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 549,
+    "word": "smile (v)",
+    "phonetic": "/smaɪl/",
+    "meaning": "cười",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 550,
+    "word": "frown (v)",
+    "phonetic": "/fraʊn/",
+    "meaning": "nhíu mày",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 552,
+    "word": "hit (v)",
+    "phonetic": "/hɪt/",
+    "meaning": "đánh, va phải",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 553,
+    "word": "punch (v)",
+    "phonetic": "/pʌntʃ/",
+    "meaning": "đấm, thọi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 554,
+    "word": "kick (v)",
+    "phonetic": "/kɪk/",
+    "meaning": "đá",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 555,
+    "word": "put down (v)",
+    "phonetic": "/pʊt daʊn/",
+    "meaning": "đặt xuống",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 556,
+    "word": "march (v)",
+    "phonetic": "/mɑːrtʃ/",
+    "meaning": "diễu hành, hành quân",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 557,
+    "word": "drop (v)",
+    "phonetic": "/drɑːp/",
+    "meaning": "làm rơi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 558,
+    "word": "break (v)",
+    "phonetic": "/breɪk/",
+    "meaning": "làm vỡ, bẻ gãy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 559,
+    "word": "drag (v)",
+    "phonetic": "/dræɡ/",
+    "meaning": "lôi, kéo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 560,
+    "word": "carry (v)",
+    "phonetic": "/ˈker.i/",
+    "meaning": "mang, vác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 561,
+    "word": "open (v)",
+    "phonetic": "/ˈoʊ.pən/",
+    "meaning": "mở ra",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 562,
+    "word": "lie down (v)",
+    "phonetic": "/laɪ daʊn/",
+    "meaning": "nằm xuống, ngả lưng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 563,
+    "word": "hold (v)",
+    "phonetic": "/hoʊld/",
+    "meaning": "nắm, giữ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 564,
+    "word": "lift (v)",
+    "phonetic": "/lɪft/",
+    "meaning": "nâng lên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 565,
+    "word": "throw (v)",
+    "phonetic": "/θroʊ/",
+    "meaning": "ném, quăng, vứt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 566,
+    "word": "trip (v)",
+    "phonetic": "/trɪp/",
+    "meaning": "ngáng chân, vấp ngã",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 567,
+    "word": "squat (v)",
+    "phonetic": "/skwɑːt/",
+    "meaning": "ngồi xổm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 568,
+    "word": "cartwheel (v)",
+    "phonetic": "/ˈkɑːrt.wiːl/",
+    "meaning": "nhào lộn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 569,
+    "word": "dive (v)",
+    "phonetic": "/daɪv/",
+    "meaning": "nhảy lao xuống nước, lặn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 570,
+    "word": "dance (v)",
+    "phonetic": "/dæns/",
+    "meaning": "nhảy múa, khiêu vũ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 571,
+    "word": "look (v)",
+    "phonetic": "/lʊk/",
+    "meaning": "nhìn, ngắm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 572,
+    "word": "kneel (v)",
+    "phonetic": "/niːl/",
+    "meaning": "quỳ gối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 573,
+    "word": "slip (v)",
+    "phonetic": "/slɪp/",
+    "meaning": "trượt, tuột CLOTHES - TRANG PHỤC",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 574,
+    "word": "clothes (n)",
+    "phonetic": "/kləʊðz/",
+    "meaning": "quần áo (nói chung)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 575,
+    "word": "t-shirt (n)",
+    "phonetic": "/ˈtiː.ʃɝːt/",
+    "meaning": "áo phông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 576,
+    "word": "shirt (n)",
+    "phonetic": "/ʃɝːt/",
+    "meaning": "áo sơ mi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 577,
+    "word": "sweater (n)",
+    "phonetic": "/ˈswet̬.ɚ/",
+    "meaning": "áo len dài tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 578,
+    "word": "vest (n)",
+    "phonetic": "/vest/",
+    "meaning": "áo gi-lê, áo vét",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 579,
+    "word": "suit (n)",
+    "phonetic": "/suːt/",
+    "meaning": "bộ com lê, Âu phục",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 580,
+    "word": "trench coat (n)",
+    "phonetic": "/ˈtrentʃ ˌkoʊt/",
+    "meaning": "áo choàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 581,
+    "word": "skirt (n)",
+    "phonetic": "/skɜːrt/",
+    "meaning": "chân váy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 583,
+    "word": "jeans (n)",
+    "phonetic": "/dʒiːnz/",
+    "meaning": "quần bò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 584,
+    "word": "shorts (n)",
+    "phonetic": "/ʃɔːrts/",
+    "meaning": "quần sóoc, quần đùi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 585,
+    "word": "accessories (n)",
+    "phonetic": "/əkˈsesəris/",
+    "meaning": "phụ kiện",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 586,
+    "word": "hat (n)",
+    "phonetic": "/hæt/",
+    "meaning": "mũ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 587,
+    "word": "glasses (n)",
+    "phonetic": "/ˈɡlæs·əz/",
+    "meaning": "kính mắt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 588,
+    "word": "sunglasses (n)",
+    "phonetic": "/ˈsʌnˌɡlæs.ɪz/",
+    "meaning": "kính râm, kính mát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 589,
+    "word": "earring (n)",
+    "phonetic": "/ˈɪrɪŋ/",
+    "meaning": "khuyên tai",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 590,
+    "word": "necklace (n)",
+    "phonetic": "/ˈnekləs/",
+    "meaning": "vòng cổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 591,
+    "word": "ring (n)",
+    "phonetic": "/rɪŋ/",
+    "meaning": "nhẫn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 592,
+    "word": "hairpin (n)",
+    "phonetic": "/ˈherpɪn/",
+    "meaning": "cặp tóc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 593,
+    "word": "tie (n)",
+    "phonetic": "/taɪ/",
+    "meaning": "cà vạt, nơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 594,
+    "word": "scarf (n)",
+    "phonetic": "/skɑːrf/",
+    "meaning": "khăn choàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 595,
+    "word": "gloves (n)",
+    "phonetic": "/ɡlʌv/",
+    "meaning": "găng tay, bao tay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 596,
+    "word": "watch (n)",
+    "phonetic": "/wɑːtʃ/",
+    "meaning": "đồng hồ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 597,
+    "word": "handbag (n)",
+    "phonetic": "/ˈhænd.bæɡ/",
+    "meaning": "túi xách",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 598,
+    "word": "wallet (n)",
+    "phonetic": "/ˈwɑː.lɪt/",
+    "meaning": "ví, bóp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 599,
+    "word": "belt (n)",
+    "phonetic": "/belt/",
+    "meaning": "thắt lưng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 600,
+    "word": "socks (n)",
+    "phonetic": "/sɑːk/",
+    "meaning": "tất, vớ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 601,
+    "word": "shoe (n)",
+    "phonetic": "/ʃuː/",
+    "meaning": "giày",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 602,
+    "word": "boot (n)",
+    "phonetic": "/buːt/",
+    "meaning": "ủng, giày cao cổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 603,
+    "word": "swimsuit (n)",
+    "phonetic": "/ˈswɪm.suːt/",
+    "meaning": "đồ tắm, đồ bơi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 604,
+    "word": "bra (n)",
+    "phonetic": "/brɑː/",
+    "meaning": "áo lót",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 605,
+    "word": "underwear (n)",
+    "phonetic": "/ˈʌndərwer/",
+    "meaning": "quần lót",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 606,
+    "word": "button (n)",
+    "phonetic": "/ˈbʌtn/",
+    "meaning": "khuy áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 607,
+    "word": "collar (n)",
+    "phonetic": "/ˈkɑːlər/",
+    "meaning": "cổ áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 608,
+    "word": "hem (n)",
+    "phonetic": "/hem/",
+    "meaning": "đường viền (áo, quần)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 609,
+    "word": "hood (n)",
+    "phonetic": "/hʊd/",
+    "meaning": "mũ áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 610,
+    "word": "pocket (n)",
+    "phonetic": "/ˈpɑːkɪt/",
+    "meaning": "túi áo, túi quần",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 611,
+    "word": "sleeve (n)",
+    "phonetic": "/sliːv/",
+    "meaning": "tay áo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 612,
+    "word": "strap (n)",
+    "phonetic": "/stræp/",
+    "meaning": "dây",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 613,
+    "word": "zip (n)",
+    "phonetic": "/zɪp/",
+    "meaning": "khóa kéo",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 615,
+    "word": "denim (n)",
+    "phonetic": "/ˈdenɪm/",
+    "meaning": "vải bò",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 616,
+    "word": "silk (n)",
+    "phonetic": "/sɪlk/",
+    "meaning": "lụa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 617,
+    "word": "corduroy (n)",
+    "phonetic": "/ˈkɔːrdərɔɪ/",
+    "meaning": "nhung",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 618,
+    "word": "cotton (n)",
+    "phonetic": "/ˈkɑːtn/",
+    "meaning": "vải sợi bông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 619,
+    "word": "linen (n)",
+    "phonetic": "/ˈlɪnɪn/",
+    "meaning": "vải lanh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 620,
+    "word": "khaki (n)",
+    "phonetic": "/ˈkɑːki/",
+    "meaning": "vải kaki",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 621,
+    "word": "jewel (n)",
+    "phonetic": "/ˈdʒuːəl/",
+    "meaning": "đá quý",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 622,
+    "word": "diamond (n)",
+    "phonetic": "/ˈdaɪmənd/",
+    "meaning": "kim cương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 623,
+    "word": "gold (n)",
+    "phonetic": "/ɡəʊld/",
+    "meaning": "vàng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 624,
+    "word": "silver (n)",
+    "phonetic": "/ˈsɪlvər/",
+    "meaning": "bạc FEELING - CẢM XÚC",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 625,
+    "word": "annoyed (adj)",
+    "phonetic": "/əˈnɔɪd/",
+    "meaning": "khó chịu, bực bội, bị làm phiền",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 626,
+    "word": "angry (adj)",
+    "phonetic": "/ˈæŋɡri/",
+    "meaning": "tức giận",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 627,
+    "word": "mad (adj)",
+    "phonetic": "/mæd/",
+    "meaning": "cực kì giận",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 628,
+    "word": "worried (adj)",
+    "phonetic": "/ˈwɜːrid/",
+    "meaning": "lo lắng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 629,
+    "word": "happy (adj)",
+    "phonetic": "/ˈhæpi/",
+    "meaning": "vui vẻ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 630,
+    "word": "sad (adj)",
+    "phonetic": "/sæd/",
+    "meaning": "buồn sầu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 631,
+    "word": "moody (adj)",
+    "phonetic": "/ˈmuːdi/",
+    "meaning": "buồn bực",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 632,
+    "word": "anxious (adj)",
+    "phonetic": "/ˈæŋk.ʃəs/",
+    "meaning": "lo âu, bồn chồn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 633,
+    "word": "grateful (adj)",
+    "phonetic": "/ˈɡreɪtfl/",
+    "meaning": "biết ơn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 634,
+    "word": "emotional (adj)",
+    "phonetic": "/ɪˈməʊʃənl/",
+    "meaning": "xúc động",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 635,
+    "word": "hungry (adj)",
+    "phonetic": "/ˈhʌŋɡri/",
+    "meaning": "đói",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 636,
+    "word": "thirsty (adj)",
+    "phonetic": "/ˈθɜːrsti/",
+    "meaning": "khát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 637,
+    "word": "astonished (adj)",
+    "phonetic": "/əˈstɑː.nɪʃt/",
+    "meaning": "kinh ngạc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 638,
+    "word": "uncomfortable (adj)",
+    "phonetic": "/ʌnˈkʌmftəbl/",
+    "meaning": "không thoải mái",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 639,
+    "word": "wonderful (adj)",
+    "phonetic": "/ˈwʌndərfl/",
+    "meaning": "tuyệt vời",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 640,
+    "word": "bored (adj)",
+    "phonetic": "/bɔːrd/",
+    "meaning": "buồn chán, tẻ nhạt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 641,
+    "word": "tired (adj)",
+    "phonetic": "/ˈtaɪərd/",
+    "meaning": "mệt mỏi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 642,
+    "word": "terrible (adj)",
+    "phonetic": "/ˈterəbl/",
+    "meaning": "tệ hại",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 643,
+    "word": "calm (adj)",
+    "phonetic": "/kɑːm/",
+    "meaning": "bình tĩnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 644,
+    "word": "unhappy (adj)",
+    "phonetic": "/ʌnˈhæpi/",
+    "meaning": "không vui",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 646,
+    "word": "delighted (adj)",
+    "phonetic": "/dɪˈlaɪ.t̬ɪd/",
+    "meaning": "vui mừng, mừng rỡ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 647,
+    "word": "desperate (adj)",
+    "phonetic": "/ˈdes.pɚ.ət/",
+    "meaning": "tuyệt vọng, chán trường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 648,
+    "word": "disturbed (adj)",
+    "phonetic": "/dɪˈstɝːbd/",
+    "meaning": "bối rối, lúng túng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 649,
+    "word": "doubtful (adj)",
+    "phonetic": "/ˈdaʊt.fəl/",
+    "meaning": "nghi hoặc, hoài nghi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 650,
+    "word": "down (adj)",
+    "phonetic": "/daʊn/",
+    "meaning": "nản lòng, chán nản",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 651,
+    "word": "drained (adj)",
+    "phonetic": "/dreɪnd/",
+    "meaning": "kiệt sức",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 652,
+    "word": "elated (adj)",
+    "phonetic": "/iˈleɪ.t̬ɪd/",
+    "meaning": "phẩn khởi, hân hoan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 653,
+    "word": "embarrassed (adj)",
+    "phonetic": "/ɪmˈber.əst/",
+    "meaning": "xấu hổ, ngại ngùng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 654,
+    "word": "empathetic (adj)",
+    "phonetic": "/ˌem.pəˈθet̬.ɪk/",
+    "meaning": "đồng cảm, xót xa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 655,
+    "word": "enlightened (adj)",
+    "phonetic": "/ɪnˈlaɪ.t̬ənd/",
+    "meaning": "được làm sáng tỏ, được thông suốt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 656,
+    "word": "jealous (adj)",
+    "phonetic": "/ˈdʒeləs/",
+    "meaning": "ghen tị",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 657,
+    "word": "envious (adj)",
+    "phonetic": "/ˈen.vi.əs/",
+    "meaning": "ghen tị, độ kỵ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 658,
+    "word": "excited (adj)",
+    "phonetic": "/ɪkˈsaɪ.t̬ɪd/",
+    "meaning": "hưng phấn, sôi nổi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 659,
+    "word": "excluded (adj)",
+    "phonetic": "/ɪkˈskluːd/",
+    "meaning": "bị bỏ rơi, cảm giác lạc lõng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 660,
+    "word": "exhausted (adj)",
+    "phonetic": "/ɪɡˈzɑː.stɪd/",
+    "meaning": "mệt lử",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 661,
+    "word": "foolish (adj)",
+    "phonetic": "/ˈfuː.lɪʃ/",
+    "meaning": "dại dột",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 662,
+    "word": "frustrated (adj)",
+    "phonetic": "/ˈfrʌs.treɪ.t̬ɪd/",
+    "meaning": "nản lòng, nản chí",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 663,
+    "word": "furious (adj)",
+    "phonetic": "/ˈfʊr.i.əs/",
+    "meaning": "giận dữ, điên tiết",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 664,
+    "word": "giddy (adj)",
+    "phonetic": "/ˈɡɪd.i/",
+    "meaning": "chóng mặt, choáng váng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 665,
+    "word": "glad (adj)",
+    "phonetic": "/ɡlæd/",
+    "meaning": "vui sướng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 666,
+    "word": "gleeful (adj)",
+    "phonetic": "/ˈɡliː.fəl/",
+    "meaning": "hân hoan, mừng rỡ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 667,
+    "word": "guarded (adj)",
+    "phonetic": "/ˈɡɑːr.dɪd/",
+    "meaning": "thận trọng, ý tứ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 668,
+    "word": "guilty (adj)",
+    "phonetic": "/ˈɡɪl.ti/",
+    "meaning": "mặc cảm, cảm thấy tội lỗi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 669,
+    "word": "hesitant (adj)",
+    "phonetic": "/ˈhez.ə.tənt/",
+    "meaning": "do dự, ngập ngừng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 670,
+    "word": "hollow (adj)",
+    "phonetic": "/ˈhɑː.loʊ/",
+    "meaning": "trống rỗng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 671,
+    "word": "horrified (adj)",
+    "phonetic": "/ˈhɔːr.ə.faɪd/",
+    "meaning": "khiếp sợ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 672,
+    "word": "humiliated (adj)",
+    "phonetic": "/hjuːˈmɪl.i.eɪ.t̬ɪd/",
+    "meaning": "cảm giác bẽ mặt, xấu hổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 673,
+    "word": "indifferent (adj)",
+    "phonetic": "/ɪnˈdɪf.ɚ.ənt/",
+    "meaning": "dửng dưng, lãnh đạm, thờ ơ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 674,
+    "word": "intense (adj)",
+    "phonetic": "/ɪnˈtens/",
+    "meaning": "mãnh liệt, nồng nhiệt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 675,
+    "word": "interested (adj)",
+    "phonetic": "/ˈɪn.trɪ.stɪd/",
+    "meaning": "hứng thú, thích thú",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 677,
+    "word": "jittery (adj)",
+    "phonetic": "/ˈdʒɪt̬.ɚ.i/",
+    "meaning": "bồn chồn, dễ bị kích động",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 678,
+    "word": "jolly (adj)",
+    "phonetic": "/ˈdʒɑː.li/",
+    "meaning": "vui tươi, nhộn nhịp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 679,
+    "word": "joyful (adj)",
+    "phonetic": "/ˈdʒɔɪ.fəl/",
+    "meaning": "hân hoan, vui mừng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 680,
+    "word": "keen (adj)",
+    "phonetic": "/kiːn/",
+    "meaning": "say mê, ham thích",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 681,
+    "word": "lonely (adj)",
+    "phonetic": "/ˈloʊn.li/",
+    "meaning": "cô đơn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 682,
+    "word": "longing (adj)",
+    "phonetic": "/ˈlɑːŋ.ɪŋ/",
+    "meaning": "thèm khát, thèm muốn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 683,
+    "word": "lost (adj)",
+    "phonetic": "/lɑːst/",
+    "meaning": "lạc lõng, mất phương hướng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 684,
+    "word": "lucky (adj)",
+    "phonetic": "/ˈlʌk.i/",
+    "meaning": "may mắn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 685,
+    "word": "melancholic (adj)",
+    "phonetic": "/ˌmel.əŋˈkɑː.lɪk/",
+    "meaning": "u sầu, buồn bã",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 686,
+    "word": "miserable (adj)",
+    "phonetic": "/ˈmɪz.ɚ.ə.bəl/",
+    "meaning": "khốn khổ, đáng thương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 687,
+    "word": "mortified (adj)",
+    "phonetic": "/ˈmɔːr.t̬ə.faɪd/",
+    "meaning": "xấu hổ, ái ngại",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 688,
+    "word": "mournful (adj)",
+    "phonetic": "/ˈmɔːrn.fəl/",
+    "meaning": "buồn rầu, ảm đạm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 689,
+    "word": "nasty (adj)",
+    "phonetic": "/ˈnæs.ti/",
+    "meaning": "tục tĩu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 690,
+    "word": "needy (adj)",
+    "phonetic": "/ˈniː.di/",
+    "meaning": "thiếu thốn (về mặt tình cảm)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 691,
+    "word": "nervous (adj)",
+    "phonetic": "/ˈnɝː.vəs/",
+    "meaning": "lo lắng, bồn chồn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 692,
+    "word": "numb (adj)",
+    "phonetic": "/nʌm/",
+    "meaning": "lặng người",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 693,
+    "word": "obsessed (adj)",
+    "phonetic": "/əbˈsest/",
+    "meaning": "ám ảnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 694,
+    "word": "offended (adj)",
+    "phonetic": "/əˈfendɪd   phật ý, cảm thấy bị xúc phạm 695   optimistic (adj)   /",
+    "meaning": "ˌɑːp.təˈmɪs.tɪk/ lạc quan, yêu đời",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 696,
+    "word": "overwhelmed (adj)",
+    "phonetic": "/ˌoʊ.vɚˈwelmd/",
+    "meaning": "choáng ngợp, quá tải",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 697,
+    "word": "passionate (adj)",
+    "phonetic": "/ˈpæʃ.ən.ət/",
+    "meaning": "nồng nhiệt, thiết tha",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 698,
+    "word": "peaceful (adj)",
+    "phonetic": "/ˈpiːs.fəl/",
+    "meaning": "thanh thản, bình yên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 699,
+    "word": "positive (adj)",
+    "phonetic": "/ˈpɑː.zə.t̬ɪv/",
+    "meaning": "tích cực, lạc quan",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 700,
+    "word": "proud (adj)",
+    "phonetic": "/praʊd/",
+    "meaning": "hãnh diện, tự hào",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 701,
+    "word": "regretful (adj)",
+    "phonetic": "/rɪˈɡret.fəl/",
+    "meaning": "hối tiếc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 702,
+    "word": "relaxed (adj)",
+    "phonetic": "/rɪˈlækst/",
+    "meaning": "thư giãn, thoải mái",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 703,
+    "word": "relieved (adj)",
+    "phonetic": "/rɪˈliːvd/",
+    "meaning": "nhẹ nhõm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 704,
+    "word": "satisfied (adj)",
+    "phonetic": "/ˈsæt̬.ɪs.faɪd/",
+    "meaning": "thỏa mãn, hài lòng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 705,
+    "word": "self-conscious (adj)",
+    "phonetic": "/ˌselfˈkɑːn.ʃəs/",
+    "meaning": "e dè, ngượng nghịu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 706,
+    "word": "selfish (adj)",
+    "phonetic": "/ˈsel.fɪʃ/",
+    "meaning": "ích kỷ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 707,
+    "word": "sensitive (adj)",
+    "phonetic": "/ˈsen.sə.t̬ɪv/",
+    "meaning": "nhạy cảm, dễ tổn thương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 709,
+    "word": "shock (adj)",
+    "phonetic": "/ʃɑːkt/",
+    "meaning": "bất ngờ, sốc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 710,
+    "word": "speechless (adj)",
+    "phonetic": "/ˈspiːtʃ.ləs/",
+    "meaning": "câm nín",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 711,
+    "word": "stressed (adj)",
+    "phonetic": "/strest/",
+    "meaning": "căng thẳng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 712,
+    "word": "stunned (adj)",
+    "phonetic": "/stʌnd/",
+    "meaning": "sững sờ, bất ngờ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 713,
+    "word": "surprised (adj)",
+    "phonetic": "/sɚˈpraɪzd/",
+    "meaning": "bất ngờ, ngạc nhiên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 714,
+    "word": "thankful (adj)",
+    "phonetic": "/ˈθæŋk.fəl/",
+    "meaning": "biết ơn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 715,
+    "word": "upbeat (adj)",
+    "phonetic": "/ˈʌp.biːt/",
+    "meaning": "vui vẻ, phấn chấn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 716,
+    "word": "uptight (adj)",
+    "phonetic": "/ˌʌpˈtaɪt/",
+    "meaning": "căng thẳng, lo lắng COOKING - NẤU ĂN",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 717,
+    "word": "ingredient (n)",
+    "phonetic": "/ɪnˈɡriːdiənt/",
+    "meaning": "nguyên liệu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 718,
+    "word": "recipe (n)",
+    "phonetic": "/ˈresəpi/",
+    "meaning": "công thức nấu ăn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 719,
+    "word": "cooking oil (n)",
+    "phonetic": "/ˈkʊkɪŋ ɔɪl/",
+    "meaning": "dầu ăn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 720,
+    "word": "salt (n)",
+    "phonetic": "/sɔːlt/",
+    "meaning": "muối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 721,
+    "word": "sugar (n)",
+    "phonetic": "/ˈʃʊɡər/",
+    "meaning": "đường",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 722,
+    "word": "vinegar (n)",
+    "phonetic": "/ˈvɪnɪɡər/",
+    "meaning": "dấm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 723,
+    "word": "chili sauce (n)",
+    "phonetic": "/ˈtʃɪli sɔːs/",
+    "meaning": "tương ớt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 724,
+    "word": "ketchup (n)",
+    "phonetic": "/ˈketʃəp/",
+    "meaning": "tương cà chua",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 725,
+    "word": "raw (adj)",
+    "phonetic": "/rɑː/",
+    "meaning": "sống",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 726,
+    "word": "wash (v)",
+    "phonetic": "/wɑːʃ/",
+    "meaning": "rửa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 727,
+    "word": "peel (v)",
+    "phonetic": "/piːl/",
+    "meaning": "bóc vỏ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 728,
+    "word": "chop (v)",
+    "phonetic": "/tʃɑːp/",
+    "meaning": "chặt, bổ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 730,
+    "word": "filet (v)",
+    "phonetic": "/ˈfɪl.ɪt/",
+    "meaning": "róc xương, lạng thịt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 731,
+    "word": "slice (v)",
+    "phonetic": "/slaɪs/",
+    "meaning": "thái",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 732,
+    "word": "dice (v)",
+    "phonetic": "/daɪs/",
+    "meaning": "thái hạt lựu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 733,
+    "word": "mince (v)",
+    "phonetic": "/mɪns/",
+    "meaning": "băm, xay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 734,
+    "word": "mash (v)",
+    "phonetic": "/mæʃ/",
+    "meaning": "nghiền, làm nát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 735,
+    "word": "blend (v)",
+    "phonetic": "/blend/",
+    "meaning": "trộn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 736,
+    "word": "boil (v)",
+    "phonetic": "/bɔɪl/",
+    "meaning": "đun sôi, luộc",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 737,
+    "word": "steam (v)",
+    "phonetic": "/stiːm/",
+    "meaning": "hấp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 738,
+    "word": "stew (v)",
+    "phonetic": "/stuː/",
+    "meaning": "hầm, ninh nhừ",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 740,
+    "word": "stir (v)",
+    "phonetic": "/stɝː/",
+    "meaning": "xào, quấy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 741,
+    "word": "fry (v)",
+    "phonetic": "/fraɪ/",
+    "meaning": "rán",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 742,
+    "word": "bake (v)",
+    "phonetic": "/beɪk/",
+    "meaning": "nướng (bánh)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 743,
+    "word": "roast (v)",
+    "phonetic": "/roʊst/",
+    "meaning": "quay, nướng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 744,
+    "word": "grill (v)",
+    "phonetic": "/ɡrɪl/",
+    "meaning": "nướng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 745,
+    "word": "steep (v)",
+    "phonetic": "/stiːp/",
+    "meaning": "ngâm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 746,
+    "word": "dip (v)",
+    "phonetic": "/dɪp/",
+    "meaning": "nhúng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 747,
+    "word": "brew (v)",
+    "phonetic": "/bruː/",
+    "meaning": "ủ (trà, rượu...)",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 748,
+    "word": "ferment (v)",
+    "phonetic": "/fɚˈment/",
+    "meaning": "lên men",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 749,
+    "word": "chill (v)",
+    "phonetic": "/tʃɪl/",
+    "meaning": "làm tan giá, rã đông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 750,
+    "word": "cool (v)",
+    "phonetic": "/kuːl/",
+    "meaning": "để nguội",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 751,
+    "word": "melt (v)",
+    "phonetic": "/melt/",
+    "meaning": "làm tan chảy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 752,
+    "word": "flavor (v)",
+    "phonetic": "/ˈfleɪ.vɚ/",
+    "meaning": "tẩm gia vị",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 753,
+    "word": "marinate (v)",
+    "phonetic": "/ˈmer.ə.neɪt/",
+    "meaning": "ướp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 754,
+    "word": "salt (v)",
+    "phonetic": "/sɑːlt/",
+    "meaning": "ướp gia vị, rắc muối",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 755,
+    "word": "garnish (v)",
+    "phonetic": "/ˈɡɑːr.nɪʃ/",
+    "meaning": "trang trí, bày biện",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 756,
+    "word": "press (v)",
+    "phonetic": "/pres/",
+    "meaning": "ấn, ép",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 757,
+    "word": "refrigerate (v)",
+    "phonetic": "/rɪˈfrɪdʒ.ə.reɪt/",
+    "meaning": "ướp lạnh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 758,
+    "word": "roll (v)",
+    "phonetic": "/roʊl/",
+    "meaning": "cuộn VEHICLES - PHƯƠNG TIỆN GIAO THÔNG",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 759,
+    "word": "automobile car (n)",
+    "phonetic": "/ˈɔːtəməbiːl/",
+    "meaning": "/kɑːr/ xe ô tô",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 760,
+    "word": "taxi (n)",
+    "phonetic": "/ˈtæk.si/",
+    "meaning": "xe taxi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 761,
+    "word": "bus (n)",
+    "phonetic": "/bʌs/",
+    "meaning": "xe buýt",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 762,
+    "word": "bicycle bike (n)",
+    "phonetic": "/ˈbaɪ.sə.kəl/",
+    "meaning": "/baɪk/ xe đạp",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 763,
+    "word": "motorcycle motorbike (n)",
+    "phonetic": "/ˈməʊtərsaɪkl/",
+    "meaning": "/ˈməʊtərbaɪk/ xe máy",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 764,
+    "word": "airplane plane (n)",
+    "phonetic": "/ˈer.pleɪn/",
+    "meaning": "/pleɪn/ máy bay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 765,
+    "word": "helicopter (n)",
+    "phonetic": "/ˈhel.əˌkɑːp.tɚ/",
+    "meaning": "trực thăng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 766,
+    "word": "train (n)",
+    "phonetic": "/treɪn/",
+    "meaning": "tàu hỏa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 768,
+    "word": "boat (n)",
+    "phonetic": "/boʊt/",
+    "meaning": "thuyền",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 769,
+    "word": "ship (n)",
+    "phonetic": "/ʃɪp/",
+    "meaning": "tàu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 770,
+    "word": "van (n)",
+    "phonetic": "/væn/",
+    "meaning": "xe van",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 771,
+    "word": "police car (n)",
+    "phonetic": "/pəˈliːs ˌkɑːr/",
+    "meaning": "xe cảnh sát",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 772,
+    "word": "ambulance (n)",
+    "phonetic": "/ˈæm.bjə.ləns/",
+    "meaning": "xe cứu thương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 773,
+    "word": "scooter (n)",
+    "phonetic": "/ˈskuːtər/",
+    "meaning": "xe tay ga",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 774,
+    "word": "truck (n)",
+    "phonetic": "/trʌk/",
+    "meaning": "xe tải",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 775,
+    "word": "yacht (n)",
+    "phonetic": "/jɑːt/",
+    "meaning": "du thuyền",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 776,
+    "word": "canoe (n)",
+    "phonetic": "/kəˈnuː/",
+    "meaning": "ca nô",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 777,
+    "word": "fire engine (n)",
+    "phonetic": "/ˈfaɪər endʒɪn/",
+    "meaning": "xe cứu hỏa",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 778,
+    "word": "hot-air balloon (n)",
+    "phonetic": "/ˌhɑːt ˈer bəluːn/",
+    "meaning": "khinh khí cầu",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 779,
+    "word": "submarine (n)",
+    "phonetic": "/ˌsʌbməˈriːn/",
+    "meaning": "tàu ngầm TRAVEL - DU LỊCH",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 780,
+    "word": "travel (v)",
+    "phonetic": "/ˈtræv.əl/",
+    "meaning": "đi du lịch",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 781,
+    "word": "depart (v)",
+    "phonetic": "/dɪˈpɑːrt/",
+    "meaning": "khởi hành",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 782,
+    "word": "leave (v)",
+    "phonetic": "/liːv/",
+    "meaning": "rời đi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 783,
+    "word": "arrive (v)",
+    "phonetic": "/əˈraɪv/",
+    "meaning": "đến nơi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 784,
+    "word": "airport (n)",
+    "phonetic": "/ˈer.pɔːrt/",
+    "meaning": "sân bay",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 785,
+    "word": "take off (v)",
+    "phonetic": "/ˈteɪk ɔːf/",
+    "meaning": "cất cánh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 786,
+    "word": "land (v)",
+    "phonetic": "/lænd/",
+    "meaning": "hạ cánh",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 787,
+    "word": "check in (v)",
+    "phonetic": "/ˈtʃek ɪn/",
+    "meaning": "đăng ký phòng ở khách sạn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 788,
+    "word": "check out (v)",
+    "phonetic": "/ˈtʃek aʊt/",
+    "meaning": "trả phòng khách sạn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 789,
+    "word": "visit (v)",
+    "phonetic": "/ˈvɪz.ɪt/",
+    "meaning": "thăm viếng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 790,
+    "word": "destination (n)",
+    "phonetic": "/ˌdes.təˈneɪ.ʃən/",
+    "meaning": "điểm đến",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 791,
+    "word": "passenger (n)",
+    "phonetic": "/ˈpæs.ən.dʒɚ/",
+    "meaning": "hành khách",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 792,
+    "word": "tourist (n)",
+    "phonetic": "/ˈtʊrɪst/",
+    "meaning": "khách du lịch",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 793,
+    "word": "cruise (n)",
+    "phonetic": "/kruːz/",
+    "meaning": "chuyến đi chơi trên biển",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 794,
+    "word": "route (n)",
+    "phonetic": "/ruːt/",
+    "meaning": "/raʊt/ lộ trình",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 795,
+    "word": "tour (n)",
+    "phonetic": "/tʊr/",
+    "meaning": "chuyến đi du lịch",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 796,
+    "word": "trip (n)",
+    "phonetic": "/trɪp/",
+    "meaning": "cuộc du ngoạn, dạo chơi",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 797,
+    "word": "journey (n)",
+    "phonetic": "/ˈdʒɝː.ni/",
+    "meaning": "hành trình",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 799,
+    "word": "ticket (n)",
+    "phonetic": "/ˈtɪkɪt/",
+    "meaning": "vé",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 800,
+    "word": "visa (n)",
+    "phonetic": "/ˈviːzə/",
+    "meaning": "thị thực",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 821,
+    "word": "Economics (n)",
+    "phonetic": "/ˌiːkəˈnɑːmɪks/",
+    "meaning": "kinh tế học SHAPE - HÌNH KHỐI",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 822,
+    "word": "line (n)",
+    "phonetic": "/laɪn/",
+    "meaning": "đường thẳng",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 823,
+    "word": "circle (n)",
+    "phonetic": "/ˈsɝː.kəl/",
+    "meaning": "hình tròn",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 824,
+    "word": "triangle (n)",
+    "phonetic": "/ˈtraɪ.æŋ.ɡəl/",
+    "meaning": "hình tam giác",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 825,
+    "word": "rectangle (n)",
+    "phonetic": "/ˈrek.tæŋ.ɡəl/",
+    "meaning": "hình chữ nhật",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 826,
+    "word": "square (n)",
+    "phonetic": "/skwer/",
+    "meaning": "hình vuông",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 828,
+    "word": "heart (n)",
+    "phonetic": "/hɑːrt/",
+    "meaning": "hình trái tim",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 829,
+    "word": "star (n)",
+    "phonetic": "/stɑːr/",
+    "meaning": "hình ngôi sao",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 830,
+    "word": "diamond (n)",
+    "phonetic": "/ˈdaɪ.mənd/",
+    "meaning": "hình kim cương",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 831,
+    "word": "ellipse (n)",
+    "phonetic": "/iˈlɪps/",
+    "meaning": "hình Elip",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 832,
+    "word": "oval (n)",
+    "phonetic": "/ˈoʊ.vəl/",
+    "meaning": "hình trái xoan, hình bầu dục",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 833,
+    "word": "curve (n)",
+    "phonetic": "/wedʒ/",
+    "meaning": "đường cong",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 834,
+    "word": "arrow (n)",
+    "phonetic": "/ˈer.oʊ/",
+    "meaning": "hình mũi tên",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 835,
+    "word": "cross (n)",
+    "phonetic": "/krɑːs/",
+    "meaning": "hình chữ thập",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 836,
+    "word": "crescent (n)",
+    "phonetic": "/ˈkres.ənt/",
+    "meaning": "hình lưỡi liềm",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 837,
+    "word": "cone (n)",
+    "phonetic": "/koʊn/",
+    "meaning": "hình nón",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 838,
+    "word": "cube (n)",
+    "phonetic": "/kjuːb/",
+    "meaning": "hình lập phương SPORTS - THỂ THAO",
+    "category": "GENERAL"
+  },
+  {
+    "stt": 840,
+    "word": "American football (n)",
+    "phonetic": "/əˌmerɪkən ˈfʊtbɔːl/",
+    "meaning": "bóng bầu dục",
+    "category": "THAO"
+  },
+  {
+    "stt": 841,
+    "word": "volleyball (n)",
+    "phonetic": "/ˈvɑːlibɔːl/",
+    "meaning": "bóng chuyền",
+    "category": "THAO"
+  },
+  {
+    "stt": 842,
+    "word": "swimming (n)",
+    "phonetic": "/ˈswɪmɪŋ/",
+    "meaning": "bơi lội",
+    "category": "THAO"
+  },
+  {
+    "stt": 843,
+    "word": "tennis (n)",
+    "phonetic": "/ˈtenɪs/",
+    "meaning": "quần vợt",
+    "category": "THAO"
+  },
+  {
+    "stt": 844,
+    "word": "badminton (n)",
+    "phonetic": "/ˈbædmɪntən/",
+    "meaning": "cầu lông",
+    "category": "THAO"
+  },
+  {
+    "stt": 845,
+    "word": "basketball (n)",
+    "phonetic": "/ˈbæskɪtbɔːl/",
+    "meaning": "bóng rổ",
+    "category": "THAO"
+  },
+  {
+    "stt": 846,
+    "word": "table tennis (n)",
+    "phonetic": "/ˈteɪbl tenɪs/",
+    "meaning": "bóng bàn",
+    "category": "THAO"
+  },
+  {
+    "stt": 847,
+    "word": "baseball (n)",
+    "phonetic": "/ˈbeɪsbɔːl/",
+    "meaning": "bóng chày",
+    "category": "THAO"
+  },
+  {
+    "stt": 848,
+    "word": "athletics (n)",
+    "phonetic": "/æθˈletɪks/",
+    "meaning": "điền kinh",
+    "category": "THAO"
+  },
+  {
+    "stt": 849,
+    "word": "martial arts (n)",
+    "phonetic": "/ˌmɑːrʃl ˈɑːrt/",
+    "meaning": "võ thuật",
+    "category": "THAO"
+  },
+  {
+    "stt": 850,
+    "word": "archery (n)",
+    "phonetic": "/ˈɑːrtʃəri/",
+    "meaning": "bắn cung",
+    "category": "THAO"
+  },
+  {
+    "stt": 851,
+    "word": "cycling (n)",
+    "phonetic": "/ˈsaɪklɪŋ/",
+    "meaning": "đua xe đạp",
+    "category": "THAO"
+  },
+  {
+    "stt": 852,
+    "word": "boxing (n)",
+    "phonetic": "/ˈbɑːksɪŋ/",
+    "meaning": "quyền anh",
+    "category": "THAO"
+  },
+  {
+    "stt": 853,
+    "word": "diving (n)",
+    "phonetic": "/ˈdaɪvɪŋ/",
+    "meaning": "nhảy cầu, lặn",
+    "category": "THAO"
+  },
+  {
+    "stt": 854,
+    "word": "skiing (n)",
+    "phonetic": "/ˈskiːɪŋ/",
+    "meaning": "trượt tuyết",
+    "category": "THAO"
+  },
+  {
+    "stt": 855,
+    "word": "figure skating (n)",
+    "phonetic": "/ˈfɪɡjər skeɪtɪŋ/",
+    "meaning": "trượt băng nghệ thuật",
+    "category": "THAO"
+  },
+  {
+    "stt": 856,
+    "word": "skateboarding (n)",
+    "phonetic": "/ˈskeɪtbɔːrdɪŋ/",
+    "meaning": "trượt ván",
+    "category": "THAO"
+  },
+  {
+    "stt": 869,
+    "word": "Morning (n)",
+    "phonetic": "/ˈmɔːrnɪŋ/",
+    "meaning": "Buổi sáng",
+    "category": "THAO"
+  },
+  {
+    "stt": 900,
+    "word": "Winter (n)",
+    "phonetic": "/ˈwɪntər/",
+    "meaning": "Mùa Đông PLANTS - CÂY VÀ HOA",
+    "category": "THAO"
+  },
+  {
+    "stt": 901,
+    "word": "rose (n)",
+    "phonetic": "/rəʊz/",
+    "meaning": "hoa hồng",
+    "category": "THAO"
+  },
+  {
+    "stt": 902,
+    "word": "sunflower (n)",
+    "phonetic": "/ˈsʌnflaʊər/",
+    "meaning": "hoa hướng dương",
+    "category": "THAO"
+  },
+  {
+    "stt": 903,
+    "word": "lily (n)",
+    "phonetic": "/ˈlɪli/",
+    "meaning": "hoa huệ tây",
+    "category": "THAO"
+  },
+  {
+    "stt": 904,
+    "word": "orchid (n)",
+    "phonetic": "/ˈɔːrkɪd/",
+    "meaning": "hoa lan",
+    "category": "THAO"
+  },
+  {
+    "stt": 905,
+    "word": "daisy (n)",
+    "phonetic": "/ˈdeɪzi/",
+    "meaning": "hoa cúc",
+    "category": "THAO"
+  },
+  {
+    "stt": 906,
+    "word": "dandelion (n)",
+    "phonetic": "/ˈdændɪlaɪən/",
+    "meaning": "hoa bồ công anh",
+    "category": "THAO"
+  },
+  {
+    "stt": 907,
+    "word": "tulip (n)",
+    "phonetic": "/ˈtuːlɪp/",
+    "meaning": "hoa tulip",
+    "category": "THAO"
+  },
+  {
+    "stt": 908,
+    "word": "water lily (n)",
+    "phonetic": "/ˈwɔːtər lɪli/",
+    "meaning": "hoa súng",
+    "category": "THAO"
+  },
+  {
+    "stt": 909,
+    "word": "lotus (n)",
+    "phonetic": "/ˈləʊtəs/",
+    "meaning": "hoa sen",
+    "category": "THAO"
+  },
+  {
+    "stt": 910,
+    "word": "hydrangea (n)",
+    "phonetic": "/haɪˈdreɪndʒə/",
+    "meaning": "hoa cẩm tú cầu",
+    "category": "THAO"
+  },
+  {
+    "stt": 911,
+    "word": "jasmine (n)",
+    "phonetic": "/ˈdʒæzmɪn/",
+    "meaning": "hoa nhài",
+    "category": "THAO"
+  },
+  {
+    "stt": 912,
+    "word": "camellia (n)",
+    "phonetic": "/kəˈmiːliə/",
+    "meaning": "hoa trà",
+    "category": "THAO"
+  },
+  {
+    "stt": 913,
+    "word": "peony (n)",
+    "phonetic": "/ˈpiːəni/",
+    "meaning": "hoa mẫu đơn",
+    "category": "THAO"
+  },
+  {
+    "stt": 914,
+    "word": "carnation (n)",
+    "phonetic": "/kɑːrˈneɪʃn/",
+    "meaning": "hoa cẩm chướng",
+    "category": "THAO"
+  },
+  {
+    "stt": 915,
+    "word": "tree (n)",
+    "phonetic": "/triː/",
+    "meaning": "cây",
+    "category": "THAO"
+  },
+  {
+    "stt": 916,
+    "word": "leaf (n)",
+    "phonetic": "/liːf/",
+    "meaning": "lá",
+    "category": "THAO"
+  },
+  {
+    "stt": 917,
+    "word": "flower (n)",
+    "phonetic": "/ˈflaʊər/",
+    "meaning": "hoa",
+    "category": "THAO"
+  },
+  {
+    "stt": 919,
+    "word": "pollen (n)",
+    "phonetic": "/ˈpɑːlən/",
+    "meaning": "phấn hoa",
+    "category": "THAO"
+  },
+  {
+    "stt": 920,
+    "word": "thorn (n)",
+    "phonetic": "/θɔːrn/",
+    "meaning": "gai",
+    "category": "THAO"
+  },
+  {
+    "stt": 921,
+    "word": "bud (n)",
+    "phonetic": "/bʌd/",
+    "meaning": "chồi",
+    "category": "THAO"
+  },
+  {
+    "stt": 922,
+    "word": "branch (n)",
+    "phonetic": "/bræntʃ/",
+    "meaning": "cành cây",
+    "category": "THAO"
+  },
+  {
+    "stt": 923,
+    "word": "sap (n)",
+    "phonetic": "/sæp/",
+    "meaning": "nhựa cây",
+    "category": "THAO"
+  },
+  {
+    "stt": 924,
+    "word": "root (n)",
+    "phonetic": "/ruːt/",
+    "meaning": "rễ cây",
+    "category": "THAO"
+  },
+  {
+    "stt": 925,
+    "word": "bark (n)",
+    "phonetic": "/bɑːrk/",
+    "meaning": "vỏ cây",
+    "category": "THAO"
+  },
+  {
+    "stt": 926,
+    "word": "cactus (n)",
+    "phonetic": "/ˈkæktəs/",
+    "meaning": "xương rồng",
+    "category": "THAO"
+  },
+  {
+    "stt": 927,
+    "word": "succulent (n)",
+    "phonetic": "/ˈsʌkjələnt/",
+    "meaning": "sen đá",
+    "category": "THAO"
+  },
+  {
+    "stt": 928,
+    "word": "aloe vera (n)",
+    "phonetic": "/ˌæləʊ ˈvɪrə/",
+    "meaning": "nha đam",
+    "category": "THAO"
+  },
+  {
+    "stt": 929,
+    "word": "bamboo (n)",
+    "phonetic": "/ˌbæmˈbuː/",
+    "meaning": "cây tre",
+    "category": "THAO"
+  },
+  {
+    "stt": 930,
+    "word": "sugar cane (n)",
+    "phonetic": "/ˈʃʊɡər keɪn/",
+    "meaning": "cây mía",
+    "category": "THAO"
+  },
+  {
+    "stt": 931,
+    "word": "pine (n)",
+    "phonetic": "/paɪn/",
+    "meaning": "cây thông",
+    "category": "THAO"
+  },
+  {
+    "stt": 932,
+    "word": "willow (n)",
+    "phonetic": "/ˈwɪləʊ/",
+    "meaning": "cây liễu",
+    "category": "THAO"
+  },
+  {
+    "stt": 933,
+    "word": "maple (n)",
+    "phonetic": "/ˈmeɪpl/",
+    "meaning": "cây phong WEATHER - THỜI TIẾT",
+    "category": "THAO"
+  },
+  {
+    "stt": 934,
+    "word": "weather (n)",
+    "phonetic": "/ˈweðər/",
+    "meaning": "thời tiết",
+    "category": "THAO"
+  },
+  {
+    "stt": 935,
+    "word": "weather forecast (n)",
+    "phonetic": "/ˈweðər fɔːrkæst/",
+    "meaning": "dự báo thời tiết",
+    "category": "THAO"
+  },
+  {
+    "stt": 936,
+    "word": "windy (adj)",
+    "phonetic": "/ˈwɪndi/",
+    "meaning": "nhiều gió",
+    "category": "THAO"
+  },
+  {
+    "stt": 937,
+    "word": "haze (n)",
+    "phonetic": "/heɪz/",
+    "meaning": "màn sương mỏng, thường gây ra bởi sức nóng",
+    "category": "THAO"
+  },
+  {
+    "stt": 938,
+    "word": "breeze (n)",
+    "phonetic": "/briːz/",
+    "meaning": "gió nhẹ",
+    "category": "THAO"
+  },
+  {
+    "stt": 939,
+    "word": "gloomy (adj)",
+    "phonetic": "/ˈɡluːmi/",
+    "meaning": "trời ảm đạm",
+    "category": "THAO"
+  },
+  {
+    "stt": 940,
+    "word": "cloudy (adj)",
+    "phonetic": "/ˈklaʊdi/",
+    "meaning": "trời nhiều mây",
+    "category": "THAO"
+  },
+  {
+    "stt": 941,
+    "word": "sunny (adj)",
+    "phonetic": "/ˈsʌni/",
+    "meaning": "bầu trời chỉ có mặt trời chiếu sáng, không có mây",
+    "category": "THAO"
+  },
+  {
+    "stt": 942,
+    "word": "foggy (adj)",
+    "phonetic": "/ˈfɑːɡi/",
+    "meaning": "có sương mù",
+    "category": "THAO"
+  },
+  {
+    "stt": 943,
+    "word": "humid (adj)",
+    "phonetic": "/ˈhjuːmɪd/",
+    "meaning": "ẩm",
+    "category": "THAO"
+  },
+  {
+    "stt": 944,
+    "word": "bright (adj)",
+    "phonetic": "/braɪt/",
+    "meaning": "sáng mạnh",
+    "category": "THAO"
+  },
+  {
+    "stt": 945,
+    "word": "wet (adj)",
+    "phonetic": "/wet/",
+    "meaning": "ẩm ướt",
+    "category": "THAO"
+  },
+  {
+    "stt": 946,
+    "word": "dry (adj)",
+    "phonetic": "/draɪ/",
+    "meaning": "hanh khô",
+    "category": "THAO"
+  },
+  {
+    "stt": 947,
+    "word": "mild (adj)",
+    "phonetic": "/maɪld/",
+    "meaning": "ôn hòa, ấm áp",
+    "category": "THAO"
+  },
+  {
+    "stt": 949,
+    "word": "climate (n)",
+    "phonetic": "/ˈklaɪmət/",
+    "meaning": "khí hậu",
+    "category": "THAO"
+  },
+  {
+    "stt": 950,
+    "word": "overcast (adj)",
+    "phonetic": "/ˌəʊvərˈkæst/",
+    "meaning": "âm u",
+    "category": "THAO"
+  },
+  {
+    "stt": 951,
+    "word": "lightning (n)",
+    "phonetic": "/ˈlaɪtnɪŋ/",
+    "meaning": "tia chớp",
+    "category": "THAO"
+  },
+  {
+    "stt": 952,
+    "word": "snow (n)",
+    "phonetic": "/snəʊ/",
+    "meaning": "tuyết",
+    "category": "THAO"
+  },
+  {
+    "stt": 953,
+    "word": "drizzle (n)",
+    "phonetic": "/ˈdrɪzl/",
+    "meaning": "mưa phùn",
+    "category": "THAO"
+  },
+  {
+    "stt": 954,
+    "word": "hail (n)",
+    "phonetic": "/heɪl/",
+    "meaning": "mưa đá",
+    "category": "THAO"
+  },
+  {
+    "stt": 955,
+    "word": "thunderstorm (n)",
+    "phonetic": "/ˈθʌndərstɔːrm/",
+    "meaning": "bão tố có sấm sét, cơn giông",
+    "category": "THAO"
+  },
+  {
+    "stt": 956,
+    "word": "snowflake (n)",
+    "phonetic": "/ˈsnəʊfleɪk/",
+    "meaning": "bông hoa tuyết",
+    "category": "THAO"
+  },
+  {
+    "stt": 957,
+    "word": "snowstorm (n)",
+    "phonetic": "/ˈsnəʊstɔːrm/",
+    "meaning": "bão tuyết",
+    "category": "THAO"
+  },
+  {
+    "stt": 958,
+    "word": "blizzard (n)",
+    "phonetic": "/ˈblɪzərd/",
+    "meaning": "cơn bão tuyết",
+    "category": "THAO"
+  },
+  {
+    "stt": 959,
+    "word": "damp (adj)",
+    "phonetic": "/dæmp/",
+    "meaning": "ẩm thấp, ẩm ướt",
+    "category": "THAO"
+  },
+  {
+    "stt": 960,
+    "word": "thunder (n)",
+    "phonetic": "/ˈθʌndər/",
+    "meaning": "sấm sét",
+    "category": "THAO"
+  },
+  {
+    "stt": 961,
+    "word": "rain (n)",
+    "phonetic": "/reɪn/",
+    "meaning": "mưa",
+    "category": "THAO"
+  },
+  {
+    "stt": 962,
+    "word": "shower (n)",
+    "phonetic": "/ˈʃaʊər/",
+    "meaning": "mưa rào",
+    "category": "THAO"
+  },
+  {
+    "stt": 963,
+    "word": "rain-storm (n)",
+    "phonetic": "/ˈreɪnstɔːrm/",
+    "meaning": "mưa bão",
+    "category": "THAO"
+  },
+  {
+    "stt": 964,
+    "word": "flood (n)",
+    "phonetic": "/flʌd/",
+    "meaning": "lũ lụt",
+    "category": "THAO"
+  },
+  {
+    "stt": 965,
+    "word": "gale (n)",
+    "phonetic": "/ɡeɪl/",
+    "meaning": "gió giật",
+    "category": "THAO"
+  },
+  {
+    "stt": 966,
+    "word": "tornado (n)",
+    "phonetic": "/tɔːrˈneɪdəʊ/",
+    "meaning": "lốc xoáy",
+    "category": "THAO"
+  },
+  {
+    "stt": 967,
+    "word": "typhoon (n)",
+    "phonetic": "/taɪˈfuːn/",
+    "meaning": "bão nhiệt đới",
+    "category": "THAO"
+  },
+  {
+    "stt": 968,
+    "word": "storm (n)",
+    "phonetic": "/stɔːrm/",
+    "meaning": "dông bão",
+    "category": "THAO"
+  },
+  {
+    "stt": 969,
+    "word": "rainbow (n)",
+    "phonetic": "/ˈreɪnbəʊ/",
+    "meaning": "cầu vồng",
+    "category": "THAO"
+  },
+  {
+    "stt": 970,
+    "word": "blustery (n)",
+    "phonetic": "/ˈblʌstəri/",
+    "meaning": "cơn gió mạnh",
+    "category": "THAO"
+  },
+  {
+    "stt": 971,
+    "word": "mist (n)",
+    "phonetic": "/mɪst/",
+    "meaning": "sương",
+    "category": "THAO"
+  },
+  {
+    "stt": 972,
+    "word": "hurricane (n)",
+    "phonetic": "/ˈhɜːrəkeɪn/",
+    "meaning": "siêu bão",
+    "category": "THAO"
+  },
+  {
+    "stt": 973,
+    "word": "frosty (adj)",
+    "phonetic": "/ˈfrɔːsti/",
+    "meaning": "lạnh băng",
+    "category": "THAO"
+  },
+  {
+    "stt": 974,
+    "word": "hot (adj)",
+    "phonetic": "/hɑːt/",
+    "meaning": "nóng",
+    "category": "THAO"
+  },
+  {
+    "stt": 976,
+    "word": "cold (adj)",
+    "phonetic": "/kəʊld/",
+    "meaning": "lạnh",
+    "category": "THAO"
+  },
+  {
+    "stt": 977,
+    "word": "chilly (adj)",
+    "phonetic": "/ˈtʃɪli/",
+    "meaning": "lạnh thấu xương",
+    "category": "THAO"
+  },
+  {
+    "stt": 978,
+    "word": "freeze (v)",
+    "phonetic": "/friːz/",
+    "meaning": "đóng băng",
+    "category": "THAO"
+  },
+  {
+    "stt": 979,
+    "word": "temperature (n)",
+    "phonetic": "/ˈtemprətʃər/",
+    "meaning": "nhiệt độ",
+    "category": "THAO"
+  }
+]
