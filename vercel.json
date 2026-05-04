@@ -4,6 +4,9 @@
   "installCommand": "npm install",
   "framework": "nextjs",
   "regions": ["sin1"],
+  "git": {
+    "deploymentEnabled": true
+  },
   "env": {
     "MONGODB_URI": "@mongodb_uri",
     "MONGODB_DB": "@mongodb_db",
