@@ -1,23 +1,19 @@
 "use client"
 
-import type { ComponentType } from "react"
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import Link from "next/link"
-import { motion, AnimatePresence } from "framer-motion"
+import { motion } from "framer-motion"
 import { LoginScreen } from "@/components/auth/login-screen"
 import { Sidebar } from "@/components/Sidebar"
 import { WelcomeBanner } from "@/components/WelcomeBanner"
+import { HallOfFameCard } from "@/components/HallOfFameCard"
+import { IncompleteLessons } from "@/components/IncompleteLessons"
 import { saveCurriculumAsset } from "@/lib/idb-curriculum"
 import {
-  ArrowRight,
   BookOpenCheck,
-  Brain,
   Database,
   HardDrive,
   Loader2,
-  ShieldCheck,
-  Trophy,
   Users,
 } from "lucide-react"
 
@@ -27,13 +23,6 @@ type Session = {
   role: "ADMIN" | "USER"
   grade?: string
   age?: string
-}
-
-type Lesson = {
-  title: string
-  meta: string
-  progress: number
-  loader: () => Promise<{ default: ComponentType }>
 }
 
 type RoadmapLevel = {
@@ -99,136 +88,13 @@ const stats = [
 ]
 
 const roadmapLevels: RoadmapLevel[] = [
-  { label: "Tập Sự", iconPath: "/TapSu.png" },
-  { label: "Cơ Bản", iconPath: "/CoBan.png" },
-  { label: "Tiến Bộ", iconPath: "/TienBo.png" },
-  { label: "Hiểu Biết", iconPath: "/HieuBiet.png" },
-  { label: "Thành Thạo", iconPath: "/thanhthao.png" },
-  { label: "Chuyên Gia", iconPath: "/ChuyenGia.png" },
+  { label: "Cấp 1", iconPath: "/TapSu.png" },
+  { label: "Cấp 2", iconPath: "/CoBan.png" },
+  { label: "Cấp 3", iconPath: "/TienBo.png" },
+  { label: "Trung Cấp", iconPath: "/HieuBiet.png" },
+  { label: "Cao Đẳng", iconPath: "/thanhthao.png" },
+  { label: "Đại Học", iconPath: "/ChuyenGia.png" },
 ]
-
-const lessonsByLevel: Record<string, Lesson[]> = {
-  "Tập Sự": [
-    {
-      title: "Daily Conversation: Morning Routine",
-      meta: "Speaking · 18 phút",
-      progress: 72,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Vocabulary Builder: Work and Study",
-      meta: "Flashcards · 24 phút",
-      progress: 54,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: Native Speed",
-      meta: "Listening · 15 phút",
-      progress: 38,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-  "Cơ Bản": [
-    {
-      title: "Daily Conversation: Making Plans",
-      meta: "Speaking · 22 phút",
-      progress: 48,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Vocabulary Builder: Travel and Food",
-      meta: "Flashcards · 26 phút",
-      progress: 41,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: Short Interviews",
-      meta: "Listening · 20 phút",
-      progress: 33,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-  "Tiến Bộ": [
-    {
-      title: "Daily Conversation: Problem Solving",
-      meta: "Speaking · 28 phút",
-      progress: 36,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Vocabulary Builder: Business English",
-      meta: "Flashcards · 30 phút",
-      progress: 29,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: Fast Explanations",
-      meta: "Listening · 24 phút",
-      progress: 24,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-  "Hiểu Biết": [
-    {
-      title: "Advanced Debate: Giving Opinions",
-      meta: "Speaking · 32 phút",
-      progress: 21,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Academic Vocabulary: Reports",
-      meta: "Flashcards · 34 phút",
-      progress: 18,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: News Speed",
-      meta: "Listening · 30 phút",
-      progress: 16,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-  "Thành Thạo": [
-    {
-      title: "Fluent Speaking: Storytelling",
-      meta: "Speaking · 36 phút",
-      progress: 14,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Vocabulary Mastery: Idioms",
-      meta: "Flashcards · 38 phút",
-      progress: 12,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: Podcasts",
-      meta: "Listening · 34 phút",
-      progress: 9,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-  "Chuyên Gia": [
-    {
-      title: "Masterclass: Natural Fluency",
-      meta: "Speaking · 45 phút",
-      progress: 7,
-      loader: () => import("@/components/lessons/daily-conversation"),
-    },
-    {
-      title: "Lexical Range: Native Expressions",
-      meta: "Flashcards · 42 phút",
-      progress: 5,
-      loader: () => import("@/components/lessons/vocabulary-builder"),
-    },
-    {
-      title: "Listening Drill: Native Podcasts",
-      meta: "Listening · 40 phút",
-      progress: 4,
-      loader: () => import("@/components/lessons/listening-drill"),
-    },
-  ],
-}
 
 function readSession() {
   if (typeof window === "undefined") {
@@ -339,10 +205,7 @@ function createSilentWavBlob() {
 export default function HomePage() {
   const [session, setSession] = useState<Session | null>(null)
   const [isReady, setIsReady] = useState(false)
-  const [activeLessonTitle, setActiveLessonTitle] = useState("")
-  const [LessonContent, setLessonContent] = useState<ComponentType | null>(null)
-  const [isLoadingLesson, setIsLoadingLesson] = useState(false)
-  const [selectedLevel, setSelectedLevel] = useState("Tập Sự")
+  const [selectedLevel, setSelectedLevel] = useState("Cấp 1")
   const [resourceSync, setResourceSync] = useState<ResourceSyncState>({
     isRunning: false,
     progress: 0,
@@ -453,19 +316,6 @@ export default function HomePage() {
     }
   }, [isReady, session])
 
-  async function loadLesson(lesson: Lesson) {
-    setActiveLessonTitle(lesson.title)
-    setLessonContent(null)
-    setIsLoadingLesson(true)
-
-    try {
-      const lessonModule = await lesson.loader()
-      setLessonContent(() => lessonModule.default)
-    } finally {
-      setIsLoadingLesson(false)
-    }
-  }
-
   if (!isReady) {
     return (
       <main className="grid min-h-screen place-items-center animated-gradient">
@@ -477,9 +327,6 @@ export default function HomePage() {
   if (!session) {
     return <LoginScreen />
   }
-
-  const isAdmin = session.role === "ADMIN"
-  const selectedLessons = lessonsByLevel[selectedLevel]
 
   return (
     <main className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_center,oklch(0.28_0.1_290/0.55),transparent_42rem),linear-gradient(135deg,oklch(0.09_0.03_280),oklch(0.18_0.08_275),oklch(0.18_0.08_245))] text-white">
@@ -500,47 +347,14 @@ export default function HomePage() {
         </div>
       ) : null}
 
-      <section className="ml-64 min-h-screen overflow-y-auto p-8">
+      {/* Main content - Responsive margin for sidebar */}
+      <section className="ml-0 lg:ml-64 min-h-screen overflow-y-auto p-3 sm:p-4 md:p-6 lg:p-8 pb-20 lg:pb-8">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.55, ease: "easeOut" }}
           className="mx-auto flex max-w-7xl flex-col gap-6"
         >
-          {isAdmin ? (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.96 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.45 }}
-              className="glass flex flex-col gap-4 rounded-[1.5rem] p-4 sm:flex-row sm:items-center sm:justify-between"
-            >
-              <div className="flex items-center gap-3">
-                <motion.div
-                  animate={{ rotate: [0, 4, -4, 0] }}
-                  transition={{ duration: 2.8, repeat: Infinity }}
-                  className="grid h-10 w-10 place-items-center rounded-2xl bg-white/10 text-[oklch(0.85_0.18_85)]"
-                >
-                  <ShieldCheck className="h-5 w-5" />
-                </motion.div>
-                <div>
-                  <p className="text-sm font-semibold text-white">
-                    Bạn đang đăng nhập bằng tài khoản Admin.
-                  </p>
-                  <p className="text-xs text-white/45">
-                    Chọn Admin Panel để quản trị, hoặc tiếp tục xem User Dashboard.
-                  </p>
-                </div>
-              </div>
-              <Link
-                href="/admin"
-                className="neon-glow inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-[oklch(0.5_0.2_280)] to-[oklch(0.45_0.22_300)] px-5 py-3 text-sm font-semibold text-white transition-transform hover:scale-[1.02]"
-              >
-                Admin Panel
-                <ArrowRight className="h-4 w-4" />
-              </Link>
-            </motion.div>
-          ) : null}
-
           <WelcomeBanner />
 
           <section className="glass rounded-[1.75rem] p-6">
@@ -558,7 +372,8 @@ export default function HomePage() {
               </p>
             </div>
 
-            <div className="grid gap-3 md:grid-cols-3 xl:grid-cols-6">
+            {/* Responsive grid for roadmap levels */}
+            <div className="grid gap-3 grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
               {roadmapLevels.map((level) => {
                 const isSelected = selectedLevel === level.label
 
@@ -568,8 +383,6 @@ export default function HomePage() {
                     type="button"
                     onClick={() => {
                       setSelectedLevel(level.label)
-                      setActiveLessonTitle("")
-                      setLessonContent(null)
                       // Save selected level to localStorage for Chat API
                       localStorage.setItem("doremi_current_level", level.label)
                     }}
@@ -600,30 +413,10 @@ export default function HomePage() {
                 )
               })}
             </div>
-
-            <motion.div
-              whileHover={{ y: -4, scale: 1.01 }}
-              transition={{ type: "spring", stiffness: 240, damping: 20 }}
-              className="mt-4 flex items-center justify-between rounded-[1.35rem] border border-[oklch(0.85_0.18_85/0.45)] bg-gradient-to-r from-[oklch(0.35_0.13_285/0.52)] to-[oklch(0.22_0.09_245/0.62)] p-5 shadow-[0_0_30px_oklch(0.85_0.18_85/0.22)]"
-            >
-              <div className="flex items-center gap-3">
-                <div className="grid h-12 w-12 place-items-center rounded-2xl bg-[oklch(0.85_0.18_85/0.16)] text-[oklch(0.85_0.18_85)]">
-                  <Trophy className="h-6 w-6" />
-                </div>
-                <div>
-                  <p className="text-lg font-black text-white">Challenger</p>
-                  <p className="text-sm text-white/45">
-                    Mở khóa sau khi hoàn thành toàn bộ lộ trình Master.
-                  </p>
-                </div>
-              </div>
-              <span className="rounded-full border border-white/10 bg-white/10 px-4 py-1.5 text-xs font-bold uppercase tracking-widest text-[oklch(0.85_0.18_85)]">
-                Cúp vàng
-              </span>
-            </motion.div>
           </section>
 
-          <section className="grid gap-6 md:grid-cols-3">
+          {/* Responsive stats grid */}
+          <section className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map((stat, index) => {
               const Icon = stat.icon
 
@@ -655,75 +448,11 @@ export default function HomePage() {
             })}
           </section>
 
-          <section className="glass rounded-[1.75rem] p-6">
-            <div className="mb-6 flex items-center justify-between gap-4">
-              <div>
-                <h2 className="text-2xl font-black text-white">
-                  Bài học đang tiếp tục
-                </h2>
-                <p className="mt-1 text-sm font-medium text-white/45">
-                  Cấp độ hiện tại: {selectedLevel}. Click vào bài học để tải nội dung.
-                </p>
-              </div>
-              <Brain className="h-8 w-8 animate-pulse text-[oklch(0.72_0.28_320)]" />
-            </div>
+          {/* Hall of Fame Section */}
+          <HallOfFameCard />
 
-            <div className="space-y-4">
-              {selectedLessons.map((lesson) => (
-                <motion.button
-                  key={lesson.title}
-                  type="button"
-                  onClick={() => void loadLesson(lesson)}
-                  whileHover={{ scale: 1.01 }}
-                  whileTap={{ scale: 0.99 }}
-                  className="w-full rounded-[1.5rem] border border-white/10 bg-white/10 p-5 text-left backdrop-blur-xl transition-colors hover:border-[oklch(0.72_0.28_325/0.6)]"
-                >
-                  <div className="flex items-start justify-between gap-4">
-                    <div>
-                      <p className="text-base font-black text-white">
-                        {lesson.title}
-                      </p>
-                      <p className="mt-1 text-sm font-medium text-white/45">
-                        {lesson.meta}
-                      </p>
-                    </div>
-                    <span className="text-sm font-black text-[oklch(0.75_0.18_200)]">
-                      {lesson.progress}%
-                    </span>
-                  </div>
-                  <div className="mt-4 h-2 overflow-hidden rounded-full bg-white/10">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      animate={{ width: `${lesson.progress}%` }}
-                      transition={{ duration: 1.1, ease: "easeOut" }}
-                      className="h-full rounded-full bg-gradient-to-r from-[oklch(0.78_0.17_200)] via-[oklch(0.72_0.25_285)] to-[oklch(0.72_0.28_325)]"
-                    />
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-
-            <AnimatePresence mode="wait">
-              {activeLessonTitle ? (
-                <motion.div
-                  key={activeLessonTitle}
-                  initial={{ opacity: 0, y: 14 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -10 }}
-                  className="mt-5 rounded-[1.5rem] border border-white/10 bg-black/20 p-5"
-                >
-                  {isLoadingLesson ? (
-                    <div className="flex items-center gap-3 text-sm text-white/60">
-                      <Loader2 className="h-4 w-4 animate-spin" />
-                      Đang tải bài học theo tốc độ mạng hiện tại...
-                    </div>
-                  ) : LessonContent ? (
-                    <LessonContent />
-                  ) : null}
-                </motion.div>
-              ) : null}
-            </AnimatePresence>
-          </section>
+          {/* Incomplete Lessons Section - Real data from database */}
+          <IncompleteLessons userId={session.email} />
 
           <footer className="pb-4 text-center">
             <p className="text-xs text-white/60 md:text-sm">

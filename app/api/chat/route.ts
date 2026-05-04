@@ -117,7 +117,7 @@ Cách dạy của bạn:
 - Khuyến khích học sinh thực hành và không sợ sai
 
 QUAN TRỌNG - Điều chỉnh theo trình độ học sinh:
-${levelGuidance[currentLevel] || levelGuidance["Cơ bản"]}
+${levelGuidance[currentLevel] || levelGuidance["Cấp 1"]}
 
 Hãy trả lời bằng tiếng Việt, ngắn gọn nhưng đầy đủ ý nghĩa. Luôn tạo không khí học tập vui vẻ và tích cực! 🌟`
 

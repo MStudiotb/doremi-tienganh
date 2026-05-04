@@ -13,7 +13,8 @@ export type LessonUnit = {
   vocabulary: VocabItem[]
   sentences: string[]
   skillTags: string[]
-  source: "seed" | "idb"
+  source: "seed" | "idb" | "mongodb"
+  grade?: number // Optional grade field for filtering (1-12)
 }
 
 // Smart Start 1 — 10 units (Khối 1, Cấp 1)

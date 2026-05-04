@@ -13,7 +13,6 @@ import {
   Loader2,
   Lock,
   Mail,
-  Music,
   ShieldCheck,
   Sparkles,
   Upload,
@@ -453,22 +452,13 @@ export function AuthCard({ isLogin, setIsLogin }: AuthCardProps) {
             </div>
           </div>
 
-          <div className="flex gap-3">
-            <button
-              type="button"
-              className="flex h-12 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[oklch(0.7_0.25_300/0.5)] hover:bg-white/10"
-            >
-              <Sparkles className="mr-2 size-5" />
-              Google
-            </button>
-            <button
-              type="button"
-              className="flex h-12 flex-1 items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[oklch(0.7_0.25_300/0.5)] hover:bg-white/10"
-            >
-              <Music className="mr-2 size-5" />
-              GitHub
-            </button>
-          </div>
+          <button
+            type="button"
+            className="flex h-12 w-full items-center justify-center rounded-xl border border-white/10 bg-white/5 transition-all hover:border-[oklch(0.7_0.25_300/0.5)] hover:bg-white/10"
+          >
+            <Sparkles className="mr-2 size-5" />
+            Google
+          </button>
         </form>
       </div>
 

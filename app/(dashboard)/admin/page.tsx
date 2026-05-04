@@ -478,6 +478,10 @@ export default function AdminPage() {
       setNamespace("primary_data");
       setAutoTagReason("Chưa phân tích tài liệu.");
       setMessage(`Đã lưu vào IndexedDB, namespace ${finalNamespace}.`);
+      
+      // Notify lessons page to reload data
+      window.dispatchEvent(new Event('doremi_idb_updated'));
+      localStorage.setItem('doremi_idb_updated', Date.now().toString());
     } catch {
       setMessage("Không thể lưu vào IndexedDB. Vui lòng kiểm tra dung lượng trình duyệt.");
     } finally {
@@ -493,6 +497,10 @@ export default function AdminPage() {
       cleanupLessonData(deleteConfirm.id);
       setResources(await getAllResources());
       setMessage(`Đã xóa "${deleteConfirm.fileName}" khỏi IndexedDB.`);
+      
+      // Notify lessons page to reload data
+      window.dispatchEvent(new Event('doremi_idb_updated'));
+      localStorage.setItem('doremi_idb_updated', Date.now().toString());
     } catch {
       setMessage("Không thể xóa tài nguyên. Vui lòng thử lại.");
     } finally {
@@ -508,6 +516,10 @@ export default function AdminPage() {
       cleanupAllLessonData();
       setResources([]);
       setMessage("Đã xóa toàn bộ tài nguyên và dữ liệu bài học liên quan.");
+      
+      // Notify lessons page to reload data
+      window.dispatchEvent(new Event('doremi_idb_updated'));
+      localStorage.setItem('doremi_idb_updated', Date.now().toString());
     } catch {
       setMessage("Không thể xóa toàn bộ tài nguyên. Vui lòng thử lại.");
     } finally {

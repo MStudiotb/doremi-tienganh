@@ -13,6 +13,7 @@ import {
   Home,
   LogOut,
   Map,
+  Menu,
   Monitor,
   Moon,
   PenLine,
@@ -21,6 +22,7 @@ import {
   Sparkles,
   Sun,
   Upload,
+  X,
 } from "lucide-react";
 import { VocabularyImportModal } from "./VocabularyImportModal";
 import { UserAvatarCard } from "./UserAvatarCard";
@@ -45,6 +47,12 @@ const mainMenuItems = [
     label: "Bài tập",
     href: "/practice",
     icon: ClipboardCheck,
+  },
+  {
+    label: "Bài Thi Tuần",
+    href: "/weekly-tests",
+    icon: Sparkles,
+    special: true, // Mark as special for custom styling
   },
   {
     label: "Tra Cứu Từ Vựng",
@@ -114,6 +122,7 @@ export function Sidebar() {
   const [isBackingUp, setIsBackingUp] = useState(false);
   const [backupMessage, setBackupMessage] = useState("");
   const [isImportModalOpen, setIsImportModalOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     async function loadCurrentUser() {
@@ -174,7 +183,31 @@ export function Sidebar() {
   }
 
   return (
-    <aside className="fixed left-0 top-0 z-40 flex h-screen w-64 flex-col border-r border-white/10 bg-[#03010a] px-4 py-5 text-foreground shadow-2xl shadow-black/40">
+    <>
+      {/* Mobile Hamburger Button */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="fixed left-4 top-4 z-50 grid size-12 place-items-center rounded-xl border border-white/10 bg-[#03010a]/95 text-white backdrop-blur-md lg:hidden"
+        aria-label="Toggle menu"
+      >
+        {isMobileMenuOpen ? <X className="size-6" /> : <Menu className="size-6" />}
+      </button>
+
+      {/* Mobile Overlay */}
+      {isMobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm lg:hidden"
+          onClick={() => setIsMobileMenuOpen(false)}
+        />
+      )}
+
+      {/* Sidebar - Desktop: always visible, Mobile: slide in */}
+      <aside
+        className={[
+          "fixed left-0 top-0 z-40 flex h-screen w-64 flex-col border-r border-white/10 bg-[#03010a] px-4 py-5 text-foreground shadow-2xl shadow-black/40 transition-transform duration-300",
+          isMobileMenuOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0",
+        ].join(" ")}
+      >
       <Link href="/" className="mb-5 flex items-center gap-4 px-1">
         <div className="grid place-items-center rounded-2xl border-2 border-cyan-400/30 bg-white/5 p-2.5 shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all hover:shadow-[0_0_30px_rgba(34,211,238,0.4)]">
           <Image
@@ -205,7 +238,73 @@ export function Sidebar() {
         {mainMenuItems.map((item) => {
           const Icon = item.icon;
           const isActive = isActivePath(pathname, item.href);
+          const isSpecial = item.special;
 
+          // Special styling for "Bài Thi Tuần" with Doraemon style + Fireworks
+          if (isSpecial) {
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                aria-current={isActive ? "page" : undefined}
+                className={[
+                  "group relative flex items-center gap-3 rounded-xl px-3 py-4 text-sm transition-all duration-200 overflow-hidden",
+                  isActive
+                    ? "bg-gradient-to-r from-yellow-500/30 to-orange-500/30 shadow-lg shadow-yellow-500/30 border-2 border-yellow-400/50"
+                    : "bg-gradient-to-r from-yellow-500/10 to-orange-500/10 border-2 border-yellow-400/20 hover:border-yellow-400/40 hover:shadow-md hover:shadow-yellow-500/20",
+                ].join(" ")}
+                style={{
+                  fontFamily: "'Nunito', sans-serif",
+                }}
+              >
+                {/* Fireworks animation background */}
+                <div className="absolute inset-0 pointer-events-none">
+                  {[...Array(6)].map((_, i) => (
+                    <div
+                      key={i}
+                      className="firework-particle"
+                      style={{
+                        left: `${15 + i * 15}%`,
+                        animationDelay: `${i * 0.3}s`,
+                      }}
+                    />
+                  ))}
+                </div>
+
+                {/* Bell icon and text container */}
+                <div className="relative flex items-center gap-2 flex-1 z-10">
+                  <span
+                    className={[
+                      "relative transition-all duration-200",
+                      isActive
+                        ? ""
+                        : "group-hover:scale-105",
+                    ].join(" ")}
+                    style={{
+                      fontWeight: 900,
+                      fontSize: "1.1rem",
+                      color: "#FFD700",
+                      textShadow: "0px 3px 6px rgba(0,0,0,0.6)",
+                      filter: "drop-shadow(0 0 8px rgba(255,215,0,0.8))",
+                    }}
+                  >
+                    {item.label}
+                  </span>
+                  {/* Bell icon positioned at top-right of text */}
+                  <Image
+                    src="/chuong.png"
+                    alt=""
+                    width={18}
+                    height={18}
+                    className="absolute -top-1 -right-1 animate-[wiggle-continuous_4s_ease-in-out_infinite] group-hover:animate-[wiggle_0.5s_ease-in-out]"
+                    aria-hidden="true"
+                  />
+                </div>
+              </Link>
+            );
+          }
+
+          // Regular menu items
           return (
             <Link
               key={item.href}
@@ -362,11 +461,50 @@ export function Sidebar() {
         </div>
       </div>
 
-      <VocabularyImportModal
-        isOpen={isImportModalOpen}
-        onClose={() => setIsImportModalOpen(false)}
-      />
-    </aside>
+        <VocabularyImportModal
+          isOpen={isImportModalOpen}
+          onClose={() => setIsImportModalOpen(false)}
+        />
+      </aside>
+
+      {/* Bottom Navigation for Mobile */}
+      <nav className="fixed bottom-0 left-0 right-0 z-30 border-t border-white/10 bg-[#03010a]/95 backdrop-blur-md lg:hidden">
+        <div className="flex items-center justify-around px-2 py-3">
+          {mainMenuItems.slice(0, 5).map((item) => {
+            const Icon = item.icon;
+            const isActive = isActivePath(pathname, item.href);
+            const isSpecial = item.special;
+
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={[
+                  "flex flex-col items-center gap-1 rounded-lg px-3 py-2 text-xs transition-colors",
+                  isActive
+                    ? "text-cyan-400"
+                    : "text-white/50 hover:text-white",
+                ].join(" ")}
+              >
+                {isSpecial ? (
+                  <Image
+                    src="/chuong.png"
+                    alt=""
+                    width={20}
+                    height={20}
+                    className="animate-[wiggle-continuous_4s_ease-in-out_infinite]"
+                  />
+                ) : (
+                  <Icon className="size-5" strokeWidth={1.7} />
+                )}
+                <span className="text-[10px] font-medium">{item.label}</span>
+              </Link>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 }
 

@@ -1,0 +1,126 @@
+{
+  "lessons": [
+    {
+      "title": "Unit 1 - Greetings and Introductions",
+      "part": 1,
+      "vocabulary": [
+        {
+          "word": "hello",
+          "phonetic": "/həˈloʊ/",
+          "meaning": "xin chào"
+        },
+        {
+          "word": "goodbye",
+          "phonetic": "/ɡʊdˈbaɪ/",
+          "meaning": "tạm biệt"
+        },
+        {
+          "word": "name",
+          "phonetic": "/neɪm/",
+          "meaning": "tên"
+        },
+        {
+          "word": "nice",
+          "phonetic": "/naɪs/",
+          "meaning": "vui, tốt đẹp"
+        },
+        {
+          "word": "meet",
+          "phonetic": "/miːt/",
+          "meaning": "gặp gỡ"
+        }
+      ],
+      "sentences": [
+        "Hello, my name is John.",
+        "Nice to meet you!",
+        "What is your name?",
+        "Goodbye, see you later!",
+        "How are you today?"
+      ],
+      "skillTags": ["Từ vựng", "Ngữ pháp", "Nói"]
+    },
+    {
+      "title": "Unit 2 - Numbers and Colors",
+      "part": 2,
+      "vocabulary": [
+        {
+          "word": "one",
+          "phonetic": "/wʌn/",
+          "meaning": "một"
+        },
+        {
+          "word": "two",
+          "phonetic": "/tuː/",
+          "meaning": "hai"
+        },
+        {
+          "word": "three",
+          "phonetic": "/θriː/",
+          "meaning": "ba"
+        },
+        {
+          "word": "red",
+          "phonetic": "/red/",
+          "meaning": "màu đỏ"
+        },
+        {
+          "word": "blue",
+          "phonetic": "/bluː/",
+          "meaning": "màu xanh dương"
+        },
+        {
+          "word": "green",
+          "phonetic": "/ɡriːn/",
+          "meaning": "màu xanh lá"
+        }
+      ],
+      "sentences": [
+        "I have one apple.",
+        "There are two cats.",
+        "The sky is blue.",
+        "I like the color red.",
+        "Count from one to three."
+      ],
+      "skillTags": ["Từ vựng", "Nghe", "Nói"]
+    },
+    {
+      "title": "Unit 3 - Family Members",
+      "part": 3,
+      "vocabulary": [
+        {
+          "word": "mother",
+          "phonetic": "/ˈmʌðər/",
+          "meaning": "mẹ"
+        },
+        {
+          "word": "father",
+          "phonetic": "/ˈfɑːðər/",
+          "meaning": "bố"
+        },
+        {
+          "word": "sister",
+          "phonetic": "/ˈsɪstər/",
+          "meaning": "chị/em gái"
+        },
+        {
+          "word": "brother",
+          "phonetic": "/ˈbrʌðər/",
+          "meaning": "anh/em trai"
+        },
+        {
+          "word": "family",
+          "phonetic": "/ˈfæməli/",
+          "meaning": "gia đình"
+        }
+      ],
+      "sentences": [
+        "This is my mother.",
+        "My father is tall.",
+        "I have one sister.",
+        "My brother is young.",
+        "I love my family."
+      ],
+      "skillTags": ["Từ vựng", "Ngữ pháp", "Nói"]
+    }
+  ]
+}

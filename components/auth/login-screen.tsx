@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { AuthCard } from "@/components/auth/auth-card"
-import { Music, PawPrint, Sparkles } from "lucide-react"
+import { PawPrint, Sparkles } from "lucide-react"
+import Image from "next/image"
 
 export function LoginScreen() {
   const [isLogin, setIsLogin] = useState(true)
@@ -17,7 +18,14 @@ export function LoginScreen() {
         <div className="flex flex-col items-center gap-4">
           <div className="glass group relative flex h-24 w-24 cursor-pointer items-center justify-center rounded-2xl border-2 border-[oklch(0.75_0.18_85)] shadow-[0_0_30px_oklch(0.75_0.18_85/0.5),0_0_60px_oklch(0.75_0.18_85/0.3)] transition-transform hover:scale-105">
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[oklch(0.8_0.18_85/0.3)] to-[oklch(0.65_0.15_60/0.1)]" />
-            <Music className="relative z-10 h-12 w-12 text-[oklch(0.85_0.18_85)] drop-shadow-[0_0_15px_oklch(0.85_0.18_85/0.8)]" />
+            <Image 
+              src="/logo.png" 
+              alt="DOREMI Logo" 
+              width={64} 
+              height={64} 
+              className="relative z-10 object-contain"
+              style={{ filter: 'drop-shadow(0 0 15px rgba(255, 255, 255, 0.5))' }}
+            />
             <Sparkles className="absolute -right-2 -top-2 h-5 w-5 animate-pulse text-[oklch(0.9_0.18_85)] drop-shadow-[0_0_10px_oklch(0.9_0.18_85)]" />
           </div>
 
@@ -28,14 +36,14 @@ export function LoginScreen() {
               </span>
               <span className="text-white/80"> - </span>
               <span className="bg-gradient-to-r from-[oklch(0.75_0.25_250)] via-[oklch(0.7_0.28_290)] to-[oklch(0.75_0.28_330)] bg-clip-text text-transparent drop-shadow-[0_0_20px_oklch(0.7_0.25_290/0.8)]">
-                ĐI HỌC ĐI
+                TIẾNG ANH
               </span>
             </h1>
 
             <div className="mt-3 flex items-center justify-center gap-2">
               <PawPrint className="h-5 w-5 text-[oklch(0.8_0.2_300)]" />
               <p className="text-sm font-medium tracking-wide text-muted-foreground md:text-base">
-                Học Tiếng Anh Mỗi Ngày
+                Tiến Bộ mỗi ngày với DOREMI
               </p>
               <PawPrint className="h-5 w-5 text-[oklch(0.8_0.2_260)]" />
             </div>

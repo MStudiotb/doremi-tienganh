@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useMemo, useState } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
 import Link from "next/link"
 import { motion, AnimatePresence } from "framer-motion"
 import {
@@ -14,6 +14,7 @@ import {
   Search,
   Sparkles,
   X,
+  Trash2,
 } from "lucide-react"
 import {
   type LessonUnit,
@@ -33,6 +34,7 @@ type RagResource = {
   schoolLevel: string
   namespace: "primary_data" | "secondary_data" | "highschool_data"
   createdAt: string
+  grade?: number // Add grade field for filtering
 }
 
 async function loadRagResources(): Promise<RagResource[]> {
@@ -60,17 +62,23 @@ async function loadRagResources(): Promise<RagResource[]> {
 
 // ── Filter constants ───────────────────────────────────────────────────────
 const LEVELS = [
-  "Tất cả",
-  "Cơ bản",
-  "Trung cấp",
-  "Trung cao cấp",
-  "Cao cấp",
-  "Thành thạo",
-  "Master",
+  "Cấp 1",
+  "Cấp 2",
+  "Cấp 3",
+  "Trung cấp & Cao đẳng",
+  "Đại học",
 ] as const
 
+// Dynamic grade blocks based on selected level
+const GRADE_BLOCKS: Record<Level, readonly string[]> = {
+  "Cấp 1": ["Khối 1", "Khối 2", "Khối 3", "Khối 4", "Khối 5"],
+  "Cấp 2": ["Khối 6", "Khối 7", "Khối 8", "Khối 9"],
+  "Cấp 3": ["Khối 10", "Khối 11", "Khối 12"],
+  "Trung cấp & Cao đẳng": ["Đang cập nhật"],
+  "Đại học": ["Đang cập nhật"],
+} as const
+
 const SKILLS = [
-  "Tất cả",
   "Từ vựng",
   "Ngữ pháp",
   "Đọc",
@@ -81,14 +89,14 @@ const SKILLS = [
 
 type Level = (typeof LEVELS)[number]
 type Skill = (typeof SKILLS)[number]
+type GradeBlock = string
 
 const levelToNamespace: Record<string, ("primary_data" | "secondary_data" | "highschool_data")[]> = {
-  "Cơ bản": ["primary_data"],
-  "Trung cấp": ["secondary_data"],
-  "Trung cao cấp": ["secondary_data"],
-  "Cao cấp": ["highschool_data"],
-  "Thành thạo": ["highschool_data"],
-  Master: ["highschool_data"],
+  "Cấp 1": ["primary_data"],
+  "Cấp 2": ["secondary_data"],
+  "Cấp 3": ["highschool_data"],
+  "Trung cấp & Cao đẳng": ["highschool_data"],
+  "Đại học": ["highschool_data"],
 }
 
 const skillKeywords: Record<string, string[]> = {
@@ -142,13 +150,63 @@ function getProgress(id: string): number {
 function LessonCard({
   unit,
   index,
+  isAdmin,
+  onDelete,
 }: {
   unit: LessonUnit
   index: number
+  isAdmin: boolean
+  onDelete: (unitId: string) => void
 }) {
-  const [isExpanded, setIsExpanded] = useState(false)
   const progress = getProgress(unit.id)
   const meta = namespaceMeta[unit.namespace] ?? namespaceMeta.primary_data
+  
+  // Long press state
+  const [showDeleteButton, setShowDeleteButton] = useState(false)
+  const longPressTimerRef = useRef<NodeJS.Timeout | null>(null)
+  const [pressProgress, setPressProgress] = useState(0)
+
+  const handleMouseDown = () => {
+    if (!isAdmin) return
+    
+    // Start long press timer
+    const startTime = Date.now()
+    const duration = 3000 // 3 seconds
+    
+    // Animate progress
+    const progressInterval = setInterval(() => {
+      const elapsed = Date.now() - startTime
+      const progress = Math.min((elapsed / duration) * 100, 100)
+      setPressProgress(progress)
+      
+      if (progress >= 100) {
+        clearInterval(progressInterval)
+      }
+    }, 50)
+    
+    longPressTimerRef.current = setTimeout(() => {
+      setShowDeleteButton(true)
+      setPressProgress(0)
+      clearInterval(progressInterval)
+    }, duration)
+  }
+
+  const handleMouseUp = () => {
+    if (longPressTimerRef.current) {
+      clearTimeout(longPressTimerRef.current)
+      longPressTimerRef.current = null
+    }
+    setPressProgress(0)
+  }
+
+  const handleDelete = (e: React.MouseEvent) => {
+    e.preventDefault()
+    e.stopPropagation()
+    
+    if (confirm(`Bạn có chắc chắn muốn xóa bài học "${unit.title}" không?`)) {
+      onDelete(unit.id)
+    }
+  }
 
   return (
     <motion.article
@@ -156,8 +214,12 @@ function LessonCard({
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.35, delay: index * 0.045 }}
       whileHover={{ y: -5, scale: 1.012 }}
-      onClick={() => setIsExpanded((v) => !v)}
-      className="relative flex cursor-pointer flex-col overflow-hidden rounded-[1.5rem] p-5 transition-colors"
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseUp}
+      onTouchStart={handleMouseDown}
+      onTouchEnd={handleMouseUp}
+      className="relative flex flex-col overflow-hidden rounded-[1.5rem] p-4 transition-colors h-[280px]"
       style={{
         background:
           "linear-gradient(145deg,oklch(0.18 0.06 280/0.85),oklch(0.14 0.04 265/0.9))",
@@ -165,6 +227,35 @@ function LessonCard({
         boxShadow: "0 8px 32px rgba(0,0,0,0.3)",
       }}
     >
+      {/* Long press progress indicator */}
+      {isAdmin && pressProgress > 0 && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="absolute inset-0 pointer-events-none z-10"
+          style={{
+            background: `linear-gradient(to right, oklch(0.5 0.2 15/0.3) ${pressProgress}%, transparent ${pressProgress}%)`,
+          }}
+        />
+      )}
+
+      {/* Delete button (shown after long press) */}
+      {isAdmin && showDeleteButton && (
+        <motion.button
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0, opacity: 0 }}
+          type="button"
+          onClick={handleDelete}
+          className="absolute top-2 right-2 z-20 grid size-8 place-items-center rounded-full text-white transition-all hover:scale-110"
+          style={{
+            background: "linear-gradient(135deg, oklch(0.5 0.25 15), oklch(0.45 0.22 10))",
+            boxShadow: "0 0 16px oklch(0.5 0.25 15/0.6)",
+          }}
+        >
+          <Trash2 className="size-4" />
+        </motion.button>
+      )}
       {/* Top badges row */}
       <div className="mb-3 flex items-center gap-2 flex-wrap">
         <span
@@ -193,24 +284,24 @@ function LessonCard({
         )}
       </div>
 
-      {/* Title */}
-      <h3 className="mb-1 text-base font-black leading-snug text-white">
+      {/* Title with ellipsis */}
+      <h3 className="mb-1 text-base font-black leading-snug text-white line-clamp-2">
         {unit.title}
       </h3>
-      <p className="mb-4 text-xs text-white/45">{unit.topic}</p>
+      <p className="mb-3 text-xs text-white/45 line-clamp-1">{unit.topic}</p>
 
-      {/* Vocabulary preview */}
-      <div className="mb-4 flex flex-wrap gap-1.5">
+      {/* Vocabulary preview - Fixed height */}
+      <div className="mb-auto flex flex-wrap gap-1.5 h-[52px] overflow-hidden">
         {unit.vocabulary.slice(0, 4).map((v) => (
           <span
             key={v.word}
-            className="rounded-lg border border-white/10 bg-white/[0.07] px-2 py-0.5 text-xs font-semibold text-white/80"
+            className="rounded-lg border border-white/10 bg-white/[0.07] px-2 py-0.5 text-xs font-semibold text-white/80 h-fit"
           >
             {v.word}
           </span>
         ))}
         {unit.vocabulary.length > 4 && (
-          <span className="rounded-lg border border-white/10 bg-white/[0.05] px-2 py-0.5 text-xs text-white/35">
+          <span className="rounded-lg border border-white/10 bg-white/[0.05] px-2 py-0.5 text-xs text-white/35 h-fit">
             +{unit.vocabulary.length - 4}
           </span>
         )}
@@ -221,7 +312,7 @@ function LessonCard({
         <span className="text-[10px] font-medium text-white/40">Tiến độ</span>
         <span className="text-[10px] font-bold text-white/55">{progress}%</span>
       </div>
-      <div className="h-1.5 overflow-hidden rounded-full bg-white/10">
+      <div className="h-1.5 overflow-hidden rounded-full bg-white/10 mb-3">
         <motion.div
           initial={{ width: 0 }}
           animate={{ width: `${progress}%` }}
@@ -234,22 +325,11 @@ function LessonCard({
         />
       </div>
 
-      {/* Action row: expand toggle + start lesson link */}
-      <div className="mt-3 flex items-center justify-between gap-2">
-        <button
-          type="button"
-          onClick={(e) => { e.stopPropagation(); setIsExpanded((v) => !v) }}
-          className="flex items-center gap-1 text-[10px] text-white/30 hover:text-white/55 transition-colors"
-        >
-          <span>{isExpanded ? "Ẩn chi tiết" : "Xem mẫu câu"}</span>
-          <ChevronRight
-            className={`size-3 transition-transform duration-200 ${isExpanded ? "rotate-90" : ""}`}
-          />
-        </button>
+      {/* Action row: start lesson link only */}
+      <div className="flex items-center justify-end">
         <Link
           href={`/lessons/${unit.id}`}
-          onClick={(e) => e.stopPropagation()}
-          className="flex items-center gap-1 rounded-lg px-2.5 py-1 text-[11px] font-bold text-white transition-all hover:scale-105"
+          className="flex items-center gap-1 rounded-lg px-3 py-1.5 text-[11px] font-bold text-white transition-all hover:scale-105"
           style={{
             background: "linear-gradient(135deg,oklch(0.52 0.22 200),oklch(0.68 0.22 280))",
             boxShadow: "0 0 10px oklch(0.65 0.22 200/0.35)",
@@ -258,67 +338,6 @@ function LessonCard({
           Vào học <ChevronRight className="size-3" />
         </Link>
       </div>
-
-      {/* Expandable sentences panel */}
-      <AnimatePresence>
-        {isExpanded && unit.sentences.length > 0 && (
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            transition={{ duration: 0.22 }}
-            className="overflow-hidden"
-          >
-            <div
-              className="mt-3 rounded-xl p-3"
-              style={{
-                background: "oklch(0.12 0.04 280/0.6)",
-                border: "1px solid oklch(0.5 0.15 285/0.25)",
-              }}
-            >
-              <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/35">
-                Mẫu câu
-              </p>
-              <ul className="space-y-1.5">
-                {unit.sentences.map((s, i) => (
-                  <li key={i} className="flex items-start gap-2 text-xs text-white/65">
-                    <span className="mt-0.5 text-[oklch(0.72_0.28_320)] text-[8px]">▶</span>
-                    {s}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Full vocabulary in expanded view */}
-            {unit.vocabulary.length > 0 && (
-              <div
-                className="mt-2 rounded-xl p-3"
-                style={{
-                  background: "oklch(0.12 0.04 165/0.4)",
-                  border: "1px solid oklch(0.5 0.15 165/0.25)",
-                }}
-              >
-                <p className="mb-2 text-[10px] font-bold uppercase tracking-wider text-white/35">
-                  Từ vựng đầy đủ
-                </p>
-                <div className="grid grid-cols-2 gap-1.5">
-                  {unit.vocabulary.map((v) => (
-                    <div key={v.word} className="flex flex-col">
-                      <span className="text-xs font-bold text-white/85">{v.word}</span>
-                      {v.phonetic && (
-                        <span className="text-[9px] text-[oklch(0.72_0.2_200)]">{v.phonetic}</span>
-                      )}
-                      {v.meaning && (
-                        <span className="text-[10px] text-white/45">{v.meaning}</span>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </motion.article>
   )
 }
@@ -336,13 +355,13 @@ function FilterStrip<T extends string>({
   onSelect: (v: T) => void
 }) {
   return (
-    <div className="flex items-center gap-3">
-      <span className="shrink-0 text-xs font-bold uppercase tracking-wider text-white/35 hidden sm:block">
+    <div className="flex items-center gap-2 sm:gap-3">
+      <span className="shrink-0 text-[10px] sm:text-xs font-bold uppercase tracking-wider text-white/35 hidden sm:block">
         {label}
       </span>
       {/* scrollable container — hides scrollbar on all platforms */}
       <div
-        className="flex gap-2 overflow-x-auto py-1"
+        className="flex gap-1.5 sm:gap-2 overflow-x-auto py-1"
         style={{ scrollbarWidth: "none", WebkitOverflowScrolling: "touch" } as React.CSSProperties}
       >
         {options.map((opt) => {
@@ -352,7 +371,7 @@ function FilterStrip<T extends string>({
               key={opt}
               type="button"
               onClick={() => onSelect(opt)}
-              className="shrink-0 rounded-full px-3.5 py-1.5 text-xs font-semibold transition-all duration-200"
+              className="shrink-0 rounded-full px-2.5 sm:px-3.5 py-1 sm:py-1.5 text-[11px] sm:text-xs font-semibold transition-all duration-200 touch-manipulation min-h-[32px]"
               style={
                 isActive
                   ? {
@@ -381,72 +400,187 @@ function FilterStrip<T extends string>({
 export default function LessonsPage() {
   const [allUnits, setAllUnits] = useState<LessonUnit[]>([])
   const [isLoading, setIsLoading] = useState(true)
-  const [selectedLevel, setSelectedLevel] = useState<Level>("Tất cả")
-  const [selectedSkill, setSelectedSkill] = useState<Skill>("Tất cả")
+  const [selectedLevel, setSelectedLevel] = useState<Level>("Cấp 1")
+  const [selectedGradeBlock, setSelectedGradeBlock] = useState<GradeBlock>("Khối 1")
+  const [selectedSkill, setSelectedSkill] = useState<Skill>("Từ vựng")
   const [searchQuery, setSearchQuery] = useState("")
+  const [currentPage, setCurrentPage] = useState(1)
+  const [isAdmin, setIsAdmin] = useState(false)
+  const ITEMS_PER_PAGE = 10
+
+  // Check if user is admin
+  useEffect(() => {
+    const session = localStorage.getItem("doremi_session")
+    if (session) {
+      try {
+        const parsed = JSON.parse(session)
+        setIsAdmin(parsed.role === "ADMIN")
+      } catch {
+        setIsAdmin(false)
+      }
+    }
+  }, [])
+
+  // Delete lesson handler
+  async function handleDeleteLesson(unitId: string) {
+    try {
+      // Extract base ID (remove -0, -1 suffix for IDB lessons)
+      const baseId = unitId.replace(/-\d+$/, "")
+      
+      // Try to delete from IndexedDB first
+      const req = indexedDB.open(RAG_DB_NAME, RAG_DB_VERSION)
+      
+      req.onsuccess = () => {
+        const db = req.result
+        const tx = db.transaction(RAG_STORE, "readwrite")
+        const store = tx.objectStore(RAG_STORE)
+        
+        const deleteReq = store.delete(baseId)
+        
+        deleteReq.onsuccess = () => {
+          // Remove from local state
+          setAllUnits(prev => prev.filter(u => !u.id.startsWith(baseId)))
+          alert("Đã xóa bài học thành công!")
+        }
+        
+        deleteReq.onerror = () => {
+          alert("Không thể xóa bài học từ IndexedDB!")
+        }
+      }
+      
+      req.onerror = () => {
+        alert("Lỗi khi mở database!")
+      }
+    } catch (error) {
+      console.error("Error deleting lesson:", error)
+      alert("Có lỗi xảy ra khi xóa bài học!")
+    }
+  }
 
   useEffect(() => {
-    loadRagResources()
-      .then((ragResources) => {
-        // Try to parse IDB resources into units
-        const idbUnits: LessonUnit[] = []
-        for (const resource of ragResources) {
-          const parsed = parseRagIntoUnits(resource.ragText, resource.namespace, resource.id)
-          if (parsed.length > 0) {
-            idbUnits.push(...parsed)
-          } else if (resource.ragText?.trim()) {
-            // Single-document fallback: treat each IDB resource as one lesson
-            idbUnits.push({
-              id: resource.id,
-              unitNumber: idbUnits.length + 1,
-              title: resource.fileName.replace(/\.[^.]+$/, ""),
-              topic: resource.schoolLevel,
-              namespace: resource.namespace,
-              vocabulary: [],
-              sentences: resource.ragText
-                .split("\n")
-                .filter((l) => /[.!?]$/.test(l.trim()) && l.trim().length > 8)
-                .slice(0, 4)
-                .map((l) => l.trim()),
-              skillTags: ["Từ vựng"],
-              source: "idb",
+    // Load lessons from both MongoDB API and IndexedDB
+    async function loadLessons() {
+      try {
+        // Load from MongoDB API
+        const response = await fetch('/api/lessons')
+        const data = await response.json()
+        
+        const apiUnits: LessonUnit[] = []
+        if (data.success && data.lessons) {
+          // Convert API lessons to LessonUnit format
+          data.lessons.forEach((lesson: any, index: number) => {
+            apiUnits.push({
+              id: lesson.id,
+              unitNumber: index + 1,
+              title: lesson.title,
+              topic: `Lớp ${lesson.grade} - Phần ${lesson.part}`,
+              namespace: lesson.namespace,
+              vocabulary: lesson.vocabulary || [],
+              sentences: lesson.sentences || [],
+              skillTags: lesson.skillTags || ["Từ vựng"],
+              source: "mongodb",
+              grade: lesson.grade,
             })
-          }
+          })
         }
 
-        // Merge: IDB units take priority; seed fills the gap
-        const idbIds = new Set(idbUnits.map((u) => u.id))
+        // Load from IndexedDB
+        const idbResources = await loadRagResources()
+        const idbUnits: LessonUnit[] = []
+        
+        idbResources.forEach((res, index) => {
+          // Extract grade from filename (e.g., "lop 2 - phan 1.pdf" -> grade 2)
+          const gradeMatch = res.fileName.match(/lop\s*(\d+)/i) || res.fileName.match(/grade\s*(\d+)/i)
+          const grade = gradeMatch ? parseInt(gradeMatch[1], 10) : undefined
+          
+          // Parse RAG text into units
+          const parsed = parseRagIntoUnits(res.ragText, res.namespace, res.id)
+          
+          parsed.forEach((unit, unitIndex) => {
+            idbUnits.push({
+              ...unit,
+              id: `${res.id}-${unitIndex}`,
+              title: unit.title || `${res.fileName} - Phần ${unitIndex + 1}`,
+              topic: grade ? `Lớp ${grade} - ${res.fileName}` : res.fileName,
+              source: "idb",
+              grade: grade,
+            })
+          })
+        })
+        
+        // Merge all sources
         const merged = [
+          ...apiUnits,
           ...idbUnits,
-          ...smartStart1Units.filter((u) => !idbIds.has(u.id)),
+          ...smartStart1Units.map(u => ({ ...u, grade: 1 })),
         ]
-
+        
         setAllUnits(merged)
-      })
-      .finally(() => setIsLoading(false))
+      } catch (error) {
+        console.error('Error loading lessons:', error)
+        // Fallback to Smart Start 1 only
+        setAllUnits(smartStart1Units.map(u => ({ ...u, grade: 1 })))
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    
+    loadLessons()
+
+    // Listen for IndexedDB updates from admin page
+    const handleStorageUpdate = (e: StorageEvent) => {
+      if (e.key === 'doremi_idb_updated') {
+        loadLessons()
+      }
+    }
+
+    // Listen for custom event from admin page
+    const handleIdbUpdate = () => {
+      loadLessons()
+    }
+
+    window.addEventListener('storage', handleStorageUpdate)
+    window.addEventListener('doremi_idb_updated', handleIdbUpdate)
+
+    return () => {
+      window.removeEventListener('storage', handleStorageUpdate)
+      window.removeEventListener('doremi_idb_updated', handleIdbUpdate)
+    }
   }, [])
 
   const filtered = useMemo(() => {
     let list = allUnits
 
-    if (selectedLevel !== "Tất cả") {
-      const ns = levelToNamespace[selectedLevel] ?? []
+    // Always filter by level
+    const ns = levelToNamespace[selectedLevel] ?? []
+    if (ns.length > 0) {
       list = list.filter((u) => ns.includes(u.namespace))
     }
 
-    if (selectedSkill !== "Tất cả") {
-      const keywords = skillKeywords[selectedSkill] ?? []
-      list = list.filter(
-        (u) =>
-          u.skillTags.includes(selectedSkill) ||
-          u.vocabulary.some((v) =>
-            keywords.some((kw) => v.word.toLowerCase().includes(kw)),
-          ) ||
-          u.sentences.some((s) =>
-            keywords.some((kw) => s.toLowerCase().includes(kw)),
-          ),
-      )
+    // Filter by grade block (Khối) - skip "Đang cập nhật"
+    if (selectedGradeBlock !== "Đang cập nhật") {
+      const gradeMatch = selectedGradeBlock.match(/Khối\s+(\d+)/)
+      if (gradeMatch) {
+        const targetGrade = parseInt(gradeMatch[1], 10)
+        list = list.filter((u) => {
+          const unitWithGrade = u as LessonUnit & { grade?: number }
+          return unitWithGrade.grade === targetGrade
+        })
+      }
     }
+
+    // Always filter by skill
+    const keywords = skillKeywords[selectedSkill] ?? []
+    list = list.filter(
+      (u) =>
+        u.skillTags.includes(selectedSkill) ||
+        u.vocabulary.some((v) =>
+          keywords.some((kw) => v.word.toLowerCase().includes(kw)),
+        ) ||
+        u.sentences.some((s) =>
+          keywords.some((kw) => s.toLowerCase().includes(kw)),
+        ),
+    )
 
     if (searchQuery.trim()) {
       const q = searchQuery.toLowerCase()
@@ -459,57 +593,87 @@ export default function LessonsPage() {
       )
     }
 
+    // FIXED SORTING: Grade -> Filename -> Page number
+    list.sort((a, b) => {
+      // 1. Sort by grade first (ascending: 1, 2, 3...)
+      const gradeA = (a as LessonUnit & { grade?: number }).grade ?? 999
+      const gradeB = (b as LessonUnit & { grade?: number }).grade ?? 999
+      if (gradeA !== gradeB) return gradeA - gradeB
+
+      // 2. Sort by filename/title (extract part number if exists)
+      const getPartNumber = (title: string) => {
+        const match = title.match(/phần\s*(\d+)|part\s*(\d+)/i)
+        return match ? parseInt(match[1] || match[2], 10) : 0
+      }
+      const partA = getPartNumber(a.title + a.topic)
+      const partB = getPartNumber(b.title + b.topic)
+      if (partA !== partB) return partA - partB
+
+      // 3. Sort by page number (extract from title/topic)
+      const getPageNumber = (text: string) => {
+        const match = text.match(/trang\s*(\d+)|page\s*(\d+)/i)
+        return match ? parseInt(match[1] || match[2], 10) : 0
+      }
+      const pageA = getPageNumber(a.title + a.topic)
+      const pageB = getPageNumber(b.title + b.topic)
+      if (pageA !== pageB) return pageA - pageB
+
+      // 4. Fallback to unit number
+      return a.unitNumber - b.unitNumber
+    })
+
     return list
-  }, [allUnits, selectedLevel, selectedSkill, searchQuery])
+  }, [allUnits, selectedLevel, selectedGradeBlock, selectedSkill, searchQuery])
+
+  // Pagination logic
+  const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE)
+  const paginatedUnits = useMemo(() => {
+    const startIndex = (currentPage - 1) * ITEMS_PER_PAGE
+    return filtered.slice(startIndex, startIndex + ITEMS_PER_PAGE)
+  }, [filtered, currentPage])
+
+  // Reset to page 1 when filters change
+  useEffect(() => {
+    setCurrentPage(1)
+  }, [selectedLevel, selectedGradeBlock, selectedSkill, searchQuery])
+
+  // Get current grade blocks based on selected level
+  const currentGradeBlocks = GRADE_BLOCKS[selectedLevel]
 
   return (
-    <div className="min-h-screen p-6 md:p-8 text-white bg-[radial-gradient(circle_at_20%_20%,oklch(0.28_0.1_290/0.4),transparent_40rem)]">
+    <div className="min-h-screen p-3 sm:p-4 md:p-6 lg:p-8 pb-20 lg:pb-8 text-white bg-[radial-gradient(circle_at_20%_20%,oklch(0.28_0.1_290/0.4),transparent_40rem)]">
       <motion.div
         initial={{ opacity: 0, y: 16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
         className="mx-auto max-w-7xl flex flex-col gap-6"
       >
-        {/* ── Page header ── */}
-        <div className="flex items-end justify-between gap-4 flex-wrap">
+        {/* ── Page header - Responsive ── */}
+        <div className="flex items-end justify-between gap-3 sm:gap-4 flex-wrap">
           <div>
-            <p className="text-xs font-bold uppercase tracking-[0.22em] text-[oklch(0.75_0.2_285)]">
-              DOREMI - ĐI HỌC ĐI
+            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-[0.22em] text-[oklch(0.75_0.2_285)]">
+              DOREMI - TIẾNG ANH
             </p>
-            <h1 className="mt-1 text-3xl font-black text-white md:text-4xl">
+            <h1 className="mt-1 text-2xl sm:text-3xl md:text-4xl font-black text-white">
               Tất cả Bài học
             </h1>
-            <p className="mt-1 text-sm text-white/45">
+            <p className="mt-1 text-xs sm:text-sm text-white/45">
               {isLoading
                 ? "Đang tải..."
                 : `${filtered.length} / ${allUnits.length} bài học`}
             </p>
           </div>
-
-          {/* Source indicator */}
-          <div className="flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/45 backdrop-blur-sm">
-            <span
-              className="size-2 rounded-full"
-              style={{ background: "oklch(0.78_0.2_165)" }}
-            />
-            Smart Start 1 &nbsp;|&nbsp;
-            <span
-              className="size-2 rounded-full"
-              style={{ background: "oklch(0.72_0.28_60)" }}
-            />
-            Từ RAG
-          </div>
         </div>
 
-        {/* ── Search bar ── */}
+        {/* ── Search bar - Responsive ── */}
         <div className="relative">
-          <Search className="absolute left-4 top-1/2 size-4 -translate-y-1/2 text-white/35" />
+          <Search className="absolute left-3 sm:left-4 top-1/2 size-4 -translate-y-1/2 text-white/35" />
           <input
             type="search"
             placeholder="Tìm bài học theo tiêu đề, từ vựng, nội dung..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="h-12 w-full rounded-2xl border border-white/10 bg-white/[0.07] pl-11 pr-10 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-[oklch(0.65_0.25_300/0.6)] backdrop-blur-sm"
+            className="h-11 sm:h-12 w-full rounded-xl sm:rounded-2xl border border-white/10 bg-white/[0.07] pl-10 sm:pl-11 pr-9 sm:pr-10 text-sm text-white placeholder:text-white/30 outline-none transition-all focus:border-[oklch(0.65_0.25_300/0.6)] backdrop-blur-sm touch-manipulation"
           />
           {searchQuery && (
             <button
@@ -522,9 +686,9 @@ export default function LessonsPage() {
           )}
         </div>
 
-        {/* ── Filter strips ── */}
+        {/* ── Filter strips - Responsive ── */}
         <div
-          className="flex flex-col gap-3 rounded-2xl p-4"
+          className="flex flex-col gap-2 sm:gap-3 rounded-xl sm:rounded-2xl p-3 sm:p-4"
           style={{
             background: "oklch(0.15 0.05 280/0.6)",
             border: "1px solid oklch(0.4 0.1 280/0.2)",
@@ -534,7 +698,22 @@ export default function LessonsPage() {
             label="Cấp độ"
             options={LEVELS}
             selected={selectedLevel}
-            onSelect={setSelectedLevel}
+            onSelect={(level) => {
+              setSelectedLevel(level)
+              // Reset to first grade block of the new level
+              const newGradeBlocks = GRADE_BLOCKS[level]
+              setSelectedGradeBlock(newGradeBlocks[0])
+            }}
+          />
+          <div
+            className="h-px w-full"
+            style={{ background: "oklch(0.45 0.1 280/0.2)" }}
+          />
+          <FilterStrip
+            label="Khối lớp"
+            options={currentGradeBlocks}
+            selected={selectedGradeBlock}
+            onSelect={setSelectedGradeBlock}
           />
           <div
             className="h-px w-full"
@@ -573,8 +752,9 @@ export default function LessonsPage() {
             <button
               type="button"
               onClick={() => {
-                setSelectedLevel("Tất cả")
-                setSelectedSkill("Tất cả")
+                setSelectedLevel("Cấp 1")
+                setSelectedGradeBlock("Khối 1")
+                setSelectedSkill("Từ vựng")
                 setSearchQuery("")
               }}
               className="rounded-xl px-4 py-2 text-sm font-semibold text-[oklch(0.75_0.22_300)] transition-colors hover:text-white"
@@ -583,11 +763,132 @@ export default function LessonsPage() {
             </button>
           </motion.div>
         ) : (
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {filtered.map((unit, i) => (
-              <LessonCard key={unit.id} unit={unit} index={i} />
-            ))}
-          </div>
+          <>
+            {/* Responsive Grid: 1 col mobile, 2 cols tablet, 3-4 cols desktop */}
+            <div className="grid gap-3 sm:gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+              {paginatedUnits.map((unit, i) => (
+                <LessonCard 
+                  key={unit.id} 
+                  unit={unit} 
+                  index={i} 
+                  isAdmin={isAdmin}
+                  onDelete={handleDeleteLesson}
+                />
+              ))}
+            </div>
+
+            {/* Pagination controls */}
+            {totalPages > 1 && (
+              <div className="flex flex-col items-center gap-4 mt-8">
+                {/* Page numbers */}
+                <div className="flex items-center gap-2 flex-wrap justify-center">
+                  {/* Previous button */}
+                  <button
+                    type="button"
+                    onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
+                    disabled={currentPage === 1}
+                    className="flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                    style={
+                      currentPage === 1
+                        ? {
+                            background: "oklch(0.2 0.05 280/0.4)",
+                            color: "oklch(0.5 0.1 280)",
+                          }
+                        : {
+                            background: "oklch(0.2 0.05 280/0.6)",
+                            border: "1px solid oklch(0.45 0.12 280/0.3)",
+                            color: "oklch(0.75 0.1 280)",
+                          }
+                    }
+                  >
+                    <ChevronRight className="size-3.5 rotate-180" />
+                    <span className="hidden sm:inline">Trước</span>
+                  </button>
+
+                  {/* Page number buttons */}
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => {
+                    // Show first page, last page, current page, and pages around current
+                    const showPage =
+                      pageNum === 1 ||
+                      pageNum === totalPages ||
+                      (pageNum >= currentPage - 1 && pageNum <= currentPage + 1)
+
+                    // Show ellipsis
+                    const showEllipsisBefore = pageNum === currentPage - 2 && currentPage > 3
+                    const showEllipsisAfter = pageNum === currentPage + 2 && currentPage < totalPages - 2
+
+                    if (showEllipsisBefore || showEllipsisAfter) {
+                      return (
+                        <span
+                          key={`ellipsis-${pageNum}`}
+                          className="px-2 text-white/30"
+                        >
+                          ...
+                        </span>
+                      )
+                    }
+
+                    if (!showPage) return null
+
+                    const isActive = currentPage === pageNum
+                    return (
+                      <button
+                        key={pageNum}
+                        type="button"
+                        onClick={() => setCurrentPage(pageNum)}
+                        className="min-w-[2.5rem] rounded-xl px-3 py-2 text-sm font-bold transition-all"
+                        style={
+                          isActive
+                            ? {
+                                background: "linear-gradient(135deg,oklch(0.52 0.22 285),oklch(0.47 0.24 305))",
+                                color: "white",
+                                boxShadow: "0 0 14px oklch(0.65 0.28 300/0.45)",
+                              }
+                            : {
+                                background: "oklch(0.2 0.05 280/0.6)",
+                                border: "1px solid oklch(0.45 0.12 280/0.3)",
+                                color: "oklch(0.75 0.1 280)",
+                              }
+                        }
+                      >
+                        {pageNum}
+                      </button>
+                    )
+                  })}
+
+                  {/* Next button */}
+                  <button
+                    type="button"
+                    onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
+                    disabled={currentPage === totalPages}
+                    className="flex items-center gap-1 rounded-xl px-3 py-2 text-sm font-semibold transition-all disabled:opacity-30 disabled:cursor-not-allowed"
+                    style={
+                      currentPage === totalPages
+                        ? {
+                            background: "oklch(0.2 0.05 280/0.4)",
+                            color: "oklch(0.5 0.1 280)",
+                          }
+                        : {
+                            background: "oklch(0.2 0.05 280/0.6)",
+                            border: "1px solid oklch(0.45 0.12 280/0.3)",
+                            color: "oklch(0.75 0.1 280)",
+                          }
+                    }
+                  >
+                    <span className="hidden sm:inline">Sau</span>
+                    <ChevronRight className="size-3.5" />
+                  </button>
+                </div>
+
+                {/* Info text */}
+                <div className="text-center">
+                  <span className="text-xs text-white/40">
+                    Hiển thị {((currentPage - 1) * ITEMS_PER_PAGE) + 1} - {Math.min(currentPage * ITEMS_PER_PAGE, filtered.length)} trong tổng số {filtered.length} bài học
+                  </span>
+                </div>
+              </div>
+            )}
+          </>
         )}
 
         {/* footer */}

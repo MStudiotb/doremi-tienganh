@@ -248,8 +248,8 @@ body {
     gap: 1rem;
   }
 
-  /* Improve touch targets */
-  button, a {
+  /* Improve touch targets - minimum 44x44px for accessibility */
+  button, a, input[type="button"], input[type="submit"] {
     min-height: 44px;
     min-width: 44px;
   }
@@ -257,6 +257,24 @@ body {
   /* Optimize chat interface for mobile */
   .chat-container {
     height: 400px !important;
+  }
+
+  /* Responsive font sizes for mobile */
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 4vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1.1rem, 3.5vw, 1.5rem);
+  }
+
+  /* Nunito font with white outline - smaller on mobile */
+  [style*="fontWeight: 900"] {
+    font-size: clamp(0.875rem, 3vw, 1rem) !important;
   }
 
   /* Reduce animations on mobile for performance */
@@ -308,5 +326,149 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+/* Bell wiggle animation for Weekly Test menu */
+@keyframes wiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-15deg);
+  }
+  75% {
+    transform: rotate(15deg);
+  }
+}
+
+/* Continuous wiggle animation - bell rings every 4 seconds */
+@keyframes wiggle-continuous {
+  0%, 90%, 100% {
+    transform: rotate(0deg);
+  }
+  92% {
+    transform: rotate(-12deg);
+  }
+  94% {
+    transform: rotate(12deg);
+  }
+  96% {
+    transform: rotate(-10deg);
+  }
+  98% {
+    transform: rotate(10deg);
+  }
+}
+
+/* Responsive utilities */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure images maintain aspect ratio */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+/* Prevent text overflow on mobile */
+@media (max-width: 640px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  * {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+  }
+}
+
+/* Optimize icon sizes for mobile */
+@media (max-width: 768px) {
+  .icon-responsive {
+    width: clamp(16px, 4vw, 24px);
+    height: clamp(16px, 4vw, 24px);
+  }
+}
+
+/* Safe area insets for mobile devices (notch support) */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+/* Fireworks animation for "Bài Thi Tuần" */
+@keyframes firework {
+  0% {
+    transform: translateY(100%) scale(0);
+    opacity: 0;
+  }
+  15% {
+    transform: translateY(0%) scale(1);
+    opacity: 1;
+  }
+  30% {
+    transform: translateY(0%) scale(1.2);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-10%) scale(0.8);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-20%) scale(0);
+    opacity: 0;
+  }
+}
+
+.firework-particle {
+  position: absolute;
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  animation: firework 2s ease-out infinite;
+  pointer-events: none;
+}
+
+.firework-particle:nth-child(1) {
+  background: radial-gradient(circle, #FFD700 0%, #FFA500 100%);
+  box-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700;
+}
+
+.firework-particle:nth-child(2) {
+  background: radial-gradient(circle, #FF6B6B 0%, #FF4757 100%);
+  box-shadow: 0 0 10px #FF6B6B, 0 0 20px #FF6B6B;
+  animation-delay: 0.3s;
+}
+
+.firework-particle:nth-child(3) {
+  background: radial-gradient(circle, #4ECDC4 0%, #1DD1A1 100%);
+  box-shadow: 0 0 10px #4ECDC4, 0 0 20px #4ECDC4;
+  animation-delay: 0.6s;
+}
+
+.firework-particle:nth-child(4) {
+  background: radial-gradient(circle, #A8E6CF 0%, #56CCF2 100%);
+  box-shadow: 0 0 10px #A8E6CF, 0 0 20px #A8E6CF;
+  animation-delay: 0.9s;
+}
+
+.firework-particle:nth-child(5) {
+  background: radial-gradient(circle, #FFB6C1 0%, #FF69B4 100%);
+  box-shadow: 0 0 10px #FFB6C1, 0 0 20px #FFB6C1;
+  animation-delay: 1.2s;
+}
+
+.firework-particle:nth-child(6) {
+  background: radial-gradient(circle, #FFA500 0%, #FF8C00 100%);
+  box-shadow: 0 0 10px #FFA500, 0 0 20px #FFA500;
+  animation-delay: 1.5s;
 }
 

@@ -27,11 +27,31 @@ export async function GET(request: NextRequest) {
     const db = client.db(process.env.MONGODB_DB || "doremi_eng");
     const collection = db.collection<VocabularyDocument>("vocabulary");
 
-    // Get all vocabulary sorted by word
+    // Get query parameters for pagination
+    const searchParams = request.nextUrl.searchParams;
+    const limit = parseInt(searchParams.get("limit") || "5000"); // Increased default limit
+    const skip = parseInt(searchParams.get("skip") || "0");
+    const search = searchParams.get("search")?.toLowerCase().trim();
+
+    // Build query filter
+    const filter = search 
+      ? {
+          $or: [
+            { word: { $regex: search, $options: "i" } },
+            { meaning: { $regex: search, $options: "i" } }
+          ]
+        }
+      : {};
+
+    // Get total count
+    const total = await collection.countDocuments(filter);
+
+    // Get vocabulary sorted by word (A-Z)
     const vocabulary = await collection
-      .find({})
+      .find(filter)
       .sort({ word: 1 })
-      .limit(1000) // Limit to prevent overload
+      .skip(skip)
+      .limit(limit)
       .toArray();
 
     return NextResponse.json({
@@ -43,7 +63,9 @@ export async function GET(request: NextRequest) {
         example: v.example,
         imageUrl: v.imageUrl,
       })),
-      total: vocabulary.length,
+      total,
+      count: vocabulary.length,
+      hasMore: skip + vocabulary.length < total,
     });
   } catch (error) {
     console.error("List vocabulary error:", error);

@@ -40,7 +40,7 @@ export default function ChatPage() {
 
     try {
       // Get current level from localStorage
-      const currentLevel = localStorage.getItem("doremi_current_level") || "Cơ bản"
+      const currentLevel = localStorage.getItem("doremi_current_level") || "Cấp 1"
       console.log("🎯 Sending question with level:", currentLevel)
       
       const response = await fetch("/api/chat", {

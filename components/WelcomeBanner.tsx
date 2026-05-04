@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-const badges = ["🔥 0 ngày streak", "✨ 0 XP", "🌱 Cơ bản"];
+const badges = ["🔥 0 ngày streak", "✨ 0 XP", "🌱 Cấp 1"];
 const mascotFrames = ["/doremi1.png", "/doremi2.png", "/doremi3.png"];
 
 type Session = {
@@ -122,7 +122,8 @@ export function WelcomeBanner() {
 
   return (
     <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#03045E] p-10 animate-gradient-x">
-      <div className="relative z-10 max-w-2xl pr-0 sm:pr-32 lg:pr-56">
+      {/* Text content - highest z-index */}
+      <div className="relative z-30 max-w-2xl pr-0 sm:pr-32 lg:pr-56">
         <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl break-words drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
           {greeting}, {displayName}
         </h1>
@@ -143,25 +144,55 @@ export function WelcomeBanner() {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-4 hidden h-[220px] w-[220px] sm:block">
-        <Image
-          src={mascotFrames[frameIndex]}
-          alt="Doremi mascot"
-          fill
-          sizes="220px"
-          priority
-          className="object-contain"
-        />
+      {/* Classroom scene - layered images */}
+      <div className="absolute bottom-0 right-0 hidden sm:block pointer-events-none w-full">
+        {/* Students in background - z-index 10, shifted LEFT to show all characters */}
+        <div className="absolute bottom-0 right-[45%] sm:right-[40%] lg:right-[35%] w-[240px] h-[170px] lg:w-[280px] lg:h-[200px] z-10">
+          <Image
+            src="/damban.png"
+            alt="Students in classroom - Nobita, Suneo, Jaian"
+            fill
+            sizes="(max-width: 1024px) 240px, 280px"
+            priority
+            className="object-contain object-bottom opacity-85"
+            style={{
+              transform: 'scale(0.9)'
+            }}
+          />
+        </div>
+
+        {/* DOREMI mascot in front - z-index 20 with drop shadow, stays on RIGHT */}
+        <div className="absolute bottom-0 right-4 lg:right-8 w-[220px] h-[220px] lg:w-[260px] lg:h-[260px] z-20">
+          <Image
+            src={mascotFrames[frameIndex]}
+            alt="Doremi mascot teaching"
+            fill
+            sizes="(max-width: 1024px) 220px, 260px"
+            priority
+            className="object-contain object-bottom"
+            style={{
+              filter: 'drop-shadow(0 8px 16px rgba(0, 0, 0, 0.3)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2))'
+            }}
+          />
+        </div>
       </div>
 
+      {/* Preload images */}
       <div aria-hidden="true" className="hidden">
+        <Image
+          src="/damban.png"
+          alt=""
+          width={320}
+          height={220}
+          priority
+        />
         {mascotFrames.map((frame) => (
           <Image
             key={frame}
             src={frame}
             alt=""
-            width={220}
-            height={220}
+            width={260}
+            height={260}
             priority
           />
         ))}

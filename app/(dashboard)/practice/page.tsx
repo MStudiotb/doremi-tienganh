@@ -78,19 +78,17 @@ async function loadRagResources(): Promise<RagResource[]> {
 }
 
 // ── Level / skill config ───────────────────────────────────────────────────
-const LEVELS = ["Cơ bản", "Trung cấp", "Trung cao cấp", "Cao cấp", "Thành thạo", "Master", "Challenger"] as const
+const LEVELS = ["Cấp 1", "Cấp 2", "Cấp 3", "Trung cấp & Cao đẳng", "Đại học"] as const
 const SKILLS = ["Tổng hợp", "Từ vựng", "Ngữ pháp", "Nghe"] as const
 type Level = (typeof LEVELS)[number]
 type Skill = (typeof SKILLS)[number]
 
 const levelToNamespace: Record<string, ("primary_data" | "secondary_data" | "highschool_data")[]> = {
-  "Cơ bản": ["primary_data"],
-  "Trung cấp": ["secondary_data"],
-  "Trung cao cấp": ["secondary_data"],
-  "Cao cấp": ["highschool_data"],
-  "Thành thạo": ["highschool_data"],
-  "Master": ["highschool_data"],
-  "Challenger": ["primary_data", "secondary_data", "highschool_data"],
+  "Cấp 1": ["primary_data"],
+  "Cấp 2": ["secondary_data"],
+  "Cấp 3": ["highschool_data"],
+  "Trung cấp & Cao đẳng": ["highschool_data"],
+  "Đại học": ["highschool_data"],
 }
 
 const SKILL_ICONS: Record<Skill, React.ReactNode> = {
@@ -337,8 +335,6 @@ const spring = { type: "spring" as const, stiffness: 240, damping: 22 }
 
 // ── Sub-components ────────────────────────────────────────────────────────
 function LevelButton({ label, isSelected, onClick }: { label: string; isSelected: boolean; onClick: () => void }) {
-  const isChallenger = label === "Challenger"
-
   return (
     <motion.button
       type="button"
@@ -349,17 +345,11 @@ function LevelButton({ label, isSelected, onClick }: { label: string; isSelected
       className="shrink-0 rounded-full px-4 py-2 text-sm font-bold transition-colors"
       style={
         isSelected
-          ? isChallenger
-            ? {
-                background: "linear-gradient(135deg,oklch(0.68 0.22 200),oklch(0.72 0.22 55))",
-                color: "white",
-                boxShadow: "0 0 20px oklch(0.68 0.22 200/0.55), 0 0 40px oklch(0.72 0.22 55/0.3)",
-              }
-            : {
-                background: "linear-gradient(135deg,oklch(0.55 0.24 200),oklch(0.5 0.26 220))",
-                color: "white",
-                boxShadow: "0 0 18px oklch(0.68 0.22 200/0.6)",
-              }
+          ? {
+              background: "linear-gradient(135deg,oklch(0.55 0.24 200),oklch(0.5 0.26 220))",
+              color: "white",
+              boxShadow: "0 0 18px oklch(0.68 0.22 200/0.6)",
+            }
           : {
               background: "oklch(0.2 0.05 280/0.6)",
               border: "1px solid oklch(0.45 0.12 280/0.3)",
@@ -367,7 +357,7 @@ function LevelButton({ label, isSelected, onClick }: { label: string; isSelected
             }
       }
     >
-      {isChallenger ? "🏆 " : ""}{label}
+      {label}
     </motion.button>
   )
 }
@@ -696,7 +686,7 @@ function ResultsScreen({
 // ── Main page ──────────────────────────────────────────────────────────────
 export default function PracticePage() {
   const [pageState, setPageState] = useState<PageState>("idle")
-  const [selectedLevel, setSelectedLevel] = useState<Level>("Cơ bản")
+  const [selectedLevel, setSelectedLevel] = useState<Level>("Cấp 1")
   const [selectedSkill, setSelectedSkill] = useState<Skill>("Tổng hợp")
   const [allUnits, setAllUnits] = useState<LessonUnit[]>([])
   const [prebuiltByNs, setPrebuiltByNs] = useState<Map<string, Question[]>>(new Map())

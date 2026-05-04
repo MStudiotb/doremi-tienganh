@@ -63,7 +63,7 @@ export default function ChatWidget() {
     ])
 
     try {
-      const currentLevel = localStorage.getItem("doremi_current_level") || "Cơ bản"
+      const currentLevel = localStorage.getItem("doremi_current_level") || "Cấp 1"
       
       const response = await fetch("/api/chat", {
         method: "POST",
@@ -113,15 +113,15 @@ export default function ChatWidget() {
       {/* Floating Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_48px_rgba(0,0,0,0.6)]"
+        className="fixed bottom-6 right-6 z-50 h-16 w-16 rounded-full bg-gradient-to-br from-[oklch(0.78_0.17_200)] to-[oklch(0.62_0.2_260)] p-2 shadow-[0_8px_32px_rgba(0,0,0,0.4)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_48px_rgba(0,0,0,0.6)]"
         aria-label="Open chat"
       >
-        <Image
-          src="/dau chan.png"
+        <img
+          src="/chuong.png?v=2"
           alt="Chat"
-          width={64}
-          height={64}
-          className="h-full w-full rounded-full object-cover"
+          width="48"
+          height="48"
+          className="h-full w-full object-contain drop-shadow-lg"
         />
       </button>
 
@@ -133,7 +133,7 @@ export default function ChatWidget() {
             <div className="flex items-center gap-3">
               <div className="h-10 w-10 shrink-0 overflow-hidden rounded-full">
                 <Image
-                  src="/dau chan.png"
+                  src="/chuong.png"
                   alt="DOREMI TEACHER"
                   width={40}
                   height={40}
@@ -165,7 +165,7 @@ export default function ChatWidget() {
                 <div>
                   <div className="mx-auto h-12 w-12 overflow-hidden rounded-full">
                     <Image
-                      src="/dau chan.png"
+                      src="/chuong.png"
                       alt="DOREMI TEACHER"
                       width={48}
                       height={48}
@@ -198,7 +198,7 @@ export default function ChatWidget() {
                     {!isUser ? (
                       <div className="h-7 w-7 shrink-0 overflow-hidden rounded-full">
                         <Image
-                          src="/dau chan.png"
+                          src="/chuong.png"
                           alt="AI"
                           width={28}
                           height={28}

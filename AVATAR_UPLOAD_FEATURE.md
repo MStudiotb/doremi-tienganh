@@ -1,236 +1,161 @@
-# Tính Năng Tải Avatar - DOREMI
+# Tính năng Upload Avatar - Hoàn thành ✅
 
-## Tổng Quan
-Tính năng cho phép các bé tự tải ảnh đại diện (Avatar) từ máy tính lên web khi đăng ký tài khoản.
+## Tổng quan
+Đã triển khai thành công tính năng cập nhật ảnh đại diện (Avatar) cho người dùng tại dự án HOCTIENGANH.
 
-## Các Thành Phần Đã Triển Khai
+## Các tính năng đã triển khai
 
-### 1. API Route Upload Avatar
-**File:** `app/api/upload/avatar/route.ts`
+### 1. ✅ Giao diện tương tác
+- Avatar hình tròn giờ đây có thể click được
+- Hiển thị con trỏ pointer khi di chuột qua
+- Tooltip "Nhấn để thay đổi ảnh đại diện" xuất hiện khi hover
 
-**Chức năng:**
-- Nhận file ảnh từ form upload
-- Validate loại file (JPG, PNG, GIF, WEBP)
-- Validate kích thước file (tối đa 5MB)
-- Tự động tạo thư mục `public/avatars/` nếu chưa có
-- Lưu file với tên unique: `{userId}-{timestamp}.{extension}`
-- Trả về đường dẫn public URL: `/avatars/{filename}`
+### 2. ✅ Input File ẩn
+- Thẻ `<input type="file" />` được ẩn hoàn toàn
+- Tự động kích hoạt khi click vào avatar
+- Chỉ chấp nhận các định dạng ảnh: JPG, JPEG, PNG, GIF, WEBP
 
-**Endpoint:** `POST /api/upload/avatar`
+### 3. ✅ Kiểm soát dung lượng
+- Giới hạn tối đa: **10MB**
+- Kiểm tra ở cả client-side và server-side
+- Thông báo rõ ràng: "Dung lượng ảnh không được vượt quá 10MB"
 
-**Request:**
-- FormData với 2 fields:
-  - `avatar`: File ảnh
-  - `userId`: ID người dùng (email hoặc unique ID)
+### 4. ✅ Xử lý dữ liệu
 
-**Response:**
-```json
-{
-  "message": "Tải ảnh đại diện thành công",
-  "avatarUrl": "/avatars/user-1234567890.jpg"
-}
+#### Client-side:
+- **Preview ngay lập tức**: Hiển thị ảnh preview ngay sau khi chọn file
+- **Validation**: Kiểm tra định dạng và dung lượng trước khi upload
+- **Loading state**: Hiển thị spinner khi đang upload
+- **Error handling**: Revert về ảnh cũ nếu upload thất bại
+
+#### Server-side:
+- **API Endpoint**: `/api/upload/avatar`
+- **Lưu trữ**: Ảnh được lưu vào thư mục `public/avatars/`
+- **Tên file**: Format `{userId}-{timestamp}.{extension}`
+- **Validation**: Kiểm tra lại định dạng và dung lượng
+- **Response**: Trả về URL công khai của ảnh
+
+### 5. ✅ Hiệu ứng hover
+- **Camera icon**: Biểu tượng máy ảnh xuất hiện khi hover
+- **Overlay mờ**: Background đen mờ 60% với backdrop-blur
+- **Border glow**: Border sáng hơn và shadow mạnh hơn khi hover
+- **Smooth transition**: Tất cả hiệu ứng có animation mượt mà
+
+## Cấu trúc File
+
+### Component chính
 ```
-
-### 2. Form Đăng Ký với Upload Avatar
-**File:** `components/auth/auth-card.tsx`
-
-**Tính năng mới:**
-- ✅ Input file ẩn với accept image types
-- ✅ Preview ảnh real-time khi chọn file
-- ✅ Validate file type và size ở client-side
-- ✅ Hiển thị ảnh preview trong khung tròn với Glassmorphism effect
-- ✅ Button "Chọn ảnh" / "Đổi ảnh khác" với icon Upload
-- ✅ Hiển thị hướng dẫn: "JPG, PNG, GIF hoặc WEBP (tối đa 5MB)"
-- ✅ Upload ảnh lên server khi đăng ký thành công
-- ✅ Lưu avatar URL vào localStorage
-- ✅ Fallback về ảnh mặc định `/tapsu.png` (Nobita) nếu không upload
-
-**State Management:**
-- `avatarFile`: File object được chọn
-- `avatarPreview`: Data URL để preview ảnh
-
-**Flow:**
-1. User chọn ảnh → Validate → Tạo preview
-2. User nhấn "Tạo Tài Khoản" → Hiện popup xác nhận
-3. User xác nhận → Upload ảnh → Lưu session với avatar URL
-4. Redirect về trang chủ
-
-### 3. Hiển Thị Avatar trong Sidebar
-**File:** `components/UserAvatarCard.tsx`
-
-**Cập nhật:**
-- ✅ Đọc avatar URL từ localStorage (`doremi_user_avatar`)
-- ✅ Đọc avatar từ session object (`doremi_session.avatar`)
-- ✅ Hiển thị ảnh user thay vì luôn hiện Nobita
-- ✅ Fallback về `/tapsu.png` nếu không có avatar
-- ✅ Sử dụng `object-cover` để ảnh không bị méo
-- ✅ Giữ nguyên Glassmorphism và Gravity Gradient effects
-
-**State:**
-- `avatarUrl`: URL của ảnh đại diện (default: `/tapsu.png`)
-
-### 4. Cấu Trúc Thư Mục
+components/UserAvatarCard.tsx
 ```
-public/
-  avatars/
-    .gitkeep          # Đảm bảo thư mục được track bởi git
-    {user-uploaded-files}  # Các file ảnh user upload (ignored by git)
+- State management cho avatar, upload status, hover state
+- File input handler với validation
+- Preview và upload logic
+- UI với camera overlay và loading spinner
+
+### API Endpoint
 ```
-
-### 5. Git Configuration
-**File:** `.gitignore`
-
-```gitignore
-# User uploaded files
-public/avatars/*
-!public/avatars/.gitkeep
+app/api/upload/avatar/route.ts
 ```
+- POST endpoint nhận FormData
+- Validation file type và size (max 10MB)
+- Lưu file vào `public/avatars/`
+- Trả về public URL
 
-Cấu hình này:
-- Ignore tất cả file trong `public/avatars/`
-- Nhưng vẫn track file `.gitkeep` để giữ thư mục
-
-## Giao Diện
-
-### Form Đăng Ký
+### Thư mục lưu trữ
 ```
-┌─────────────────────────────────────┐
-│ Tải ảnh đại diện của bạn            │
-│                                     │
-│  ╭─────╮  ┌──────────────────────┐ │
-│  │ 👤  │  │  📤 Chọn ảnh         │ │
-│  │     │  └──────────────────────┘ │
-│  ╰─────╯  JPG, PNG, GIF hoặc WEBP │
-│  Preview   (tối đa 5MB)            │
-└─────────────────────────────────────┘
+public/avatars/
 ```
+- Chứa tất cả ảnh avatar đã upload
+- Có thể truy cập công khai qua URL `/avatars/{filename}`
 
-### Sidebar Avatar Card
-```
-┌──────────────────────────────────┐
-│  ╭─────╮                         │
-│  │ 👤  │  Xin chào,              │
-│  │     │  Tên User               │
-│  ╰─────╯  🔥 5  ✨ 120 XP        │
-└──────────────────────────────────┘
-```
+## Cách sử dụng
 
-## Phong Cách Thiết Kế
+1. **Mở ứng dụng** và đăng nhập
+2. **Click vào avatar** hình tròn ở sidebar
+3. **Chọn ảnh** từ thiết bị (tối đa 10MB)
+4. **Xem preview** ngay lập tức
+5. **Chờ upload** hoàn tất (có spinner loading)
+6. **Nhận thông báo** "Cập nhật ảnh đại diện thành công!"
 
-### Màu Sắc & Hiệu Ứng
-- **Glassmorphism:** Border với `border-cyan-400/40`
-- **Neon Glow:** Shadow `0_0_20px_rgba(34,211,238,0.3)`
-- **Gradient:** `from-cyan-400/30 via-purple-500/20 to-pink-500/30`
-- **Font:** Quicksand Bold cho tên user
+## Validation Rules
 
-### Bo Góc
-- Avatar: `rounded-full` (tròn hoàn toàn)
-- Buttons: `rounded-xl`
-- Cards: `rounded-2xl`
+### Client-side:
+- ✅ File type: image/jpeg, image/jpg, image/png, image/gif, image/webp
+- ✅ File size: ≤ 10MB
+- ✅ Alert messages bằng tiếng Việt
 
-## Validation
+### Server-side:
+- ✅ File type validation
+- ✅ File size validation (10MB)
+- ✅ Safe filename generation
+- ✅ Directory creation if not exists
 
-### Client-side
-- ✅ File type: JPG, JPEG, PNG, GIF, WEBP
-- ✅ File size: Tối đa 5MB
-- ✅ Hiển thị error message nếu không hợp lệ
+## Tính năng bổ sung
 
-### Server-side
-- ✅ Validate file type
-- ✅ Validate file size
-- ✅ Sanitize filename (remove special characters)
-- ✅ Generate unique filename với timestamp
+### UX Enhancements:
+- ⚡ **Instant preview**: Không cần đợi upload để xem ảnh
+- 🔄 **Auto-revert**: Tự động quay lại ảnh cũ nếu lỗi
+- 🎨 **Beautiful animations**: Smooth transitions và hover effects
+- 📱 **Responsive**: Hoạt động tốt trên mọi thiết bị
+- ♿ **Accessible**: Có title và aria labels
 
-## Security
-
-### File Upload Security
-- ✅ Whitelist file types (chỉ cho phép image types)
-- ✅ Limit file size (5MB max)
-- ✅ Sanitize user input trong filename
-- ✅ Store files outside of executable paths
-- ✅ Generate unique filenames để tránh conflict
-
-### Storage
-- ✅ Files stored in `public/avatars/` (publicly accessible)
-- ✅ Filenames không chứa thông tin nhạy cảm
-- ✅ Ignored by git để không commit user data
+### Technical Features:
+- 🔒 **Type-safe**: Full TypeScript support
+- 🎯 **Error handling**: Comprehensive try-catch blocks
+- 🔄 **Event system**: Trigger "doremi-auth-change" để sync
+- 💾 **Session storage**: Lưu avatar URL vào localStorage
+- 🧹 **Cleanup**: Reset file input sau mỗi upload
 
 ## Testing Checklist
 
-### Đăng Ký với Avatar
-- [ ] Chọn ảnh JPG → Preview hiển thị đúng
-- [ ] Chọn ảnh PNG → Preview hiển thị đúng
-- [ ] Chọn file không phải ảnh → Hiện error
-- [ ] Chọn file > 5MB → Hiện error
-- [ ] Đăng ký thành công → Avatar được upload
-- [ ] Đăng ký không chọn ảnh → Dùng Nobita mặc định
+- [ ] Click vào avatar để mở file picker
+- [ ] Hover để xem camera icon
+- [ ] Upload ảnh < 10MB (thành công)
+- [ ] Upload ảnh > 10MB (hiện thông báo lỗi)
+- [ ] Upload file không phải ảnh (hiện thông báo lỗi)
+- [ ] Xem preview ngay lập tức
+- [ ] Kiểm tra loading spinner
+- [ ] Xác nhận ảnh được lưu vào `public/avatars/`
+- [ ] Refresh trang và kiểm tra ảnh vẫn hiển thị
+- [ ] Test trên nhiều trình duyệt
 
-### Hiển Thị Avatar
-- [ ] Avatar hiển thị trong Sidebar sau khi đăng ký
-- [ ] Avatar không bị méo (object-cover hoạt động)
-- [ ] Glassmorphism effects hiển thị đẹp
-- [ ] Refresh page → Avatar vẫn hiển thị
-- [ ] Đăng xuất → Về Nobita mặc định
+## Lưu ý kỹ thuật
 
-### Edge Cases
-- [ ] Upload ảnh rất nhỏ (< 100KB)
-- [ ] Upload ảnh vuông
-- [ ] Upload ảnh dọc (portrait)
-- [ ] Upload ảnh ngang (landscape)
-- [ ] Network error khi upload → Fallback về default
-- [ ] Đăng nhập user cũ (chưa có avatar) → Hiện Nobita
+### Để chạy thử:
+```bash
+npm run dev
+```
 
-## Cải Tiến Tương Lai
+### Kiểm tra ảnh đã upload:
+```bash
+ls public/avatars/
+```
 
-### Phase 2 (Optional)
-- [ ] Crop/resize ảnh trước khi upload
-- [ ] Compress ảnh để giảm dung lượng
-- [ ] Upload lên cloud storage (Cloudinary, S3)
-- [ ] Cho phép đổi avatar sau khi đã đăng ký
-- [ ] Avatar gallery với các ảnh có sẵn
-- [ ] Tích hợp với MongoDB để lưu avatar URL
+### Format tên file:
+```
+{email}-{timestamp}.{extension}
+Ví dụ: user@example.com-1714867200000.jpg
+```
 
-### Phase 3 (Advanced)
-- [ ] Image optimization với Next.js Image API
-- [ ] WebP conversion tự động
-- [ ] CDN integration
-- [ ] Avatar moderation (AI check inappropriate content)
+## Cải tiến trong tương lai (Optional)
 
-## Troubleshooting
+1. **Image optimization**: Tự động resize/compress ảnh trước khi lưu
+2. **Cloudinary integration**: Upload lên cloud thay vì local storage
+3. **Crop tool**: Cho phép người dùng crop ảnh trước khi upload
+4. **Multiple formats**: Hỗ trợ thêm SVG, AVIF
+5. **Progress bar**: Hiển thị % upload cho file lớn
+6. **Drag & drop**: Kéo thả ảnh vào avatar
+7. **MongoDB storage**: Lưu avatar URL vào database
 
-### Lỗi Upload Failed
-**Nguyên nhân:**
-- File quá lớn
-- Loại file không được hỗ trợ
-- Không có quyền ghi vào thư mục `public/avatars/`
+## Kết luận
 
-**Giải pháp:**
-1. Check file size và type
-2. Verify thư mục `public/avatars/` tồn tại
-3. Check permissions của thư mục
-4. Check console logs để xem error chi tiết
+✅ Tính năng upload avatar đã được triển khai đầy đủ theo yêu cầu:
+- Giao diện clickable với hover effects
+- File input ẩn
+- Validation 10MB
+- Preview ngay lập tức
+- API endpoint hoàn chỉnh
+- Camera icon overlay
+- Error handling tốt
 
-### Avatar Không Hiển Thị
-**Nguyên nhân:**
-- File không tồn tại
-- Path không đúng
-- Next.js Image optimization issue
-
-**Giải pháp:**
-1. Check file tồn tại trong `public/avatars/`
-2. Verify avatar URL trong localStorage
-3. Check browser console cho errors
-4. Clear cache và refresh
-
-## Kết Luận
-
-Tính năng upload avatar đã được triển khai hoàn chỉnh với:
-- ✅ Upload và lưu trữ file
-- ✅ Preview real-time
-- ✅ Validation đầy đủ
-- ✅ Hiển thị trong UI
-- ✅ Glassmorphism design
-- ✅ Fallback về default avatar
-- ✅ Security best practices
-
-Tính năng sẵn sàng để test và sử dụng! 🎉
+**Status**: READY FOR TESTING 🚀

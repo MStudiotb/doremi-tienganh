@@ -13,7 +13,9 @@ import {
   Volume2,
   X,
   XCircle,
+  Edit3,
 } from "lucide-react"
+import { DirectInputModal } from "@/components/lessons/DirectInputModal"
 import { parseRagIntoUnits, smartStart1Units, type LessonUnit, type VocabItem } from "@/lib/lesson-seed"
 import { parseVocabOffline } from "@/lib/parse-rag-client"
 import {
@@ -60,20 +62,31 @@ async function loadAllUnitsWithRag(): Promise<LessonUnit[]> {
   const idbUnits: LessonUnit[] = []
 
   for (const r of rag) {
+    // Extract grade from filename for consistency
+    const gradeMatch = r.fileName.match(/lop\s*(\d+)/i) || r.fileName.match(/grade\s*(\d+)/i)
+    const grade = gradeMatch ? parseInt(gradeMatch[1], 10) : undefined
+
     const parsed = parseRagIntoUnits(r.ragText, r.namespace, r.id)
     if (parsed.length > 0) {
       // Fill in missing vocab via offline parser
       const offlineVocab = parseVocabOffline(r.ragText)
-      idbUnits.push(...parsed.map((u) =>
-        u.vocabulary.length === 0 ? { ...u, vocabulary: offlineVocab } : u,
-      ))
+      // FIXED: Use same ID format as list page: ${res.id}-${unitIndex}
+      parsed.forEach((u, unitIndex) => {
+        idbUnits.push({
+          ...(u.vocabulary.length === 0 ? { ...u, vocabulary: offlineVocab } : u),
+          id: `${r.id}-${unitIndex}`,
+          title: u.title || `${r.fileName} - Phần ${unitIndex + 1}`,
+          topic: grade ? `Lớp ${grade} - ${r.fileName}` : r.fileName,
+          grade,
+        })
+      })
     } else if (r.ragText?.trim()) {
       const vocabulary = parseVocabOffline(r.ragText)
       const unit: LessonUnit = {
-        id: r.id,
+        id: `${r.id}-0`, // FIXED: Add -0 suffix for consistency
         unitNumber: idbUnits.length + 1,
         title: r.fileName.replace(/\.[^.]+$/, ""),
-        topic: r.schoolLevel,
+        topic: grade ? `Lớp ${grade} - ${r.fileName}` : r.schoolLevel,
         namespace: r.namespace,
         vocabulary,
         sentences: r.ragText
@@ -83,6 +96,7 @@ async function loadAllUnitsWithRag(): Promise<LessonUnit[]> {
           .map((l) => l.trim()),
         skillTags: ["Từ vựng"],
         source: "idb",
+        grade,
       }
       idbUnits.push(unit)
     }
@@ -116,29 +130,73 @@ type AnswerRecord = { questionId: string; correct: boolean }
 function shuffle<T>(arr: T[]): T[] { return [...arr].sort(() => Math.random() - 0.5) }
 
 function buildPart1(vocab: VocabItem[], allVocab: VocabItem[]): P1Q[] {
+  // Fallback distractors for small vocabulary sets
+  const fallbackMeanings = [
+    "con chó", "con mèo", "quả táo", "quả chuối", "màu đỏ", "màu xanh",
+    "ngôi nhà", "chiếc xe", "quyển sách", "cái bàn", "cái ghế", "cửa sổ",
+    "người mẹ", "người cha", "em bé", "học sinh", "giáo viên", "bác sĩ",
+    "ăn", "uống", "chạy", "nhảy", "đọc", "viết", "nói", "nghe"
+  ]
+  
   return vocab
     .map((v) => {
       const correctMeaning = cleanMeaning(v.meaning)
       if (!correctMeaning) return null
       const pool = buildMeaningPool(allVocab.map((a) => a.meaning), correctMeaning)
-      const wrongs = pickDistractors(correctMeaning, pool)
+      let wrongs = pickDistractors(correctMeaning, pool)
+      
+      // FIXED: If not enough distractors, use fallback meanings
+      if (wrongs.length < 3) {
+        const availableFallbacks = fallbackMeanings.filter(f => 
+          f !== correctMeaning && !wrongs.includes(f)
+        )
+        while (wrongs.length < 3 && availableFallbacks.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availableFallbacks.length)
+          wrongs.push(availableFallbacks.splice(randomIndex, 1)[0])
+        }
+      }
+      
+      // Still not enough? Skip this question
       if (wrongs.length < 3) return null
-      const options = shuffle([correctMeaning, ...wrongs])
+      
+      const options = shuffle([correctMeaning, ...wrongs.slice(0, 3)])
       return { part: 1 as const, id: `p1-${v.word}`, word: v.word, phonetic: v.phonetic ?? "", options, correctIndex: options.indexOf(correctMeaning) }
     })
     .filter(Boolean) as P1Q[]
 }
 
 function buildPart2(vocab: VocabItem[], allVocab: VocabItem[]): P2Q[] {
+  // Fallback distractors for small vocabulary sets
+  const fallbackWords = [
+    "dog", "cat", "apple", "banana", "red", "blue", "green", "yellow",
+    "house", "car", "book", "table", "chair", "window", "door", "pen",
+    "mother", "father", "baby", "student", "teacher", "doctor", "nurse",
+    "eat", "drink", "run", "jump", "read", "write", "speak", "listen"
+  ]
+  
   return vocab
     .map((v) => {
       const correctMeaning = cleanMeaning(v.meaning)
       const correctWord = cleanWord(v.word)
       if (!correctMeaning || !correctWord) return null
       const pool = buildWordPool(allVocab.map((a) => a.word), correctWord)
-      const wrongs = pickDistractors(correctWord, pool)
+      let wrongs = pickDistractors(correctWord, pool)
+      
+      // FIXED: If not enough distractors, use fallback words
+      if (wrongs.length < 3) {
+        const availableFallbacks = fallbackWords.filter(f => 
+          f.toLowerCase() !== correctWord.toLowerCase() && !wrongs.includes(f)
+        )
+        while (wrongs.length < 3 && availableFallbacks.length > 0) {
+          const randomIndex = Math.floor(Math.random() * availableFallbacks.length)
+          wrongs.push(availableFallbacks.splice(randomIndex, 1)[0])
+        }
+      }
+      
+      // Still not enough? Skip this question
       if (wrongs.length < 3) return null
-      const options = shuffle([correctWord, ...wrongs])
+      
+      const options = shuffle([correctWord, ...wrongs.slice(0, 3)])
       return { part: 2 as const, id: `p2-${v.word}`, meaning: correctMeaning, phonetic: v.phonetic ?? "", word: correctWord, options, correctIndex: options.indexOf(correctWord) }
     })
     .filter(Boolean) as P2Q[]
@@ -155,6 +213,14 @@ function buildPart3(vocab: VocabItem[]): P3Q[] {
 }
 
 function buildPart4(vocab: VocabItem[], allVocab: VocabItem[]): P4Q[] {
+  // Fallback meanings for wrong answers
+  const fallbackMeanings = [
+    "con chó", "con mèo", "quả táo", "quả chuối", "màu đỏ", "màu xanh",
+    "ngôi nhà", "chiếc xe", "quyển sách", "cái bàn", "cái ghế", "cửa sổ",
+    "người mẹ", "người cha", "em bé", "học sinh", "giáo viên", "bác sĩ",
+    "ăn", "uống", "chạy", "nhảy", "đọc", "viết", "nói", "nghe"
+  ]
+  
   return vocab
     .map((v, i) => {
       const word = cleanWord(v.word)
@@ -167,9 +233,15 @@ function buildPart4(vocab: VocabItem[], allVocab: VocabItem[]): P4Q[] {
       } else {
         // Pick a cleaned wrong meaning from the pool
         const wrongPool = buildMeaningPool(allVocab.map((a) => a.meaning), correctMeaning)
-        displayMeaning = wrongPool.length > 0
-          ? wrongPool[Math.floor(Math.random() * wrongPool.length)]
-          : correctMeaning
+        if (wrongPool.length > 0) {
+          displayMeaning = wrongPool[Math.floor(Math.random() * wrongPool.length)]
+        } else {
+          // FIXED: Use fallback if no wrong meanings available
+          const availableFallbacks = fallbackMeanings.filter(f => f !== correctMeaning)
+          displayMeaning = availableFallbacks.length > 0
+            ? availableFallbacks[Math.floor(Math.random() * availableFallbacks.length)]
+            : correctMeaning
+        }
       }
       return { part: 4 as const, id: `p4-${v.word}`, word, phonetic: v.phonetic ?? "", displayMeaning, isCorrect }
     })
@@ -479,6 +551,8 @@ export default function LessonDetailPage() {
   const [unit, setUnit] = useState<LessonUnit | null>(null)
   const [isLoading, setIsLoading] = useState(true)
   const [showVocab, setShowVocab] = useState(false)
+  const [showDirectInput, setShowDirectInput] = useState(false)
+  const [isAdmin, setIsAdmin] = useState(false)
 
   // Question sets (built once per load)
   const [p1, setP1] = useState<P1Q[]>([])
@@ -512,6 +586,17 @@ export default function LessonDetailPage() {
   }
 
   useEffect(() => {
+    // Check if user is admin
+    const session = localStorage.getItem("doremi_session")
+    if (session) {
+      try {
+        const parsed = JSON.parse(session)
+        setIsAdmin(parsed.role === "ADMIN")
+      } catch {
+        setIsAdmin(false)
+      }
+    }
+
     loadAllUnitsWithRag().then((units) => {
       setAllUnits(units)
       const found = units.find((u) => u.id === id)
@@ -520,6 +605,85 @@ export default function LessonDetailPage() {
       setIsLoading(false)
     })
   }, [id])
+
+  // Handle direct input save
+  async function handleDirectInputSave(data: { vocabulary: VocabItem[]; sentences: string[] }) {
+    if (!unit) return
+
+    try {
+      // Save to IndexedDB
+      const req = indexedDB.open("doremi_rag_database", 1)
+      
+      req.onsuccess = () => {
+        const db = req.result
+        const tx = db.transaction("rag_resources", "readwrite")
+        const store = tx.objectStore("rag_resources")
+        
+        // Extract base ID (remove -0, -1 suffix)
+        const baseId = unit.id.replace(/-\d+$/, "")
+        
+        // Get existing resource
+        const getReq = store.get(baseId)
+        
+        getReq.onsuccess = () => {
+          const existing = getReq.result
+          
+          if (existing) {
+            // Update existing resource with new data
+            const updatedRagText = `
+# ${unit.title}
+
+## Vocabulary
+${data.vocabulary.map(v => `- ${v.word} ${v.phonetic ? `(${v.phonetic})` : ''}: ${v.meaning}`).join('\n')}
+
+## Sentences
+${data.sentences.map(s => `- ${s}`).join('\n')}
+            `.trim()
+            
+            existing.ragText = updatedRagText
+            store.put(existing)
+            
+            tx.oncomplete = () => {
+              // FIXED: Update unit state immediately with new data
+              const updatedUnit = {
+                ...unit,
+                vocabulary: data.vocabulary,
+                sentences: data.sentences,
+              }
+              setUnit(updatedUnit)
+              
+              // Rebuild question sets with new vocabulary
+              applyVocab(updatedUnit, data.vocabulary)
+              
+              // Close modal
+              setShowDirectInput(false)
+              
+              // Show success message
+              alert("✅ Đã lưu bài học thành công! Dữ liệu đã được cập nhật.")
+            }
+            
+            tx.onerror = () => {
+              alert("❌ Lỗi khi lưu vào IndexedDB!")
+            }
+          } else {
+            alert("❌ Không tìm thấy bài học trong database!")
+          }
+        }
+        
+        getReq.onerror = () => {
+          alert("❌ Lỗi khi đọc dữ liệu từ IndexedDB!")
+        }
+      }
+      
+      req.onerror = () => {
+        alert("❌ Lỗi khi mở IndexedDB!")
+      }
+    } catch (error) {
+      console.error("Error saving lesson:", error)
+      alert("❌ Có lỗi xảy ra: " + (error as Error).message)
+      throw error
+    }
+  }
 
   // Focus input when entering part 3
   useEffect(() => {
@@ -662,6 +826,20 @@ export default function LessonDetailPage() {
             <BookOpen className="size-3.5" />
             <span className="hidden sm:inline">Xem lại </span>từ vựng
           </button>
+          {isAdmin && (
+            <button
+              type="button"
+              onClick={() => setShowDirectInput(true)}
+              className="flex shrink-0 items-center gap-1.5 rounded-xl px-3 py-2 text-xs font-bold text-white transition-all hover:scale-105"
+              style={{
+                background: "linear-gradient(135deg,oklch(0.52 0.22 200),oklch(0.68 0.22 280))",
+                boxShadow: "0 0 12px oklch(0.65 0.22 200/0.35)",
+              }}
+            >
+              <Edit3 className="size-3.5" />
+              <span className="hidden sm:inline">Nhập bài</span>
+            </button>
+          )}
         </div>
 
         {/* ── Main card ── */}
@@ -1028,6 +1206,15 @@ export default function LessonDetailPage() {
           <VocabPanel vocab={unit.vocabulary} onClose={() => setShowVocab(false)} />
         )}
       </AnimatePresence>
+
+      {/* Direct input modal for Admin */}
+      <DirectInputModal
+        isOpen={showDirectInput}
+        onClose={() => setShowDirectInput(false)}
+        unitId={unit.id}
+        unitTitle={unit.title}
+        onSave={handleDirectInputSave}
+      />
     </div>
   )
 }
