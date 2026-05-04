@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(cmd.exe /c chay-9router.bat)",
+      "Bash(cmd.exe //c \"cd /d C:\\\\Users\\\\MSTUDIOTB\\\\Desktop\\\\HOCTIENGANH && chay-9router.bat\")",
+      "Bash(cmd.exe //c 'C:\\\\Users\\\\MSTUDIOTB\\\\Desktop\\\\HOCTIENGANH\\\\chay-9router.bat')",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code} in %{time_total}s\\\\n\" http://localhost:20128/)",
+      "Read(//c/9router/**)",
+      "Bash(netstat -ano)",
+      "Bash(findstr :20128)",
+      "Bash(tasklist /fi \"PID eq 5264\")",
+      "Bash(tasklist //fi \"PID eq 5264\")"
+    ],
+    "additionalDirectories": [
+      "\\tmp",
+      "C:\\9router"
+    ]
+  }
+}
