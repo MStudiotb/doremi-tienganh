@@ -121,22 +121,22 @@ export function WelcomeBanner() {
   });
 
   return (
-    <div className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#03045E] p-10 animate-gradient-x">
+    <div className="relative overflow-hidden rounded-2xl sm:rounded-[2.5rem] bg-gradient-to-r from-[#00B4D8] via-[#0077B6] to-[#03045E] p-6 sm:p-10 animate-gradient-x">
       {/* Text content - highest z-index */}
       <div className="relative z-30 max-w-2xl pr-0 sm:pr-32 lg:pr-56">
-        <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl break-words drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)]">
-          {greeting}, {displayName}
+        <h1 className="text-2xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-white break-words drop-shadow-[0_2px_8px_rgba(0,0,0,0.3)] leading-tight">
+          {greeting},<br className="sm:hidden" /> {displayName}
         </h1>
 
-        <p className="mt-2 text-base italic tracking-wide text-yellow-100/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)] font-quicksand">
+        <p className="mt-2 text-sm sm:text-base italic tracking-wide text-yellow-100/95 drop-shadow-[0_1px_4px_rgba(0,0,0,0.2)] font-quicksand">
           Có Công Mài Sắc - Có Ngày Nên Kim
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-3">
+        <div className="mt-4 sm:mt-8 flex flex-wrap gap-2 sm:gap-3">
           {badges.map((badge) => (
             <span
               key={badge}
-              className="rounded-full border border-white/10 bg-white/20 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-md"
+              className="rounded-full border border-white/10 bg-white/20 px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium text-white backdrop-blur-md"
             >
               {badge}
             </span>

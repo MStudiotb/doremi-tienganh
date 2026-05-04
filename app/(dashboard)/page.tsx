@@ -117,12 +117,12 @@ export default function DashboardPage() {
   }, CHARACTER_LEVELS[0]);
 
   return (
-    <div className="min-h-screen p-6 md:p-8">
+    <div className="min-h-screen">
       <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
-        className="mx-auto max-w-7xl space-y-8"
+        className="space-y-6 sm:space-y-8 p-4 sm:p-6 lg:p-8 pt-16 sm:pt-8"
       >
         {/* Welcome Banner */}
         <WelcomeBanner />
